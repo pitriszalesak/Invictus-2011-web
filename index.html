@@ -2,43 +2,104 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>FK [Název klubu]</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invictus 2011</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #000000, #c40000);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #1c1c1c;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c40000;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #c40000;
+            border-bottom: 2px solid #c40000;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        button {
+            background-color: #c40000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>FK [Název klubu]</h1>
-        <p>Oficiální stránka futsalového klubu</p>
-    </header>
 
-    <nav>
-        <a href="#o-nas">O nás</a>
-        <a href="#tym">Tým</a>
-        <a href="#zapasy">Zápasy</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
+<header>
+    <img src="logo.png" alt="Invictus 2011 Logo">
+    <h1>INVICTUS 2011</h1>
+    <p>Oficiální stránka futsalového klubu</p>
+</header>
 
-    <section id="o-nas">
-        <h2>O nás</h2>
-        <p>Jsme futsalový klub založený v roce XXXX...</p>
-    </section>
+<nav>
+    <a href="#o-nas">O nás</a>
+    <a href="#tym">Tým</a>
+    <a href="#zapasy">Zápasy</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
 
-    <section id="tym">
-        <h2>Náš tým</h2>
-        <ul>
-            <li>Brankář – Jan Novák</li>
-            <li>Obránce – Petr Svoboda</li>
-        </ul>
-    </section>
-
-    <section id="zapasy">
-        <h2>Nejbližší zápasy</h2>
-        <p>FK Klub vs. Soupeř – 15.3.2026</p>
-    </section>
-
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Email: info@klub.cz</p>
-    </section>
-</body>
-</html>
+<section id="o-nas">
+    <h2>O nás</h2>
+    <div class
