@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Historie Invictus 2011 v Karvinské futsalové lize: sezony, výsledky, střelci, sestavy a karty.">
+  <meta name="description" content="Oficiální web amatérského futsalového klubu Invictus 2011 z Havířova. Historie, soupiska a klubové informace.">
   <meta name="theme-color" content="#090909">
-  <title>Karvinská liga | Invictus 2011</title>
+  <title>Invictus 2011 | Futsal Havířov</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="archive-page">
+<body>
   <a class="skip-link" href="#obsah">Přejít na obsah</a>
 
   <header class="site-header" id="top">
-    <a class="brand" href="index.html" aria-label="Invictus 2011 – úvod">
+    <a class="brand" href="#top" aria-label="Invictus 2011 – úvod">
       <img src="assets/logo-invictus-2011.png" alt="" width="72" height="53">
       <span>Invictus <b>2011</b></span>
     </a>
@@ -21,98 +21,356 @@
       <span class="sr-only">Otevřít menu</span>
     </button>
     <nav id="main-nav" aria-label="Hlavní navigace">
-      <a href="index.html#klub">O klubu</a>
-      <a href="index.html#historie">Historie</a>
-      <a href="index.html#soupiska">Soupiska</a>
-      <a href="souteze.html" aria-current="page">Soutěže</a>
-      <a href="index.html#galerie">Galerie</a>
-      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#sezona">Sezona 26/27</a>
+      <a href="#klub">O klubu</a>
+      <a href="#historie">Historie</a>
+      <a href="#soupiska">Soupiska</a>
+      <a href="souteze.html">Soutěže</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <main id="obsah">
-    <section class="archive-hero">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Futsalový klub · Havířov</p>
+        <img class="hero-logo" src="assets/logo-invictus-2011.png" alt="Znak klubu Invictus 2011">
+        <h1 id="hero-title">Patnáct let.<br><em>Jeden tým.</em></h1>
+        <p class="hero-lead">Přátelství, čest a odhodlání nevzdat žádný zápas.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#soupiska">Poznej náš tým</a>
+          <a class="button button-ghost" href="#historie">Náš příběh</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#klub" aria-label="Pokračovat k obsahu">
+        <span>Objev Invictus</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <section class="stats-strip" aria-label="Klub v číslech">
+      <div><strong>2011</strong><span>rok založení</span></div>
+      <div><strong>15</strong><span>let společné cesty</span></div>
+      <div class="annotated-stat"><strong>198</strong><span>soutěžních zápasů</span><small>Další starší zápasy se v dostupných archivech nepodařilo dohledat.</small></div>
+      <div class="annotated-stat"><strong>397</strong><span>vstřelených gólů</span><small>Součet z dohledaných zápasů; starší archivní údaje nejsou kompletní.</small></div>
+    </section>
+
+    <section class="season-center" id="sezona" aria-labelledby="season-title">
+      <div class="season-center-inner">
+        <header class="season-center-head">
+          <div>
+            <p class="eyebrow">Zápasové centrum · jubilejní ročník</p>
+            <h2 id="season-title">Sezona <em>2026/27</em></h2>
+          </div>
+          <div class="season-status" aria-label="Stav sezony: před sezonou">
+            <span class="season-status-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Před sezonou</strong>
+              <p>Čekáme na oficiální rozpis soutěží.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="season-center-grid">
+          <article class="next-match-card">
+            <div class="match-card-topline">
+              <span>Příští zápas</span>
+              <span>Termín bude doplněn</span>
+            </div>
+            <div class="match-pending">
+              <span aria-hidden="true">—</span>
+              <div>
+                <p>Jubilejní sezona</p>
+                <h3>Čekáme na první výkop</h3>
+              </div>
+              <span aria-hidden="true">—</span>
+            </div>
+            <p class="match-card-copy">Havířovská futsalová liga přijímá přihlášky do 6. září 2026. Soupeře, datum, čas i místo prvního utkání doplníme bezprostředně po zveřejnění oficiálního programu.</p>
+            <div class="match-card-actions">
+              <a class="button button-primary" href="souteze.html">Přehled soutěží</a>
+              <a class="button button-ghost" href="https://www.futsalhavirov.cz/" target="_blank" rel="noopener">Futsal Havířov ↗</a>
+            </div>
+            <p class="match-updated">Stav ověřen k 23. 7. 2026</p>
+          </article>
+
+          <article class="anniversary-season-card">
+            <img src="assets/history/vyrocni-logo-invictus-15-let-2026-2027.png" alt="Výroční logo Invictus 2011 pro sezonu 2026/2027" width="1024" height="1024">
+            <div>
+              <span>15 let klubu</span>
+              <h3>Jedna sezona.<br>Výjimečný znak.</h3>
+              <p>Speciální zlaté logo bude klub provázet pouze jubilejním ročníkem 2026/2027.</p>
+              <a href="#historie">Příběh výročního loga →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="last-season">
+          <div class="last-season-heading">
+            <p class="eyebrow">Poslední dokončený ročník</p>
+            <h3>Sezona 2025/26 v číslech</h3>
+          </div>
+          <div class="competition-result-grid">
+            <article class="competition-result-card">
+              <div class="result-place"><strong>13.</strong><span>místo</span></div>
+              <div class="result-content">
+                <p>Havířovská futsalová liga</p>
+                <h4>Skupina o udržení</h4>
+                <dl>
+                  <div><dt>Zápasy</dt><dd>21</dd></div>
+                  <div><dt>Skóre</dt><dd>39:69</dd></div>
+                  <div><dt>Body</dt><dd>21</dd></div>
+                </dl>
+                <a href="havirovska-liga.html">Detail soutěže →</a>
+              </div>
+            </article>
+            <article class="competition-result-card">
+              <div class="result-place"><strong>13.</strong><span>místo</span></div>
+              <div class="result-content">
+                <p>Okresní přebor Ostrava/Opava</p>
+                <h4>Ostravská futsalová liga</h4>
+                <dl>
+                  <div><dt>Zápasy</dt><dd>14</dd></div>
+                  <div><dt>Skóre</dt><dd>22:39</dd></div>
+                  <div><dt>Body</dt><dd>8</dd></div>
+                </dl>
+                <a href="ostravska-liga.html">Detail soutěže →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="klub">
+      <div class="section-heading">
+        <p class="eyebrow">Kdo jsme</p>
+        <h2>Víc než<br>jen futsal.</h2>
+      </div>
+      <div class="about-copy">
+        <p class="lead">Invictus 2011 je amatérský futsalový klub s historií napříč regionem. Působil v Havířovské, Karvinské i Ostravské futsalové lize a pravidelně se účastnil turnajů Futsalmania Orlová.</p>
+        <p>Od roku 2011 prošly klubem desítky hráčů, nespočet zápasů i chvíle, které se nevejdou do výsledkových tabulek. Základem zůstává parta lidí, pro které má klub své pevné místo.</p>
+        <div class="values" aria-label="Klubové hodnoty">
+          <article><span>01</span><h3>Přátelství</h3><p>Tým stojí na lidech, kteří se na sebe mohou spolehnout.</p></article>
+          <article><span>02</span><h3>Čest</h3><p>Hrajeme naplno, s respektem k soupeři i vlastnímu znaku.</p></article>
+          <article><span>03</span><h3>Odhodlání</h3><p>Výsledek není nikdy rozhodnutý, dokud nezazní poslední hvizd.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="records-section" id="rekordy" aria-labelledby="records-title">
+      <div class="records-head">
+        <div>
+          <p class="eyebrow">Klubové rekordy</p>
+          <h2 id="records-title">Jména, která<br><em>zůstávají.</em></h2>
+        </div>
+        <p>Výběr doložených individuálních rekordů a historických milníků Invictus 2011.</p>
+      </div>
+      <div class="records-grid">
+        <article>
+          <span class="record-index">01</span>
+          <strong class="record-value">72</strong>
+          <p class="record-label">startů v HFL</p>
+          <h3>Jakub Mojzeš</h3>
+          <p>Nejvíce evidovaných ligových startů v dostupné databázi Futsalu Havířov.</p>
+        </article>
+        <article>
+          <span class="record-index">02</span>
+          <strong class="record-value">32</strong>
+          <p class="record-label">gólů v HFL</p>
+          <h3>Jakub Čespiva</h3>
+          <p>Nejlepší evidovaný střelec klubu v dostupné databázi Futsalu Havířov.</p>
+        </article>
+        <article>
+          <span class="record-index">03</span>
+          <strong class="record-value">3.</strong>
+          <p class="record-label">místo v KFL</p>
+          <h3>Sezona 2016/17</h3>
+          <p>Nejlepší doložené umístění klubu: bronz při premiéře v Karvinské futsalové lize.</p>
+        </article>
+        <article>
+          <span class="record-index">04</span>
+          <strong class="record-value">11.</strong>
+          <p class="record-label">soutěžní zápas</p>
+          <h3>Petr Zálešák</h3>
+          <p>Autor vůbec prvního gólu Invictu po dlouhém čekání v premiérové sezoně.</p>
+        </article>
+      </div>
+      <p class="records-note">Hráčské statistiky vycházejí z veřejné databáze Futsalu Havířov a zahrnují pouze dohledané ročníky; starší evidence není kompletní. Aktualizováno 23. 7. 2026.</p>
+    </section>
+
+    <section class="quote-band" aria-label="Klubové motto">
+      <p>„Invictus“ znamená <strong>neporažený.</strong><br>Ne skóre na tabuli, ale duch, který se nevzdává.</p>
+    </section>
+
+    <section class="section history" id="historie">
+      <div class="section-heading">
+        <p class="eyebrow">Naše cesta</p>
+        <h2>Od roku<br><em>2011.</em></h2>
+        <a class="history-jump" href="historie-dresu.html">Otevřít historii dresů</a>
+      </div>
+      <div class="timeline">
+        <article>
+          <time>2011</time>
+          <div><h3>Čtyři nadšenci a jeden nápad</h3><p>Marek Adamec, Jakub Čespiva, Filip Hrbek a Petr Zálešák se rozhodli založit vlastní futsalový klub. Cesta nebyla jednoduchá, ale po velkém úsilí se jejich nápad stal skutečností.</p></div>
+        </article>
+        <article>
+          <time>Září 2011</time>
+          <div><h3>První sezona v HFL</h3><p>Startovné 15 000 Kč bylo pro mladé studenty téměř nepřekonatelnou překážkou. Díky tehdejšímu předsedovi Havířovské futsalové ligy, panu Svorníkovi, jej mohli zaplatit nadvakrát a nastoupit do první sezony.</p></div>
+        </article>
+        <article>
+          <time>11. zápas</time>
+          <div><h3>Historicky první gól</h3><p>Začátky byly tvrdé. Na první gól čekal tým dlouhých jedenáct zápasů. Vstřelil jej Petr Zálešák a navždy se tak zapsal jako první střelec v historii Invictu.</p></div>
+        </article>
+        <article>
+          <time>2. sezona</time>
+          <div><h3>První skutečné vítězství</h3><p>První výhra na hřišti přišla až ve druhé sezoně. V premiérovém ročníku tým zaznamenal pouze kontumační vítězství kvůli nedovoleným startům soupeře z Horní Suché.</p></div>
+        </article>
+        <article>
+          <time>Od počátku</time>
+          <div><h3>Kapitán Jakub Čespiva</h3><p>Na týmové poradě v den založení byl kapitánem zvolen Jakub Čespiva – hlavní zakladatel a „otec Invictu“. Kapitánskou roli zastává dodnes.</p></div>
+        </article>
+        <article>
+          <time>Invictus</time>
+          <div><h3>Jméno z hospody U Koníčka</h3><p>Název vznikl v tehdejší klubovně, hospodě na Nábřeží U Sváti, které nikdo z týmu neřekl jinak než U Koníčka. Latinské slovo <em>invictus</em> znamená „neporažený“ – odvážný cíl, ke kterému klub od začátku směřuje.</p></div>
+        </article>
+        <article>
+          <time>Znak klubu</time>
+          <div><h3>Logo tvořené vlastními silami</h3><p>První podobu klubového loga vytvořil zakladatel Filip Hrbek. Do současné a dalších podob jej rozvinul Petr Zálešák, který se stará o grafickou tvář Invictu.</p></div>
+        </article>
+        <article class="kit-history">
+          <time>2011–2024</time>
+          <div>
+            <h3>Historie dresů</h3>
+            <p>Od zapůjčených erárních dresů Saxon přes KIK a Nike Victory až po současnou sadu Joma s partnerem Bistruck.</p>
+            <a class="history-subsection-link" href="historie-dresu.html"><span>Samostatná podsekce</span><strong>Prohlédnout vývoj dresů a fotografie →</strong></a>
+          </div>
+        </article>
+        <article class="karvina-history">
+          <time>2016–2019</time>
+          <div>
+            <h3>Tři sezony v Karvinské futsalové lize</h3>
+            <p>Invictus vstoupil do karvinské soutěže skvělým bronzem. Během následujících dvou ročníků se výsledkově postupně propadal a po sezoně 2018/2019 zamířil do Ostravské futsalové ligy.</p>
+            <ol class="history-season-summary" aria-label="Výsledky Invictus 2011 v Karvinské futsalové lize">
+              <li><span>2016/2017</span><strong>3. místo</strong><p>Premiérový ročník, třetí místo ze 13 týmů a udržený bronz také v nadstavbě.</p></li>
+              <li><span>2017/2018</span><strong>6. místo</strong><p>Šestá příčka mezi 16 účastníky. Nadstavbová část se v této sezoně nehrála.</p></li>
+              <li><span>2018/2019</span><strong>11. místo</strong><p>Poslední karvinská sezona, po níž následoval přesun do Ostravské futsalové ligy.</p></li>
+            </ol>
+          </div>
+        </article>
+        <article>
+          <time>Napříč regionem</time>
+          <div><h3>Havířov, Karviná, Ostrava i Orlová</h3><p>Invictus během své historie nepůsobil pouze v Havířovské futsalové lize. Nastupoval také v Karvinské a Ostravské futsalové lize a aktivně se účastnil turnajů Futsalmania Orlová.</p></div>
+        </article>
+        <article class="timeline-now">
+          <time>2026</time>
+          <div><h3>Patnáct let jedné party</h3><p>Soupiska se během let výrazně proměnila, ale zdravé jádro přátel zůstalo. Právě ono je největším vítězstvím klubu – a plánuje zůstat až do posledního výdechu Invictu.</p></div>
+        </article>
+        <article class="anniversary-milestone">
+          <time>2026/2027</time>
+          <div class="anniversary-milestone-content">
+            <div>
+              <p class="eyebrow">15 let Invictus 2011</p>
+              <h3>Výroční logo pro jubilejní sezonu</h3>
+              <p>Pro sezonu 2026/2027 klub představil speciální výroční znak k patnácti letům od svého založení. Zlaté logo bude Invictus používat pouze během této jubilejní sezony; poté se vrátí ke své klasické klubové identitě.</p>
+            </div>
+            <a href="assets/history/vyrocni-logo-invictus-15-let-2026-2027.png" target="_blank" rel="noopener" aria-label="Otevřít výroční logo Invictus 2011 v původní velikosti">
+              <img src="assets/history/vyrocni-logo-invictus-15-let-2026-2027.png" alt="Výroční zlaté logo Invictus 2011 pro sezonu 2026/2027">
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="roster" id="soupiska">
+      <div class="roster-head">
+        <div>
+          <p class="eyebrow">Náš tým</p>
+          <h2>Soupiska</h2>
+        </div>
+        <p>Hráči Invictus 2011 se startem v Havířovské futsalové lize v sezoně 2025/26, doplnění o dlouholeté členy týmu.</p>
+      </div>
+      <div class="player-grid" id="player-grid"></div>
+      <button class="button button-outline roster-toggle" type="button" aria-expanded="false">Zobrazit celou soupisku</button>
+    </section>
+
+    <dialog class="player-modal" id="player-modal" aria-labelledby="modal-player-name">
+      <button class="modal-close" type="button" aria-label="Zavřít profil hráče">×</button>
+      <div class="modal-player">
+        <div class="modal-portrait" id="modal-portrait"></div>
+        <div class="modal-content">
+          <p class="eyebrow">Hráčský profil · Futsal Havířov</p>
+          <div class="modal-title-row">
+            <div>
+              <span class="modal-number" id="modal-player-number"></span>
+              <h2 id="modal-player-name"></h2>
+            </div>
+            <p class="modal-born">Narozen<br><strong id="modal-player-birth"></strong></p>
+          </div>
+          <div class="modal-stats" aria-label="Celkové statistiky hráče">
+            <div><strong id="modal-matches"></strong><span>Zápasy</span></div>
+            <div><strong id="modal-goals"></strong><span>Góly</span></div>
+            <div><strong id="modal-yellow"></strong><span>Žluté karty</span></div>
+            <div><strong id="modal-red"></strong><span>Červené karty</span></div>
+          </div>
+          <div class="season-table-wrap">
+            <table class="season-table">
+              <thead><tr><th>Sezona</th><th>Klub</th><th>Z</th><th>G</th><th>ŽK</th><th>ČK</th></tr></thead>
+              <tbody id="modal-seasons"></tbody>
+            </table>
+          </div>
+          <a class="button button-outline modal-source" id="modal-source" href="#" target="_blank" rel="noopener">Kompletní profil na Futsal Havířov ↗</a>
+          <p class="modal-note">Statistiky pocházejí z veřejné databáze Futsalu Havířov. Aktualizováno 23. 7. 2026.</p>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="gallery-section" id="galerie">
+      <div class="gallery-head">
+        <div>
+          <p class="eyebrow">Klubový archiv</p>
+          <h2>Fotogalerie</h2>
+        </div>
+        <p>Od prvních dochovaných snímků až po současnost. Další společné momenty budeme postupně doplňovat.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-item-wide">
+          <img src="assets/team-invictus-2015-16.jpg" alt="Tým Invictus 2011 v sezoně 2015/16 před futsalovou brankou" loading="lazy" width="2048" height="1280">
+          <figcaption><span>2015/16</span><p>Nejstarší dochovaná týmová fotografie</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/team-invictus-2011-2025-26.jpg" alt="Společná fotografie osmi hráčů Invictus 2011 před futsalovou brankou" loading="lazy" width="951" height="634">
+          <figcaption><span>2025/26</span><p>Patnáctá sezona Invictu</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
       <div>
-        <p class="eyebrow">Klubový archiv</p>
-        <h1>Karvinská<br><em>futsalová liga.</em></h1>
-        <p>Ověřený přehled působení Invictu v Karviné. Výsledky, střelci, sestavy i disciplinární statistiky na jednom místě.</p>
+        <p class="eyebrow">Buď u toho</p>
+        <h2>Další kapitolu<br>píšeme právě teď.</h2>
       </div>
-      <div class="archive-hero-mark" aria-hidden="true">
-        <img src="assets/logo-invictus-2011.png" alt="">
-      </div>
-    </section>
-
-    <section class="archive-totals" aria-label="Souhrn působení v Karvině">
-      <div><strong id="total-seasons">5</strong><span>sezon</span></div>
-      <div><strong id="total-matches">74</strong><span>zápasů</span></div>
-      <div><strong id="total-record">31–8–35</strong><span>výhry · remízy · prohry</span></div>
-      <div><strong id="total-score">185:198</strong><span>celkové skóre</span></div>
-    </section>
-
-    <section class="archive-section" aria-labelledby="seasons-title">
-      <div class="archive-heading">
-        <div>
-          <p class="eyebrow">Pět ročníků</p>
-          <h2 id="seasons-title">Sezona po sezoně</h2>
+      <div class="contact-copy">
+        <p>Sleduj výsledky, novinky, týmové fotografie a momenty z klubového života na našem Instagramu.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener" aria-label="Instagram Invictus 2011 – otevře se v novém okně">Instagram @futsalinvictus2011 ↗</a>
+          <a class="button button-ghost" href="https://www.futsalhavirov.cz/klub/invictus-2011/" target="_blank" rel="noopener">Profil v soutěži ↗</a>
         </div>
-        <p>Součty vycházejí z konečných tabulek a zápasové databáze Futsalu Karviná.</p>
+        <p class="partner-note">Děkujeme našemu partnerovi <strong>Bistruck Havířov</strong>.</p>
       </div>
-      <div class="season-cards" id="season-cards"></div>
-    </section>
-
-    <section class="archive-section match-archive" aria-labelledby="matches-title">
-      <div class="archive-heading">
-        <div>
-          <p class="eyebrow">Detailní zápisy</p>
-          <h2 id="matches-title">Zápasy a statistiky</h2>
-        </div>
-        <p>Rozkliknutím zápasu zobrazíš poločasy, střelce, sestavu i karty.</p>
-      </div>
-
-      <div class="archive-controls">
-        <div class="season-filter" role="group" aria-label="Filtrovat sezonu">
-          <button class="is-active" type="button" data-season="all">Vše</button>
-          <button type="button" data-season="2019/20">2019/20</button>
-          <button type="button" data-season="2021/22">2021/22</button>
-        </div>
-        <p id="match-count" aria-live="polite"></p>
-      </div>
-      <div class="match-list" id="match-list"></div>
-    </section>
-
-    <section class="archive-section scorers-section" aria-labelledby="scorers-title">
-      <div class="archive-heading">
-        <div>
-          <p class="eyebrow">Dohledatelní střelci</p>
-          <h2 id="scorers-title">Střelecká tabulka</h2>
-        </div>
-        <p>Součet branek z 28 detailních zápisů, které archiv zveřejňuje.</p>
-      </div>
-      <div class="scorers-table-wrap">
-        <table class="scorers-table">
-          <thead><tr><th>Poř.</th><th>Hráč</th><th>Góly</th></tr></thead>
-          <tbody id="scorers-body"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="archive-note">
-      <p class="eyebrow">Poznámka k pramenům</p>
-      <h2>Co archiv dovoluje doložit</h2>
-      <p>U ročníků 2016/17 až 2018/19 zveřejňuje sekce „Archiv výsledků“ konečné tabulky a pouze omezené žebříčky nejlepších střelců. Jednotlivé zápisy Invictu ani jeho kompletní střelce proto nelze z těchto tří sezon spolehlivě doplnit.</p>
-      <p>Od sezony 2019/20 jsou dostupné samostatné zápisy. Dvě kontumační prohry 0:5 z prosince 2021 archiv uvádí bez sestav a střelců. U několika zápisů navíc nesouhlasí součet uvedených střelců s výsledkem; stránka proto zachovává údaje přesně podle zdroje a odkazuje na originální zápis.</p>
-      <a class="button button-outline" href="https://futsalkarvina.cz/" target="_blank" rel="noopener">Archiv Futsalu Karviná ↗</a>
     </section>
   </main>
 
   <footer>
-    <a class="footer-brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a>
+    <a class="footer-brand" href="#top"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a>
     <a class="footer-instagram" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener">@futsalinvictus2011 ↗</a>
     <p>Amicitia · Virtus · Invictus</p>
     <p>© <span id="year"></span> Invictus 2011</p>
   </footer>
 
-  <script src="karvina-data.js"></script>
-  <script src="karvina.js"></script>
+  <script src="players-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

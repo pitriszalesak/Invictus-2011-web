@@ -1,637 +1,80 @@
-window.KARVINA_DATA = {
-  "updated": "23. 7. 2026",
-  "seasons": [
-    {
-      "season": "2016/17",
-      "league": "4. liga",
-      "placement": "3.",
-      "matches": 16,
-      "wins": 10,
-      "draws": 2,
-      "losses": 4,
-      "goalsFor": 44,
-      "goalsAgainst": 39,
-      "detail": false,
-      "source": "https://futsalkarvina.cz/zobraz.asp?t=archiv-vysledku-2017",
-      "note": "Základní část a nadstavba."
-    },
-    {
-      "season": "2017/18",
-      "league": "3. liga",
-      "placement": "6.",
-      "matches": 15,
-      "wins": 8,
-      "draws": 2,
-      "losses": 5,
-      "goalsFor": 44,
-      "goalsAgainst": 36,
-      "detail": false,
-      "source": "https://www.futsalkarvina.cz/zobraz.asp?t=archiv-vysledku-2018",
-      "note": "Archiv zveřejňuje konečnou tabulku, nikoli jednotlivé zápisy."
-    },
-    {
-      "season": "2018/19",
-      "league": "3. liga",
-      "placement": "11.",
-      "matches": 15,
-      "wins": 5,
-      "draws": 2,
-      "losses": 8,
-      "goalsFor": 36,
-      "goalsAgainst": 36,
-      "detail": false,
-      "source": "https://futsalkarvina.cz/zobraz.asp?t=archiv-vysledku-2019",
-      "note": "Archiv zveřejňuje konečnou tabulku, nikoli jednotlivé zápisy."
-    },
-    {
-      "season": "2019/20",
-      "league": "3. liga",
-      "placement": "14.",
-      "matches": 15,
-      "wins": 4,
-      "draws": 1,
-      "losses": 10,
-      "goalsFor": 31,
-      "goalsAgainst": 50,
-      "detail": true,
-      "source": "https://futsalkarvina.cz/tabulka.asp?sezona=2020-3&kategorie=3LIGA",
-      "note": "Kompletní zápisy všech 15 utkání."
-    },
-    {
-      "season": "2021/22",
-      "league": "3. liga",
-      "placement": "9.",
-      "matches": 13,
-      "wins": 4,
-      "draws": 1,
-      "losses": 8,
-      "goalsFor": 30,
-      "goalsAgainst": 37,
-      "detail": true,
-      "source": "https://futsalkarvina.cz/tabulka.asp?sezona=20223LIGA-2&kategorie=3LIGAPO",
-      "note": "11 utkání základní části a 2 utkání nadstavby. Dvě prohry 0:5 jsou v archivu vedené bez sestav a střelců."
-    }
-  ],
-  "matches": [
-    {
-      "season": "2019/20",
-      "id": 369,
-      "matchNo": 19,
-      "date": "so 16.11.2019",
-      "time": "09:00",
-      "home": "INVICTUS 2011",
-      "away": "PIKASO.CZ",
-      "score": "2:0",
-      "halftime": "1:0, 1:0",
-      "result": "V",
-      "invictusGoals": 2,
-      "opponentGoals": 0,
-      "invictusScorers": "2× Malý Tomáš",
-      "opponentScorers": "1× Laluch",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Mojzeš Jakub, Sekanina Lubomír, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=369"
-    },
-    {
-      "season": "2019/20",
-      "id": 371,
-      "matchNo": 21,
-      "date": "so 16.11.2019",
-      "time": "10:20",
-      "home": "INVICTUS 2011",
-      "away": "AMBRA REAL",
-      "score": "2:4",
-      "halftime": "1:2, 1:2",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 4,
-      "invictusScorers": "1× Malý Jakub, 1× Vallo David",
-      "opponentScorers": "1× Krafčík Tomáš, 2× Cieslawski Martin, 1× Friedl Tibor",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Mojzeš Jakub, Sekanina Lubomír, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "1× Mojzeš",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=371"
-    },
-    {
-      "season": "2019/20",
-      "id": 373,
-      "matchNo": 23,
-      "date": "so 16.11.2019",
-      "time": "11:40",
-      "home": "INVICTUS 2011",
-      "away": "PIVNICE U HAVÍŘE",
-      "score": "6:3",
-      "halftime": "2:0, 4:3",
-      "result": "V",
-      "invictusGoals": 6,
-      "opponentGoals": 3,
-      "invictusScorers": "4× Vallo David, 1× Malý Tomáš, 1× Malý Jakub",
-      "opponentScorers": "1× Tyrlík Aleš, 1× Halama Miroslav, 1× Slíva Milan",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Sekanina Lubomír, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=373"
-    },
-    {
-      "season": "2019/20",
-      "id": 375,
-      "matchNo": 25,
-      "date": "so 7.12.2019",
-      "time": "18:00",
-      "home": "INVICTUS 2011",
-      "away": "REAPERS",
-      "score": "2:2",
-      "halftime": "0:0, 2:2",
-      "result": "R",
-      "invictusGoals": 2,
-      "opponentGoals": 2,
-      "invictusScorers": "2× Vallo David",
-      "opponentScorers": "1× Starzyczny",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Sivera Adam, Mojzeš Jakub, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=375"
-    },
-    {
-      "season": "2019/20",
-      "id": 377,
-      "matchNo": 27,
-      "date": "so 7.12.2019",
-      "time": "19:20",
-      "home": "INVICTUS 2011",
-      "away": "MALÁRIA HAVÍŘOV",
-      "score": "0:3",
-      "halftime": "0:2, 0:1",
-      "result": "P",
-      "invictusGoals": 0,
-      "opponentGoals": 3,
-      "invictusScorers": "",
-      "opponentScorers": "1× Havlásek Michal, 1× Berta Jan, 1× Bystroň Jan",
-      "invictusRoster": "Zálešák Petr, Sekanina Lubomír, Sivera Adam, Malý Jakub, Mojzeš Jakub, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=377"
-    },
-    {
-      "season": "2019/20",
-      "id": 379,
-      "matchNo": 29,
-      "date": "so 7.12.2019",
-      "time": "20:40",
-      "home": "INVICTUS 2011",
-      "away": "BILBAO PETROVICE",
-      "score": "2:3",
-      "halftime": "1:0, 1:3",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 3,
-      "invictusScorers": "2× Malý Jakub",
-      "opponentScorers": "1× Banot Vojtěch, 1× Smiech Ondřej, 1× Krejčí Šimon",
-      "invictusRoster": "Zálešák Petr, Sekanina Lubomír, Sivera Adam, Malý Jakub, Mojzeš Jakub, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=379"
-    },
-    {
-      "season": "2019/20",
-      "id": 419,
-      "matchNo": 68,
-      "date": "so 11.1.2020",
-      "time": "13:40",
-      "home": "INVICTUS 2011",
-      "away": "GESOMONT",
-      "score": "3:1",
-      "halftime": "3:1, 0:0",
-      "result": "V",
-      "invictusGoals": 3,
-      "opponentGoals": 1,
-      "invictusScorers": "1× Sekanina Lubomír, 1× Zálešák Petr, 1× Malý Jakub",
-      "opponentScorers": "1× Voznica",
-      "invictusRoster": "Bartoš Zdeněk, Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Mojzeš Jakub, Sekanina Lubomír, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=419"
-    },
-    {
-      "season": "2019/20",
-      "id": 421,
-      "matchNo": 70,
-      "date": "so 11.1.2020",
-      "time": "15:00",
-      "home": "INVICTUS 2011",
-      "away": "AC 6",
-      "score": "1:2",
-      "halftime": "1:1, 0:1",
-      "result": "P",
-      "invictusGoals": 1,
-      "opponentGoals": 2,
-      "invictusScorers": "1× Klimša Daniel",
-      "opponentScorers": "1× Konáš Michael, 1× Trudič Lukáš",
-      "invictusRoster": "Bartoš Zdeněk, Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Mojzeš Jakub, Sekanina Lubomír, Vallo David,",
-      "invictusYellow": "1× Bartoš",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=421"
-    },
-    {
-      "season": "2019/20",
-      "id": 422,
-      "matchNo": 71,
-      "date": "so 11.1.2020",
-      "time": "15:40",
-      "home": "FC EGOLAND",
-      "away": "INVICTUS 2011",
-      "score": "7:0",
-      "halftime": "3:0, 4:0",
-      "result": "P",
-      "invictusGoals": 0,
-      "opponentGoals": 7,
-      "invictusScorers": "1× Klimša",
-      "opponentScorers": "1× Tomašák Miroslav, 1× Grochol Jakub, 5× Staník Sebastián",
-      "invictusRoster": "Bartoš Zdeněk, Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Mojzeš Jakub, Sekanina Lubomír, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=422"
-    },
-    {
-      "season": "2019/20",
-      "id": 431,
-      "matchNo": 80,
-      "date": "so 25.1.2020",
-      "time": "13:40",
-      "home": "SURVIVORS",
-      "away": "INVICTUS 2011",
-      "score": "5:3",
-      "halftime": "1:1, 4:2",
-      "result": "P",
-      "invictusGoals": 3,
-      "opponentGoals": 5,
-      "invictusScorers": "1× Vallo David, 1× Malý Jakub, 1× Sivera Adam",
-      "opponentScorers": "1× Bélai Daniel",
-      "invictusRoster": "Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Pizúr Jakub, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=431"
-    },
-    {
-      "season": "2019/20",
-      "id": 432,
-      "matchNo": 81,
-      "date": "so 25.1.2020",
-      "time": "14:20",
-      "home": "THE VEGETABLES",
-      "away": "INVICTUS 2011",
-      "score": "6:1",
-      "halftime": "3:0, 3:1",
-      "result": "P",
-      "invictusGoals": 1,
-      "opponentGoals": 6,
-      "invictusScorers": "1× Zálešák Petr",
-      "opponentScorers": "1× Feber Adam, 1× Bystřický Ondřej, 3× Feber Tomáš, 1× Dančík Pavel",
-      "invictusRoster": "Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Pizúr Jakub, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=432"
-    },
-    {
-      "season": "2019/20",
-      "id": 435,
-      "matchNo": 84,
-      "date": "so 25.1.2020",
-      "time": "16:20",
-      "home": "INVICTUS 2011",
-      "away": "FC TYGŘI",
-      "score": "1:4",
-      "halftime": "0:2, 1:2",
-      "result": "P",
-      "invictusGoals": 1,
-      "opponentGoals": 4,
-      "invictusScorers": "1× Klimša Daniel",
-      "opponentScorers": "2× Olivka Jiří",
-      "invictusRoster": "Zálešák Petr, Horňák Jakub, Klimša Daniel, Malý Jakub, Pizúr Jakub, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=435"
-    },
-    {
-      "season": "2019/20",
-      "id": 460,
-      "matchNo": 109,
-      "date": "ne 9.2.2020",
-      "time": "12:00",
-      "home": "VETERÁN TEAM",
-      "away": "INVICTUS 2011",
-      "score": "3:4",
-      "halftime": "2:1, 1:3",
-      "result": "V",
-      "invictusGoals": 4,
-      "opponentGoals": 3,
-      "invictusScorers": "2× Vallo David, 2× Zápotočný Robert",
-      "opponentScorers": "1× Martinčko Vojtěch, 2× Novák Tomáš",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Mojzeš Jakub, Pizúr Jakub, Sivera Adam, Vallo David, Zápotočný Robert,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=460"
-    },
-    {
-      "season": "2019/20",
-      "id": 463,
-      "matchNo": 112,
-      "date": "ne 9.2.2020",
-      "time": "14:00",
-      "home": "SLOVAN HAVÍŘOV",
-      "away": "INVICTUS 2011",
-      "score": "2:0",
-      "halftime": "2:0, 0:0",
-      "result": "P",
-      "invictusGoals": 0,
-      "opponentGoals": 2,
-      "invictusScorers": "",
-      "opponentScorers": "1× Mencel Martin, 1× Okon Lukáš",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Mojzeš Jakub, Pizúr Jakub, Sivera Adam, Vallo David, Zápotočný Robert,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=463"
-    },
-    {
-      "season": "2019/20",
-      "id": 465,
-      "matchNo": 114,
-      "date": "ne 9.2.2020",
-      "time": "15:20",
-      "home": "IZS LOUKY",
-      "away": "INVICTUS 2011",
-      "score": "5:4",
-      "halftime": "0:3, 5:1",
-      "result": "P",
-      "invictusGoals": 4,
-      "opponentGoals": 5,
-      "invictusScorers": "1× Vallo David, 2× Malý Tomáš, 1× Malý Jakub",
-      "opponentScorers": "1× Michalski Jakub, 1× Drobisz Tomáš, 2× Žáček Tomáš, 1× Juroszek Jakub",
-      "invictusRoster": "Malý Tomáš, Horňák Jakub, Malý Jakub, Mojzeš Jakub, Pizúr Jakub, Sivera Adam, Vallo David, Zápotočný Robert,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=465"
-    },
-    {
-      "season": "2021/22",
-      "id": 767,
-      "matchNo": 5,
-      "date": "so 13.11.2021",
-      "time": "20:40",
-      "home": "INVICTUS 2011",
-      "away": "PIKASO.CZ",
-      "score": "2:5",
-      "halftime": "1:2, 1:3",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 5,
-      "invictusScorers": "1× Zálešák Petr, 1× Čespiva Jakub",
-      "opponentScorers": "1× Holáň David, 1× Šimík Lukáš, 1× Smiga Michal, 1× Dostál Lukáš, 1× Demeter Jakub",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Čespiva Jakub, Urválek David, Malý Jakub, Rachov Luboš, Sivera Adam,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=767"
-    },
-    {
-      "season": "2021/22",
-      "id": 768,
-      "matchNo": 6,
-      "date": "so 13.11.2021",
-      "time": "21:20",
-      "home": "SOKOL BOHUMÍN",
-      "away": "INVICTUS 2011",
-      "score": "4:2",
-      "halftime": "2:0, 2:2",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 4,
-      "invictusScorers": "1× Malý Tomáš, 1× Zálešák Petr",
-      "opponentScorers": "2× Galusek Adam, 2× Sollich Jiří",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Čespiva Jakub, Urválek David, Malý Jakub, Rachov Luboš, Sivera Adam,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=768"
-    },
-    {
-      "season": "2021/22",
-      "id": 775,
-      "matchNo": 13,
-      "date": "ne 5.12.2021",
-      "time": "18:00",
-      "home": "FUTSAL GUYS",
-      "away": "INVICTUS 2011",
-      "score": "5:0",
-      "halftime": "0:0, 0:0",
-      "result": "P",
-      "invictusGoals": 0,
-      "opponentGoals": 5,
-      "invictusScorers": "",
-      "opponentScorers": "",
-      "invictusRoster": "",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=775"
-    },
-    {
-      "season": "2021/22",
-      "id": 776,
-      "matchNo": 14,
-      "date": "ne 5.12.2021",
-      "time": "18:40",
-      "home": "KST MEMBRANE",
-      "away": "INVICTUS 2011",
-      "score": "5:0",
-      "halftime": "0:0, 0:0",
-      "result": "P",
-      "invictusGoals": 0,
-      "opponentGoals": 5,
-      "invictusScorers": "",
-      "opponentScorers": "",
-      "invictusRoster": "",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=776"
-    },
-    {
-      "season": "2021/22",
-      "id": 799,
-      "matchNo": 34,
-      "date": "so 8.1.2022",
-      "time": "15:00",
-      "home": "INVICTUS 2011",
-      "away": "FC REVOLUTION",
-      "score": "2:4",
-      "halftime": "2:2, 0:2",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 4,
-      "invictusScorers": "1× Klimša Daniel, 1× Čespiva Jakub",
-      "opponentScorers": "1× Lýsek Patrik, 3× Hrčkulák Tomáš",
-      "invictusRoster": "Čespiva Jakub, Urválek David, Klimša Daniel, Malý Jakub, Mojzeš Jakub, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=799"
-    },
-    {
-      "season": "2021/22",
-      "id": 801,
-      "matchNo": 36,
-      "date": "so 8.1.2022",
-      "time": "16:20",
-      "home": "INVICTUS 2011",
-      "away": "FC U BARÁKU",
-      "score": "6:0",
-      "halftime": "2:0, 4:0",
-      "result": "V",
-      "invictusGoals": 6,
-      "opponentGoals": 0,
-      "invictusScorers": "1× Vallo David, 5× Klimša Daniel",
-      "opponentScorers": "",
-      "invictusRoster": "Čespiva Jakub, Urválek David, Klimša Daniel, Malý Jakub, Mojzeš Jakub, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=801"
-    },
-    {
-      "season": "2021/22",
-      "id": 809,
-      "matchNo": 44,
-      "date": "ne 16.1.2022",
-      "time": "13:40",
-      "home": "INVICTUS 2011",
-      "away": "SFC KARVIŇÁCI",
-      "score": "2:3",
-      "halftime": "2:0, 0:3",
-      "result": "P",
-      "invictusGoals": 2,
-      "opponentGoals": 3,
-      "invictusScorers": "1× Vallo David, 1× Malý Jakub",
-      "opponentScorers": "1× Obrusník David, 2× Mikuš Marian",
-      "invictusRoster": "Čespiva Jakub, Urválek David, Malý Jakub, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "1× Vallo, 1× Čespiva",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=809"
-    },
-    {
-      "season": "2021/22",
-      "id": 810,
-      "matchNo": 45,
-      "date": "ne 16.1.2022",
-      "time": "14:20",
-      "home": "KERBEROS",
-      "away": "INVICTUS 2011",
-      "score": "0:5",
-      "halftime": "0:1, 0:4",
-      "result": "V",
-      "invictusGoals": 5,
-      "opponentGoals": 0,
-      "invictusScorers": "1× Urválek David, 2× Vallo David, 2× Čespiva Jakub",
-      "opponentScorers": "",
-      "invictusRoster": "Čespiva Jakub, Urválek David, Malý Jakub, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=810"
-    },
-    {
-      "season": "2021/22",
-      "id": 821,
-      "matchNo": 56,
-      "date": "ne 30.1.2022",
-      "time": "12:40",
-      "home": "INVICTUS 2011",
-      "away": "TJSK NOACO",
-      "score": "3:0",
-      "halftime": "1:0, 2:0",
-      "result": "V",
-      "invictusGoals": 3,
-      "opponentGoals": 0,
-      "invictusScorers": "1× Malý Jakub, 1× Vallo David, 1× Čespiva Jakub",
-      "opponentScorers": "",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Čespiva Jakub, Horňák Jakub, Malý Jakub, Myšák Martin, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=821"
-    },
-    {
-      "season": "2021/22",
-      "id": 823,
-      "matchNo": 58,
-      "date": "ne 30.1.2022",
-      "time": "14:00",
-      "home": "INVICTUS 2011",
-      "away": "GLACGOW RANGERS",
-      "score": "1:4",
-      "halftime": "1:1, 0:3",
-      "result": "P",
-      "invictusGoals": 1,
-      "opponentGoals": 4,
-      "invictusScorers": "1× Zálešák Petr",
-      "opponentScorers": "1× Filuś Marek, 1× Gonsior Lukáš, 1× Bélai Daniel",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Čespiva Jakub, Horňák Jakub, Malý Jakub, Myšák Martin, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=823"
-    },
-    {
-      "season": "2021/22",
-      "id": 824,
-      "matchNo": 59,
-      "date": "ne 30.1.2022",
-      "time": "14:40",
-      "home": "MOJEMOBILKA",
-      "away": "INVICTUS 2011",
-      "score": "4:5",
-      "halftime": "1:1, 3:4",
-      "result": "V",
-      "invictusGoals": 5,
-      "opponentGoals": 4,
-      "invictusScorers": "2× Vallo David, 1× Myšák Martin, 1× Rachov Luboš, 1× Čespiva Jakub",
-      "opponentScorers": "2× Potyka Marek, 1× Trnka Jan, 1× Palša Pavel",
-      "invictusRoster": "Malý Tomáš, Zálešák Petr, Čespiva Jakub, Horňák Jakub, Malý Jakub, Myšák Martin, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=824"
-    },
-    {
-      "season": "2021/22 nadstavba",
-      "id": 847,
-      "matchNo": 7,
-      "date": "so 5.2.2022",
-      "time": "19:00",
-      "home": "FUTSAL GUYS",
-      "away": "INVICTUS 2011",
-      "score": "1:1",
-      "halftime": "0:1, 1:0",
-      "result": "R",
-      "invictusGoals": 1,
-      "opponentGoals": 1,
-      "invictusScorers": "1× Zálešák Petr",
-      "opponentScorers": "1× Kozubek Libor",
-      "invictusRoster": "Zálešák Petr, Čespiva Jakub, Urválek David, Horňák Jakub, Malý Jakub, Myšák Martin, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=847"
-    },
-    {
-      "season": "2021/22 nadstavba",
-      "id": 848,
-      "matchNo": 8,
-      "date": "so 5.2.2022",
-      "time": "19:40",
-      "home": "MOJEMOBILKA",
-      "away": "INVICTUS 2011",
-      "score": "2:1",
-      "halftime": "2:1, 0:0",
-      "result": "P",
-      "invictusGoals": 1,
-      "opponentGoals": 2,
-      "invictusScorers": "1× Vallo David",
-      "opponentScorers": "2× Potyka Marek",
-      "invictusRoster": "Zálešák Petr, Čespiva Jakub, Urválek David, Horňák Jakub, Malý Jakub, Myšák Martin, Mojzeš Jakub, Rachov Luboš, Sivera Adam, Vallo David,",
-      "invictusYellow": "",
-      "invictusRed": "",
-      "source": "https://futsalkarvina.cz/zapas.asp?id=848"
-    }
-  ]
-};
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Historie klubových dresů futsalového klubu Invictus 2011 od roku 2011.">
+  <meta name="theme-color" content="#090909">
+  <title>Historie dresů | Invictus 2011</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="kit-page">
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Invictus 2011 – úvod">
+      <img src="assets/logo-invictus-2011.png" alt="" width="72" height="53">
+      <span>Invictus <b>2011</b></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Otevřít menu</span>
+    </button>
+    <nav id="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html#klub">O klubu</a>
+      <a href="index.html#historie" aria-current="page">Historie</a>
+      <a href="index.html#soupiska">Soupiska</a>
+      <a href="souteze.html">Soutěže</a>
+      <a href="index.html#galerie">Galerie</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="obsah">
+    <section class="kit-page-hero">
+      <div>
+        <a class="back-link" href="index.html#historie">← Zpět na historii klubu</a>
+        <p class="eyebrow">Klubová identita</p>
+        <h1>Historie<br><em>dresů.</em></h1>
+        <p>Od prvních vypůjčených sad až k vlastnímu bíločernému dresu s klubovým znakem a partnerem Bistruck.</p>
+      </div>
+      <img src="assets/history/dres-joma-bistruck-2024.jpg" alt="Současný dres Joma Invictus 2011 s logem Bistruck">
+    </section>
+
+    <section class="kit-page-history" aria-labelledby="kit-timeline-title">
+      <div class="archive-heading">
+        <div><p class="eyebrow">2011–2024</p><h2 id="kit-timeline-title">Pět generací dresů</h2></div>
+        <p>Dresy se měnily společně s klubem. Každá sada připomíná jinou část příběhu Invictu.</p>
+      </div>
+      <ol class="kit-page-timeline">
+        <li><time>Prvních 5 kol</time><span>01</span><div><h3>Saxon</h3><p>Do prvních pěti kol své historie nastoupil tým v zapůjčených erárních dresech Saxon.</p></div></li>
+        <li>
+          <time>2011–2015</time><span>02</span>
+          <div><h3>KIK</h3><p>První vlastní dresy s logem KIK provázely Invictus tři a půl sezony.</p></div>
+          <a class="kit-timeline-photo kit-timeline-photo-kik" href="assets/history/dres-kik.jpg" target="_blank" rel="noopener"><img src="assets/history/dres-kik.jpg" alt="Hráč Invictus 2011 v bíločerném dresu s logem KIK"></a>
+        </li>
+        <li>
+          <time>Leden 2015</time><span>03</span>
+          <div><h3>Nike Victory</h3><p>V lednu 2015 přišla nová sada Nike Victory a s ní další etapa klubové identity.</p></div>
+          <a class="kit-timeline-photo kit-timeline-photo-nike" href="assets/history/dres-nike-victory-2015.jpg" target="_blank" rel="noopener"><img src="assets/history/dres-nike-victory-2015.jpg" alt="Bíločerný dres Nike Victory Invictus 2011 z roku 2015"></a>
+        </li>
+        <li>
+          <time>2018</time><span>04</span>
+          <div><h3>Joma</h3><p>Invictus poprvé přešel na dresy značky Joma. Bíločerná sada nesla klubový znak a zlatý nápis Invictus 2011.</p></div>
+          <a class="kit-timeline-photo kit-timeline-photo-joma" href="assets/history/dres-joma-2018-predni-strana.jpg" target="_blank" rel="noopener"><img src="assets/history/dres-joma-2018-predni-strana.jpg" alt="Přední strana bíločerného dresu Joma Invictus 2011 z roku 2018"></a>
+        </li>
+        <li>
+          <time>2024</time><span>05</span>
+          <div><h3>Joma × Bistruck</h3><p>Nová sada Joma zachovala bíločernou identitu a poprvé nesla také výrazné logo klubového partnera Bistruck.</p></div>
+          <a class="kit-timeline-photo kit-timeline-photo-current" href="assets/history/dres-joma-bistruck-2024.jpg" target="_blank" rel="noopener"><img src="assets/history/dres-joma-bistruck-2024.jpg" alt="Bíločerný dres Joma Invictus 2011 s logem Bistruck z roku 2024"></a>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a>
+    <a class="footer-instagram" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener">@futsalinvictus2011 ↗</a>
+    <p>Amicitia · Virtus · Invictus</p><p>© <span id="year"></span> Invictus 2011</p>
+  </footer>
+  <script src="page.js"></script>
+</body>
+</html>

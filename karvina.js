@@ -1,104 +1,67 @@
-(() => {
-  const data = window.KARVINA_DATA;
-  const menuButton = document.querySelector(".menu-button");
-  const nav = document.querySelector("#main-nav");
-  const cards = document.querySelector("#season-cards");
-  const list = document.querySelector("#match-list");
-  const count = document.querySelector("#match-count");
-  const filters = [...document.querySelectorAll("[data-season]")];
-
-  document.querySelector("#year").textContent = new Date().getFullYear();
-  menuButton?.addEventListener("click", () => {
-    const open = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!open));
-    nav.classList.toggle("is-open", !open);
-  });
-
-  const totals = data.seasons.reduce((sum, season) => ({
-    matches: sum.matches + season.matches,
-    wins: sum.wins + season.wins,
-    draws: sum.draws + season.draws,
-    losses: sum.losses + season.losses,
-    goalsFor: sum.goalsFor + season.goalsFor,
-    goalsAgainst: sum.goalsAgainst + season.goalsAgainst
-  }), { matches: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0 });
-
-  document.querySelector("#total-seasons").textContent = data.seasons.length;
-  document.querySelector("#total-matches").textContent = totals.matches;
-  document.querySelector("#total-record").textContent = `${totals.wins}–${totals.draws}–${totals.losses}`;
-  document.querySelector("#total-score").textContent = `${totals.goalsFor}:${totals.goalsAgainst}`;
-
-  cards.innerHTML = data.seasons.map((season) => `
-    <article class="season-card ${season.detail ? "has-detail" : ""}">
-      <div class="season-card-top">
-        <div><span>${season.league}</span><h3>${season.season}</h3></div>
-        <strong>${season.placement}</strong>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Invictus 2011 v Havířovské futsalové lize – sezonní výsledky a statistiky.">
+  <title>Havířovská liga | Invictus 2011</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="league-page">
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <header class="site-header"><a class="brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="72" height="53"><span>Invictus <b>2011</b></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Otevřít menu</span></button><nav id="main-nav"><a href="index.html#klub">O klubu</a><a href="index.html#historie">Historie</a><a href="index.html#soupiska">Soupiska</a><a href="souteze.html" aria-current="page">Soutěže</a><a href="index.html#galerie">Galerie</a><a href="index.html#kontakt">Kontakt</a></nav></header>
+  <main id="obsah">
+    <section class="league-hero league-hero-havirov"><div><a class="back-link" href="souteze.html">← Všechny soutěže</a><p class="eyebrow">Domovská soutěž</p><h1>Havířovská<br><em>futsalová liga.</em></h1><p>Právě tady Invictus v září 2011 odehrál svou první sezonu a tady pokračuje jeho příběh.</p></div><img src="assets/logo-invictus-2011.png" alt="" aria-hidden="true"></section>
+    <section class="league-summary" aria-label="Doložené statistiky"><div><strong>2011</strong><span>první sezona</span></div><div><strong>4</strong><span>doložené ročníky</span></div><div><strong>86</strong><span>doložených zápasů</span></div><div><strong>155</strong><span>vstřelených gólů</span></div></section>
+    <section class="archive-section"><div class="archive-heading"><div><p class="eyebrow">Dostupné ročenky</p><h2>Poslední sezony</h2></div><p>Starší část historie budeme doplňovat postupně podle dostupnosti úplných výsledkových archivů.</p></div>
+      <div class="season-cards two-cards">
+        <article class="season-card has-detail"><div class="season-card-top"><div><span>HFL</span><h3>2024/25</h3></div><strong>12.</strong></div><div class="season-record"><div><b>22</b><span>Z</span></div><div><b>1</b><span>V</span></div><div><b>1</b><span>R</span></div><div><b>20</b><span>P</span></div><div><b>44:106</b><span>Skóre</span></div></div><p>Konečná bilance podle oficiální ročenky Futsalu Havířov.</p><a href="https://www.futsalhavirov.cz/wp-content/uploads/2025/10/rocenka_futsal_havirov_2024_2025.pdf" target="_blank" rel="noopener">Ověřit v ročence ↗</a></article>
+        <article class="season-card has-detail"><div class="season-card-top"><div><span>HFL · konečné pořadí</span><h3>2025/26</h3></div><strong>13.</strong></div><div class="season-record"><div><b>21</b><span>Z</span></div><div><b>5</b><span>V</span></div><div><b>2</b><span>VP</span></div><div><b>2</b><span>R</span></div><div><b>39:69</b><span>Skóre</span></div></div><p>Konečná bilance po základní části a sedmi zápasech ve skupině o udržení.</p><a href="https://www.futsalhavirov.cz/wp-content/uploads/2026/06/rocenka_futsal_havirov_2025_2026.pdf" target="_blank" rel="noopener">Ověřit v ročence ↗</a></article>
       </div>
-      <div class="season-record">
-        <div><b>${season.matches}</b><span>Z</span></div>
-        <div><b>${season.wins}</b><span>V</span></div>
-        <div><b>${season.draws}</b><span>R</span></div>
-        <div><b>${season.losses}</b><span>P</span></div>
-        <div><b>${season.goalsFor}:${season.goalsAgainst}</b><span>Skóre</span></div>
+    </section>
+    <section class="archive-section standings-section" aria-labelledby="hfl-table-title">
+      <div class="archive-heading"><div><p class="eyebrow">Sezona 2025/26</p><h2 id="hfl-table-title">Konečná tabulka soutěže</h2></div><p>Invictus uzavřel ročník na 13. místě se ziskem 21 bodů. Tabulka zahrnuje základní část i nadstavbové skupiny.</p></div>
+      <div class="league-table-wrap">
+        <table class="league-data-table">
+          <thead><tr><th>Poř.</th><th>Tým</th><th>Z</th><th>V</th><th>VP</th><th>R</th><th>PP</th><th>P</th><th>Skóre</th><th>Body</th></tr></thead>
+          <tbody>
+            <tr><td>1.</td><th scope="row">Glory United</th><td>20</td><td>18</td><td>0</td><td>0</td><td>1</td><td>1</td><td>108:31</td><td>55</td></tr>
+            <tr><td>2.</td><th scope="row">Hajduk Šumbark</th><td>20</td><td>14</td><td>0</td><td>1</td><td>1</td><td>4</td><td>94:41</td><td>44</td></tr>
+            <tr><td>3.</td><th scope="row">FK Junior Havířov</th><td>20</td><td>11</td><td>1</td><td>2</td><td>0</td><td>6</td><td>66:44</td><td>37</td></tr>
+            <tr><td>4.</td><th scope="row">FK Rapid Havířov</th><td>20</td><td>12</td><td>0</td><td>1</td><td>0</td><td>7</td><td>76:54</td><td>37</td></tr>
+            <tr><td>5.</td><th scope="row">Apollón Havířov</th><td>20</td><td>12</td><td>0</td><td>0</td><td>0</td><td>8</td><td>75:60</td><td>36</td></tr>
+            <tr><td>6.</td><th scope="row">EGOISTE</th><td>20</td><td>10</td><td>1</td><td>1</td><td>0</td><td>8</td><td>65:49</td><td>33</td></tr>
+            <tr><td>7.</td><th scope="row">Orca Team</th><td>20</td><td>8</td><td>0</td><td>1</td><td>0</td><td>11</td><td>61:60</td><td>25</td></tr>
+            <tr><td>8.</td><th scope="row">FO3 Havířov</th><td>21</td><td>12</td><td>0</td><td>1</td><td>1</td><td>7</td><td>72:51</td><td>38</td></tr>
+            <tr><td>9.</td><th scope="row">Tinder Surprise</th><td>21</td><td>10</td><td>1</td><td>1</td><td>0</td><td>9</td><td>76:56</td><td>33</td></tr>
+            <tr><td>10.</td><th scope="row">BELLATORES FUTSAL</th><td>21</td><td>9</td><td>1</td><td>1</td><td>0</td><td>10</td><td>49:53</td><td>30</td></tr>
+            <tr><td>11.</td><th scope="row">DYNAMO Šumbark</th><td>21</td><td>7</td><td>0</td><td>1</td><td>1</td><td>12</td><td>41:63</td><td>23</td></tr>
+            <tr><td>12.</td><th scope="row">Slovan Havířov</th><td>21</td><td>6</td><td>0</td><td>2</td><td>1</td><td>12</td><td>38:59</td><td>21</td></tr>
+            <tr class="is-invictus"><td>13.</td><th scope="row">Invictus 2011</th><td>21</td><td>5</td><td>2</td><td>2</td><td>0</td><td>12</td><td>39:69</td><td>21</td></tr>
+            <tr><td>14.</td><th scope="row">FK Slavoj Houfnice</th><td>21</td><td>4</td><td>0</td><td>2</td><td>1</td><td>14</td><td>42:65</td><td>15</td></tr>
+            <tr><td>15.</td><th scope="row">FC Chlebíček</th><td>21</td><td>2</td><td>0</td><td>0</td><td>0</td><td>19</td><td>25:172</td><td>6</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p>${season.note}</p>
-      <a href="${season.source}" target="_blank" rel="noopener">Ověřit ve zdroji ↗</a>
-    </article>
-  `).join("");
-
-  function renderMatches(season = "all") {
-    const matches = data.matches.filter((match) =>
-      season === "all" || match.season.startsWith(season)
-    );
-    count.textContent = `${matches.length} ${matches.length === 1 ? "zápas" : matches.length < 5 ? "zápasy" : "zápasů"}`;
-    list.innerHTML = matches.map((match) => {
-      const opponent = match.home === "INVICTUS 2011" ? match.away : match.home;
-      const invictusHome = match.home === "INVICTUS 2011";
-      const shownScore = invictusHome ? match.score : match.score.split(":").reverse().join(":");
-      return `
-        <details class="match-card result-${match.result.toLowerCase()}">
-          <summary>
-            <span class="match-result">${match.result}</span>
-            <span class="match-date">${match.date.replace(/^(so|ne)\s/, "")}<small>${match.time} · ${match.season}</small></span>
-            <span class="match-opponent"><small>Invictus 2011</small>${opponent}</span>
-            <strong>${shownScore}</strong>
-            <span class="match-chevron" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="match-detail">
-            <div class="match-facts">
-              <p><span>Poločasy</span><strong>${match.halftime || "neuvedeno"}</strong></p>
-              <p><span>Střelci Invictu</span><strong>${match.invictusScorers || "neuvedeni"}</strong></p>
-              <p><span>Žluté karty</span><strong>${match.invictusYellow || "—"}</strong></p>
-              <p><span>Červené karty</span><strong>${match.invictusRed || "—"}</strong></p>
-            </div>
-            <div class="match-roster">
-              <span>Sestava Invictu</span>
-              <p>${match.invictusRoster ? match.invictusRoster.replace(/,$/, "") : "Archiv sestavu neuvádí."}</p>
-            </div>
-            <a href="${match.source}" target="_blank" rel="noopener">Originální zápis č. ${match.matchNo} ↗</a>
-          </div>
-        </details>
-      `;
-    }).join("");
-  }
-
-  filters.forEach((button) => button.addEventListener("click", () => {
-    filters.forEach((item) => item.classList.toggle("is-active", item === button));
-    renderMatches(button.dataset.season);
-  }));
-
-  const scorerMap = new Map();
-  for (const match of data.matches) {
-    for (const part of match.invictusScorers.split(",")) {
-      const found = part.trim().match(/^(\d+)×\s+(.+)$/);
-      if (!found) continue;
-      scorerMap.set(found[2], (scorerMap.get(found[2]) || 0) + Number(found[1]));
-    }
-  }
-  const scorers = [...scorerMap].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "cs"));
-  document.querySelector("#scorers-body").innerHTML = scorers.map(([player, goals], index) => `
-    <tr><td>${index + 1}.</td><th scope="row">${player}</th><td>${goals}</td></tr>
-  `).join("");
-
-  renderMatches();
-})();
+      <p class="table-source-note">Zdroj: oficiální ročenka HFL 2025/26. Rozdílný počet zápasů souvisí s rozdělením soutěže do nadstavbových skupin.</p>
+    </section>
+    <section class="archive-section scorers-section" aria-labelledby="hfl-scorers-title">
+      <div class="archive-heading"><div><p class="eyebrow">Invictus 2011 · 2025/26</p><h2 id="hfl-scorers-title">Kluboví střelci</h2></div><p>Nejlepším střelcem týmu byl kapitán Jakub Čespiva se 13 ligovými góly.</p></div>
+      <div class="league-table-wrap compact-table-wrap">
+        <table class="league-data-table player-stat-table">
+          <thead><tr><th>Poř.</th><th>Hráč</th><th>Zápasy</th><th>Góly</th><th>RP</th></tr></thead>
+          <tbody>
+            <tr class="is-top-scorer"><td>1.</td><th scope="row">Jakub Čespiva</th><td>19</td><td>13</td><td>0</td></tr>
+            <tr><td>2.</td><th scope="row">David Vallo</th><td>19</td><td>9</td><td>2</td></tr>
+            <tr><td>3.</td><th scope="row">Petr Zálešák</th><td>17</td><td>4</td><td>0</td></tr>
+            <tr><td>4.</td><th scope="row">Jakub Malý</th><td>18</td><td>4</td><td>0</td></tr>
+            <tr><td>5.</td><th scope="row">Ján Štromp</th><td>2</td><td>3</td><td>0</td></tr>
+            <tr><td>6.</td><th scope="row">Martin Myšák</th><td>10</td><td>3</td><td>0</td></tr>
+            <tr><td>7.</td><th scope="row">Tomáš Poncza</th><td>6</td><td>1</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-source-note">Součet zveřejněných osobních statistik je 37 gólů; dva z 39 týmových gólů nejsou v oficiální tabulce střelců přiřazeny konkrétnímu hráči. RP = rozhodující penalty.</p>
+    </section>
+    <section class="archive-note"><p class="eyebrow">Detailní databáze</p><h2>Hráči a jednotlivé zápasy</h2><p>Oficiální profil obsahuje soupisku, profily hráčů, osobní statistiky a dostupné zápasy Invictu. Tyto údaje už používáme také v rozklikávacích hráčských profilech na hlavní stránce.</p><a class="button button-outline" href="https://www.futsalhavirov.cz/klub/invictus-2011/" target="_blank" rel="noopener">Profil Invictu na Futsalu Havířov ↗</a></section>
+  </main>
+  <footer><a class="footer-brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a><a class="footer-instagram" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener">@futsalinvictus2011 ↗</a><p>Amicitia · Virtus · Invictus</p><p>© <span id="year"></span> Invictus 2011</p></footer><script src="page.js"></script>
+</body></html>
