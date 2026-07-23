@@ -1,72 +1,24 @@
-<!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Invictus Ostrava v okresních futsalových soutěžích Ostravy a Opavy.">
-  <title>Ostravská liga | Invictus 2011</title><link rel="stylesheet" href="style.css">
-</head>
-<body class="league-page">
-  <a class="skip-link" href="#obsah">Přejít na obsah</a>
-  <header class="site-header"><a class="brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="72" height="53"><span>Invictus <b>2011</b></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Otevřít menu</span></button><nav id="main-nav"><a href="index.html#klub">O klubu</a><a href="index.html#historie">Historie</a><a href="index.html#soupiska">Soupiska</a><a href="souteze.html" aria-current="page">Soutěže</a><a href="index.html#galerie">Galerie</a><a href="index.html#kontakt">Kontakt</a></nav></header>
-  <main id="obsah">
-    <section class="league-hero league-hero-ostrava"><div><a class="back-link" href="souteze.html">← Všechny soutěže</a><p class="eyebrow">Ostrava a Opava</p><h1>Ostravská<br><em>futsalová liga.</em></h1><p>V oficiálních soutěžích FAČR klub nastupuje pod názvem Invictus Ostrava.</p></div><img src="assets/logo-invictus-2011.png" alt="" aria-hidden="true"></section>
-    <section class="league-summary" aria-label="Souhrn posledních sezon"><div><strong>3</strong><span>doložené ročníky</span></div><div><strong>38</strong><span>zápasů</span></div><div><strong>6–4–28</strong><span>výhry · remízy · prohry</span></div><div><strong>57:128</strong><span>celkové skóre</span></div></section>
-    <section class="archive-section"><div class="archive-heading"><div><p class="eyebrow">Okresní přebor</p><h2>Sezonní bilance</h2></div><p>Oficiální výsledky oblasti Ostrava–Opava jsou vedené v databázi FAČR.</p></div>
-      <div class="season-cards">
-        <article class="season-card has-detail"><div class="season-card-top"><div><span>1. třída</span><h3>2023/24</h3></div><strong>10.</strong></div><div class="season-record"><div><b>9</b><span>Z</span></div><div><b>1</b><span>V</span></div><div><b>1</b><span>R</span></div><div><b>7</b><span>P</span></div><div><b>14:28</b><span>Skóre</span></div></div><p>První kompletně dohledatelný ročník Invictu v nové databázi FAČR.</p><a href="https://www.fotbal.cz/futsal/futsal/table/4ebc705e-f91a-4010-b01e-6adee420c967" target="_blank" rel="noopener">Ověřit ve FAČR ↗</a></article>
-        <article class="season-card has-detail"><div class="season-card-top"><div><span>Okresní přebor</span><h3>2024/25</h3></div><strong>15.</strong></div><div class="season-record"><div><b>15</b><span>Z</span></div><div><b>3</b><span>V</span></div><div><b>1</b><span>R</span></div><div><b>11</b><span>P</span></div><div><b>21:61</b><span>Skóre</span></div></div><p>První kompletně dohledatelný ročník v nové databázi soutěží.</p><a href="https://www.fotbal.cz/futsal/futsal/hlavni/764bd9cd-1772-4dab-a1d0-0d87a5fb0971" target="_blank" rel="noopener">Ověřit ve FAČR ↗</a></article>
-        <article class="season-card has-detail"><div class="season-card-top"><div><span>Okresní přebor</span><h3>2025/26</h3></div><strong>13.</strong></div><div class="season-record"><div><b>14</b><span>Z</span></div><div><b>2</b><span>V</span></div><div><b>2</b><span>R</span></div><div><b>10</b><span>P</span></div><div><b>22:39</b><span>Skóre</span></div></div><p>Konečná tabulka ročníku 2025/26 podle oficiálního soutěžního systému.</p><a href="https://www.fotbal.cz/futsal/futsal/table/4828b9cc-3723-4da0-9104-795f87e798be" target="_blank" rel="noopener">Ověřit ve FAČR ↗</a></article>
-      </div>
-    </section>
-    <section class="archive-section standings-section" aria-labelledby="ostrava-table-title">
-      <div class="archive-heading"><div><p class="eyebrow">Okresní přebor 2025/26</p><h2 id="ostrava-table-title">Konečná tabulka soutěže</h2></div><p>Invictus Ostrava skončil na 13. místě. Osm bodů získal za dvě výhry a dvě remízy.</p></div>
-      <div class="league-table-wrap">
-        <table class="league-data-table">
-          <thead><tr><th>Poř.</th><th>Tým</th><th>Z</th><th>V</th><th>R</th><th>P</th><th>Skóre</th><th>Body</th></tr></thead>
-          <tbody>
-            <tr><td>1.</td><th scope="row">SK Krmelín</th><td>14</td><td>12</td><td>2</td><td>0</td><td>54:23</td><td>38</td></tr>
-            <tr><td>2.</td><th scope="row">FC ComProMiS Ostrava B</th><td>14</td><td>10</td><td>2</td><td>2</td><td>58:27</td><td>32</td></tr>
-            <tr><td>3.</td><th scope="row">Poruba Warriors z.s.</th><td>14</td><td>9</td><td>1</td><td>4</td><td>70:27</td><td>28</td></tr>
-            <tr><td>4.</td><th scope="row">FC Dravci Dolní Benešov</th><td>14</td><td>8</td><td>3</td><td>3</td><td>64:33</td><td>27</td></tr>
-            <tr><td>5.</td><th scope="row">Toro Fifejdy</th><td>14</td><td>7</td><td>4</td><td>3</td><td>49:31</td><td>25</td></tr>
-            <tr><td>6.</td><th scope="row">FC Inkognito Ostrava</th><td>14</td><td>8</td><td>1</td><td>5</td><td>60:33</td><td>25</td></tr>
-            <tr><td>7.</td><th scope="row">FC Bukanýři Ostrava</th><td>14</td><td>7</td><td>3</td><td>4</td><td>45:26</td><td>24</td></tr>
-            <tr><td>8.</td><th scope="row">FK New Design Ostrava</th><td>14</td><td>7</td><td>1</td><td>6</td><td>53:42</td><td>22</td></tr>
-            <tr><td>9.</td><th scope="row">TJ Sokol Martinov</th><td>14</td><td>6</td><td>2</td><td>6</td><td>45:46</td><td>20</td></tr>
-            <tr><td>10.</td><th scope="row">Shooters Bolatice</th><td>14</td><td>5</td><td>2</td><td>7</td><td>46:37</td><td>17</td></tr>
-            <tr><td>11.</td><th scope="row">Toro Fifejdy B</th><td>14</td><td>5</td><td>0</td><td>9</td><td>33:68</td><td>15</td></tr>
-            <tr><td>12.</td><th scope="row">DTJ Vřesina Ostrava</th><td>14</td><td>2</td><td>3</td><td>9</td><td>32:71</td><td>9</td></tr>
-            <tr class="is-invictus"><td>13.</td><th scope="row">Invictus Ostrava</th><td>14</td><td>2</td><td>2</td><td>10</td><td>22:39</td><td>8</td></tr>
-            <tr><td>14.</td><th scope="row">Orel Stěbořice</th><td>14</td><td>2</td><td>2</td><td>10</td><td>30:65</td><td>8</td></tr>
-            <tr><td>15.</td><th scope="row">TJ Sokol Bobrovníky</th><td>14</td><td>1</td><td>0</td><td>13</td><td>12:105</td><td>3</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="table-source-note">Zdroj: oficiální soutěžní systém FAČR, konečný stav ročníku 2025/26.</p>
-    </section>
-    <section class="archive-section scorers-section" aria-labelledby="ostrava-scorers-title">
-      <div class="archive-heading"><div><p class="eyebrow">Invictus Ostrava · 2025/26</p><h2 id="ostrava-scorers-title">Střelci a disciplinární statistiky</h2></div><p>Jakub Čespiva byl s pěti góly nejlepším klubovým střelcem také v ostravské soutěži.</p></div>
-      <div class="league-table-wrap compact-table-wrap">
-        <table class="league-data-table player-stat-table">
-          <thead><tr><th>Poř.</th><th>Hráč</th><th>Góly</th><th>Asistence</th><th>ŽK</th><th>ČK</th></tr></thead>
-          <tbody>
-            <tr class="is-top-scorer"><td>1.</td><th scope="row">Jakub Čespiva</th><td>5</td><td>0</td><td>1</td><td>0</td></tr>
-            <tr><td>2.</td><th scope="row">Jakub Malý</th><td>3</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>3.</td><th scope="row">Filip Hrbek</th><td>2</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>4.</td><th scope="row">Adam Sivera</th><td>2</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>5.</td><th scope="row">David Vallo</th><td>2</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>6.</td><th scope="row">Pavel Janás</th><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>7.</td><th scope="row">Tomáš Malý</th><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>8.</td><th scope="row">Martin Myšák</th><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>9.</td><th scope="row">Jakub Horňák</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>10.</td><th scope="row">Jakub Mojzeš</th><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-            <tr><td>11.</td><th scope="row">Petr Zálešák</th><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="table-source-note">Osobní statistiky zachycují 17 z 22 týmových branek. Zbývajících pět připadá na kontumační výhru 5:0, u níž nejsou evidováni střelci.</p>
-    </section>
-    <section class="archive-note"><p class="eyebrow">Zápis po zápisu</p><h2>Výsledky, sestavy a střelci</h2><p>Databáze FAČR umožňuje otevřít jednotlivé zápasy včetně času, poločasu, střelců, sestav, karet, rozhodčích a haly. Následující odkaz je předfiltrovaný přímo na Invictus Ostrava.</p><a class="button button-outline" href="https://www.fotbal.cz/futsal/futsal/zapas/4828b9cc-3723-4da0-9104-795f87e798be?programFilter-team-id=8516a8c7-675a-43cf-9592-09102457d22f" target="_blank" rel="noopener">Všechny zápasy Invictu ↗</a></section>
-  </main>
-  <footer><a class="footer-brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a><a class="footer-instagram" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener">@futsalinvictus2011 ↗</a><p>Amicitia · Virtus · Invictus</p><p>© <span id="year"></span> Invictus 2011</p></footer><script src="page.js"></script>
-</body></html>
+# Invictus 2011 – web pro GitHub Pages
+
+Hotová jednostránková prezentace klubu. Web nevyžaduje instalaci ani sestavení.
+
+## Nasazení
+
+Nahrajte obsah této složky do kořene repozitáře GitHub Pages:
+
+- `index.html`
+- `style.css`
+- `script.js`
+- složku `assets`
+
+## Snadné úpravy
+
+- Texty a sekce: `index.html`
+- Hráči a názvy fotografií: začátek `script.js`
+- Statistiky hráčů: generovaný soubor `players-data.js`
+- Barvy a vzhled: proměnné na začátku `style.css`
+- Fotografie galerie: složka `assets` a sekce `gallery-grid` v `index.html`
+
+## Obsah k doplnění
+
+Kontaktní e-mail zatím není uvedený. Klubový Instagram je propojený.
