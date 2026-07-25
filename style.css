@@ -422,6 +422,13 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .season-record span { margin-top:.25rem; color:var(--muted); font-size:.65rem; text-transform:uppercase; }
 .season-card p { flex:1; color:var(--muted); font-size:.88rem; line-height:1.55; }
 .season-card a,.match-detail > a { color:var(--gold); text-decoration:none; font-size:.82rem; font-weight:700; }
+.historical-season-list { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; margin:0; padding:1px; list-style:none; background:var(--line); }
+.historical-season-list li { min-height:190px; padding:1.5rem; background:#101010; }
+.historical-season-list li.has-result { background:linear-gradient(145deg,rgba(201,164,75,.13),#101010 62%); }
+.historical-season-list span { display:block; color:var(--gold); font-size:.72rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.historical-season-list strong { display:block; margin:.75rem 0; color:#fff; font-size:1.15rem; }
+.historical-season-list p { margin:0; color:var(--muted); font-size:.84rem; line-height:1.55; }
+.historical-seasons-section .table-source-note { margin-top:1.25rem; }
 .match-archive { background:#0d0d0d; }
 .archive-controls { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.3rem; }
 .season-filter { display:flex; gap:.5rem; flex-wrap:wrap; }
@@ -484,6 +491,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .archive-totals div:nth-child(-n+2) { border-bottom:1px solid var(--line); }
   .archive-heading { grid-template-columns:1fr; gap:1rem; }
   .season-cards { grid-template-columns:repeat(2,1fr); }
+  .historical-season-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .match-facts { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:640px) {
@@ -491,6 +499,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .archive-section,.archive-note { padding:5rem 1.25rem; }
   .archive-totals div { padding:1.5rem 1.25rem; }
   .season-cards { grid-template-columns:1fr; }
+  .historical-season-list { grid-template-columns:1fr; }
   .archive-controls { align-items:flex-start; flex-direction:column; }
   .match-card summary { grid-template-columns:36px 1fr auto; gap:.65rem; min-height:110px; }
   .match-date { display:none; }
