@@ -646,22 +646,5 @@
             {"goals": 0, "red": 0, "yellow": 1, "team": "Invictus 2011", "matches": 2, "season": "2025/26"}
         ],
         "profile": "https://www.futsalhavirov.cz/hrac/ondrej-smolka/"
-    },
-    {
-        "number": 18,
-        "name": "Tomáš Němec",
-        "slug": "tomas-nemec",
-        "image": "tomas-nemec-portrait.png",
-        "initials": "TN",
-        "birth": "28.1.1986",
-        "seasons": "2025/26",
-        "matches": 2,
-        "goals": 0,
-        "yellow": 0,
-        "red": 0,
-        "breakdown": [
-            {"goals": 0, "red": 0, "yellow": 0, "team": "Invictus 2011", "matches": 2, "season": "2025/26"}
-        ],
-        "profile": "https://www.futsalhavirov.cz/hrac/tomas-nemec/"
     }
 ];
