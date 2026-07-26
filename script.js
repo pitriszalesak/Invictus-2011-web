@@ -4,8 +4,29 @@ function formatJerseyNumber(number) {
   return Number.isInteger(number) ? `#${number}` : "—";
 }
 
+const positionOrder = new Map([
+  ["Brankář", 0],
+  ["Obránce", 1],
+  ["Útočník", 2],
+]);
+const czechCollator = new Intl.Collator("cs", { sensitivity: "base" });
+
+function getSurname(name) {
+  const nameParts = name.trim().split(/\s+/);
+  return nameParts[nameParts.length - 1];
+}
+
+const sortedPlayers = [...players].sort((playerA, playerB) => {
+  const positionDifference = (positionOrder.get(playerA.position) ?? positionOrder.size)
+    - (positionOrder.get(playerB.position) ?? positionOrder.size);
+  if (positionDifference) return positionDifference;
+
+  const surnameDifference = czechCollator.compare(getSurname(playerA.name), getSurname(playerB.name));
+  return surnameDifference || czechCollator.compare(playerA.name, playerB.name);
+});
+
 const grid = document.querySelector("#player-grid");
-players.forEach((player) => {
+sortedPlayers.forEach((player) => {
   const card = document.createElement("article");
   card.className = `player-card${player.image ? "" : " missing"}`;
   card.tabIndex = 0;
