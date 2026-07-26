@@ -35,7 +35,7 @@
   </header>
 
   <main id="obsah">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" data-view="home" aria-labelledby="hero-title">
       <div class="hero-photo" aria-hidden="true"></div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">
@@ -48,20 +48,20 @@
           <a class="button button-ghost" href="#historie">Náš příběh</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#klub" aria-label="Pokračovat k obsahu">
+      <a class="scroll-cue" href="#sezona" aria-label="Pokračovat k sezoně 2026/2027">
         <span>Objev Invictus</span>
         <span aria-hidden="true">↓</span>
       </a>
     </section>
 
-    <section class="stats-strip" aria-label="Klub v číslech">
+    <section class="stats-strip" data-view="home" aria-label="Klub v číslech">
       <div><strong>2011</strong><span>rok založení</span></div>
       <div><strong>15</strong><span>let společné cesty</span></div>
       <div class="annotated-stat"><strong>198</strong><span>soutěžních zápasů</span><small>Další starší zápasy se v dostupných archivech nepodařilo dohledat.</small></div>
       <div class="annotated-stat"><strong>397</strong><span>vstřelených gólů</span><small>Součet z dohledaných zápasů; starší archivní údaje nejsou kompletní.</small></div>
     </section>
 
-    <section class="season-center" id="sezona" aria-labelledby="season-title">
+    <section class="season-center" id="sezona" data-view="home" aria-labelledby="season-title">
       <div class="season-center-inner">
         <header class="season-center-head">
           <div>
@@ -110,44 +110,10 @@
           </article>
         </div>
 
-        <div class="last-season">
-          <div class="last-season-heading">
-            <p class="eyebrow">Poslední dokončený ročník</p>
-            <h3>Sezona 2025/26 v číslech</h3>
-          </div>
-          <div class="competition-result-grid">
-            <article class="competition-result-card">
-              <div class="result-place"><strong>13.</strong><span>místo</span></div>
-              <div class="result-content">
-                <p>Havířovská futsalová liga</p>
-                <h4>Skupina o udržení</h4>
-                <dl>
-                  <div><dt>Zápasy</dt><dd>21</dd></div>
-                  <div><dt>Skóre</dt><dd>39:69</dd></div>
-                  <div><dt>Body</dt><dd>21</dd></div>
-                </dl>
-                <a href="havirovska-liga.html">Detail soutěže →</a>
-              </div>
-            </article>
-            <article class="competition-result-card">
-              <div class="result-place"><strong>13.</strong><span>místo</span></div>
-              <div class="result-content">
-                <p>Okresní přebor Ostrava/Opava</p>
-                <h4>Ostravská futsalová liga</h4>
-                <dl>
-                  <div><dt>Zápasy</dt><dd>14</dd></div>
-                  <div><dt>Skóre</dt><dd>22:39</dd></div>
-                  <div><dt>Body</dt><dd>8</dd></div>
-                </dl>
-                <a href="ostravska-liga.html">Detail soutěže →</a>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="recent-results" aria-labelledby="recent-results-title">
+    <section class="recent-results" data-view="home" aria-labelledby="recent-results-title">
       <div class="recent-results-inner">
         <header class="recent-results-head">
           <div>
@@ -269,7 +235,7 @@
       </div>
     </section>
 
-    <section class="section about" id="klub">
+    <section class="section about" id="klub" data-view="club" hidden>
       <div class="section-heading">
         <p class="eyebrow">Kdo jsme</p>
         <h2>Víc než<br>jen futsal.</h2>
@@ -285,7 +251,7 @@
       </div>
     </section>
 
-    <section class="records-section" id="rekordy" aria-labelledby="records-title">
+    <section class="records-section" id="rekordy" data-view="club" aria-labelledby="records-title" hidden>
       <div class="records-head">
         <div>
           <p class="eyebrow">Klubové rekordy</p>
@@ -326,11 +292,11 @@
       <p class="records-note">Hráčské statistiky vycházejí z veřejné databáze Futsalu Havířov a zahrnují pouze dohledané ročníky; starší evidence není kompletní. Aktualizováno 23. 7. 2026.</p>
     </section>
 
-    <section class="quote-band" aria-label="Klubové motto">
+    <section class="quote-band" data-view="club" aria-label="Klubové motto" hidden>
       <p>„Invictus“ znamená <strong>neporažený.</strong><br>Ne skóre na tabuli, ale duch, který se nevzdává.</p>
     </section>
 
-    <section class="section history" id="historie">
+    <section class="section history" id="historie" data-view="history" hidden>
       <div class="section-heading">
         <p class="eyebrow">Naše cesta</p>
         <h2>Od roku<br><em>2011.</em></h2>
@@ -404,7 +370,7 @@
       </div>
     </section>
 
-    <section class="roster" id="soupiska">
+    <section class="roster" id="soupiska" data-view="roster" hidden>
       <div class="roster-head">
         <div>
           <p class="eyebrow">Náš tým</p>
@@ -450,7 +416,7 @@
       </div>
     </dialog>
 
-    <section class="gallery-section" id="galerie">
+    <section class="gallery-section" id="galerie" data-view="gallery" hidden>
       <div class="gallery-head">
         <div>
           <p class="eyebrow">Klubový archiv</p>
@@ -470,7 +436,7 @@
       </div>
     </section>
 
-    <section class="section contact" id="kontakt">
+    <section class="section contact" id="kontakt" data-view="contact" hidden>
       <div>
         <p class="eyebrow">Buď u toho</p>
         <h2>Další kapitolu<br>píšeme právě teď.</h2>

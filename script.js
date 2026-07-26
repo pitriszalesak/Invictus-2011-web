@@ -134,4 +134,84 @@ nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () =>
   menuButton.setAttribute("aria-expanded", "false");
 }));
 
+const routeByHash = new Map([
+  ["", "home"],
+  ["#top", "home"],
+  ["#sezona", "home"],
+  ["#klub", "club"],
+  ["#rekordy", "club"],
+  ["#historie", "history"],
+  ["#soupiska", "roster"],
+  ["#galerie", "gallery"],
+  ["#kontakt", "contact"],
+]);
+const viewTitles = {
+  home: "Invictus 2011 | Futsal Havířov",
+  club: "O klubu | Invictus 2011",
+  history: "Historie | Invictus 2011",
+  roster: "Soupiska | Invictus 2011",
+  gallery: "Galerie | Invictus 2011",
+  contact: "Kontakt | Invictus 2011",
+};
+const viewSections = [...document.querySelectorAll("[data-view]")];
+
+function getRequestedView() {
+  if (window.location.hash === "#obsah") {
+    return document.body.dataset.currentView || "home";
+  }
+  return routeByHash.get(window.location.hash) || "home";
+}
+
+function renderView() {
+  const requestedView = getRequestedView();
+  viewSections.forEach((section) => {
+    section.hidden = section.dataset.view !== requestedView;
+  });
+  document.body.dataset.currentView = requestedView;
+  document.title = viewTitles[requestedView];
+
+  nav.querySelectorAll("a").forEach((link) => {
+    const linkView = routeByHash.get(link.getAttribute("href"));
+    if (linkView === requestedView) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  if (requestedView !== "roster" && modal.open) {
+    modal.close();
+    document.body.classList.remove("modal-open");
+    lastPlayerTrigger = null;
+  }
+
+  window.requestAnimationFrame(() => {
+    const hash = window.location.hash;
+    if (!hash || hash === "#top") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
+
+    const target = document.getElementById(hash.slice(1));
+    if (target && !target.hidden) {
+      target.scrollIntoView({ block: "start", behavior: "auto" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  });
+}
+
+window.addEventListener("hashchange", renderView);
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a");
+  if (!link) return;
+
+  const href = link.getAttribute("href");
+  if (routeByHash.has(href) && href === window.location.hash) {
+    event.preventDefault();
+    renderView();
+  }
+});
+renderView();
+
 document.querySelector("#year").textContent = new Date().getFullYear();
