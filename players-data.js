@@ -439,6 +439,11 @@
         "slug":  "petr-zalesak",
         "image":  "petr-zalesak.webp",
         "initials":  null,
+        "bio":  [
+                     "Petr, kterému spousta spoluhráčů neřekne jinak než Pitris, je jedním ze čtyř zakladatelů Invictu. Do historie klubu se zapsal také jako autor vůbec prvního soutěžního gólu. Na kontě má nespočet proměněných penalt i přímých kopů, přičemž jeden z nich svou originalitou obletěl sociální sítě.",
+                     "Vždy se mohl pochlubit výbornou střelbou – v noze měl ránu, jako když kopne kůň. S přibývajícími lety se však jeho hra proměnila. Už sice nesází v každé sezoně přes deset gólů jako dříve, stále častěji ale nastupuje také v obraně, kde umí pěkně přitvrdit.",
+                     "Pitris není pouze hráčem, výrazně se zapojuje také do chodu celého klubu. Stojí za internetovými stránkami a sociálními sítěmi, vytvořil klubové logo i veškerou další grafiku. Navrhuje dresy a klubová trička – a dresy po zápase nemá problém také vyprat. Pro Invictus žije a dýchá a svou lásku ke klubu neváhal zvěčnit tetováním na ruce. Spoluhráči se pro něj stali rodinou a snad mu prominou i jeho občas výbušnou povahu."
+                 ],
         "birth":  "10.4.1995",
         "seasons":  "2015/16, 2018/19, 2020/22, 2024/25, 2025/26",
         "matches":  63,

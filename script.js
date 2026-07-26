@@ -74,6 +74,17 @@ function openPlayer(player, trigger) {
   document.querySelector("#modal-red").textContent = player.red;
   document.querySelector("#modal-source").href = player.profile;
 
+  const biography = document.querySelector("#modal-player-biography");
+  const biographyContent = document.querySelector("#modal-player-bio");
+  const biographyParagraphs = Array.isArray(player.bio) ? player.bio : [];
+  biographyContent.replaceChildren();
+  biography.hidden = biographyParagraphs.length === 0;
+  biographyParagraphs.forEach((text) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    biographyContent.append(paragraph);
+  });
+
   const portrait = document.querySelector("#modal-portrait");
   portrait.replaceChildren();
   portrait.classList.toggle("missing", !player.image);

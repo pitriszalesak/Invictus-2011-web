@@ -403,6 +403,10 @@ body.modal-open { overflow: hidden; }
 .modal-stats div:last-child { border: 0; }
 .modal-stats strong { display: block; color: var(--gold-light); font-family: Impact, sans-serif; font-size: 2.2rem; font-weight: 500; line-height: 1; }
 .modal-stats span { color: var(--muted); text-transform: uppercase; letter-spacing: .09em; font-size: .58rem; }
+.modal-biography { margin: 1.5rem 0; padding: 1.35rem 1.5rem; border-left: 3px solid var(--gold); background: rgba(255,255,255,.035); }
+.modal-biography h3 { margin: 0 0 .85rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; }
+.modal-biography p { margin: 0; color: #c9c6bf; font-size: .86rem; line-height: 1.72; }
+.modal-biography p + p { margin-top: .85rem; }
 .season-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
 .season-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
 .season-table th { color: var(--muted); text-align: left; text-transform: uppercase; letter-spacing: .08em; font-size: .6rem; }
@@ -551,6 +555,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .modal-content { padding: 1.3rem; }
   .modal-title-row { display: block; }
   .modal-born { margin-top: 1rem; text-align: left; }
+  .modal-biography { padding: 1.1rem; }
   .modal-stats { grid-template-columns: repeat(2, 1fr); }
   .modal-stats div:nth-child(2) { border-right: 0; }
   .modal-stats div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
