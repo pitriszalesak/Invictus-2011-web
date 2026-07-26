@@ -316,6 +316,11 @@
         "slug":  "jakub-cespiva",
         "image":  "jakub-cespiva.webp",
         "initials":  null,
+        "bio":  [
+                     "Pokud bychom měli hledat jeho slabé stránky, byla by to téměř marná práce. Vyniká obrovskou rychlostí a skvělou technikou a obě tyto přednosti dokáže v zápase dokonale spojit. Pro soupeřovu obranu tak představuje neustálé nebezpečí. Je lídrem na hřišti i mimo něj – vedle neúnavného útočení neváhá zabrat ani směrem dozadu a svou univerzálností je pro tým mimořádně cenný.",
+                     "V posledních letech na sebe konečně převzal také hlavní odpovědnost za góly a sází jednu branku za druhou. Je naším jednoznačně nejlepším střelcem. Kapitánskou pásku nenosí náhodou – získal si ji schopností pozvednout všechny kolem sebe na vyšší úroveň i přirozeným respektem, který u spoluhráčů má.",
+                     "Čespík je takzvaným otcem našeho klubu. Prvotní myšlenka založit tým vzešla právě od něj a od té chvíle s obrovským odhodláním řídí jeho chod. Pro mnoho spoluhráčů je jedním z hlavních důvodů, proč stále hrají, a zároveň jednoznačným pojítkem nás všech. Jedním slovem: LEGENDA."
+                 ],
         "birth":  "10.2.1993",
         "seasons":  "2015/16, 2020/22, 2024/25, 2025/26",
         "matches":  59,
