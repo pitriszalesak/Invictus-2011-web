@@ -1,6 +1,7 @@
 ﻿window.playersData = [
     {
         "number":  null,
+        "position":  "Útočník",
         "name":  "Daniel Klimša",
         "slug":  "daniel-klimsa",
         "image":  "daniel-klimsa.webp",
@@ -49,6 +50,7 @@
     },
     {
         "number":  null,
+        "position":  "Útočník",
         "name":  "David Vallo",
         "slug":  "david-vallo",
         "image":  "david-vallo.webp",
@@ -97,6 +99,7 @@
     },
     {
         "number":  11,
+        "position":  "Obránce",
         "name":  "Filip Hrbek",
         "slug":  "filip-hrbek",
         "image":  "filip-hrbek.webp",
@@ -145,6 +148,7 @@
     },
     {
         "number":  2,
+        "position":  "Brankář",
         "name":  "Jakub Horňák",
         "slug":  "jakub-hornak",
         "image":  "jakub-hornak.webp",
@@ -193,6 +197,7 @@
     },
     {
         "number":  10,
+        "position":  "Obránce",
         "name":  "Jakub Malý",
         "slug":  "jakub-maly",
         "image":  "jakub-maly.webp",
@@ -241,6 +246,7 @@
     },
     {
         "number":  1,
+        "position":  "Brankář",
         "name":  "Jakub Mojzeš",
         "slug":  "jakub-mojzes",
         "image":  "jakub-mojzes.webp",
@@ -305,6 +311,7 @@
     },
     {
         "number":  4,
+        "position":  "Útočník",
         "name":  "Jakub Čespiva",
         "slug":  "jakub-cespiva",
         "image":  "jakub-cespiva.webp",
@@ -353,6 +360,7 @@
     },
     {
         "number":  null,
+        "position":  "Útočník",
         "name":  "Ján Štromp",
         "slug":  "jan-stromp",
         "image":  "jan-stromp.webp",
@@ -385,6 +393,7 @@
     },
     {
         "number":  null,
+        "position":  "Útočník",
         "name":  "Martin Myšák",
         "slug":  "martin-mysak",
         "image":  "martin-mysak.webp",
@@ -425,6 +434,7 @@
     },
     {
         "number":  17,
+        "position":  "Útočník",
         "name":  "Petr Zálešák",
         "slug":  "petr-zalesak",
         "image":  "petr-zalesak.webp",
@@ -481,6 +491,7 @@
     },
     {
         "number":  88,
+        "position":  "Obránce",
         "name":  "Tomáš Malý",
         "slug":  "tomas-maly",
         "image":  "tomas-maly.webp",
@@ -529,6 +540,7 @@
     },
     {
         "number":  null,
+        "position":  "Útočník",
         "name":  "Tomáš Poncza",
         "slug":  "tomas-poncza",
         "image":  "tomas-poncza.webp",
@@ -561,6 +573,7 @@
     },
     {
         "number": null,
+        "position": "Obránce",
         "name": "Jiří Richter",
         "slug": "jiri-richter",
         "image": "jiri-richter-portrait.webp",
@@ -581,6 +594,7 @@
     },
     {
         "number": null,
+        "position": "Útočník",
         "name": "Marek Šlosar",
         "slug": "marek-slosar",
         "image": "marek-slosar-portrait.webp",
@@ -598,6 +612,7 @@
     },
     {
         "number": 14,
+        "position": "Obránce",
         "name": "Mathias Ruschka",
         "slug": "mathias-ruschka",
         "image": "mathias-ruschka-portrait.webp",
@@ -615,6 +630,7 @@
     },
     {
         "number": null,
+        "position": "Obránce",
         "name": "Miroslav Tomašák",
         "slug": "miroslav-tomasak",
         "image": "miroslav-tomasak-portrait.webp",
@@ -632,6 +648,7 @@
     },
     {
         "number": null,
+        "position": "Obránce",
         "name": "Ondřej Smolka",
         "slug": "ondrej-smolka",
         "image": "ondrej-smolka-portrait.webp",

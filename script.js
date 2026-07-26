@@ -25,7 +25,7 @@ players.forEach((player) => {
 
   const info = document.createElement("div");
   info.className = "player-info";
-  info.innerHTML = `<span class="player-number">${formatJerseyNumber(player.number)}</span><h3>${player.name}</h3>`;
+  info.innerHTML = `<div class="player-role"><span class="player-number">${formatJerseyNumber(player.number)}</span><span class="player-position">${player.position}</span></div><h3>${player.name}</h3>`;
   card.append(info);
   card.addEventListener("click", () => openPlayer(player, card));
   card.addEventListener("keydown", (event) => {
@@ -44,6 +44,7 @@ let lastPlayerTrigger = null;
 function openPlayer(player, trigger) {
   lastPlayerTrigger = trigger;
   document.querySelector("#modal-player-number").textContent = formatJerseyNumber(player.number);
+  document.querySelector("#modal-player-position").textContent = player.position;
   document.querySelector("#modal-player-name").textContent = player.name;
   document.querySelector("#modal-player-birth").textContent = player.birth || "Neuvedeno";
   document.querySelector("#modal-matches").textContent = player.matches;
