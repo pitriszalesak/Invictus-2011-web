@@ -202,6 +202,11 @@
         "slug":  "jakub-maly",
         "image":  "jakub-maly.webp",
         "initials":  null,
+        "bio":  [
+                     "Maluch se k Invictu připojil několik sezon po jeho vzniku, přesto všichni cítíme, jako by s námi byl od samého začátku. Na hřišti naběhá jednoznačně nejvíce kilometrů a neúnavně bojuje – klidně i za cenu vlastního palce. Jeho kvalita podpořená lety fotbalových tréninků je nezpochybnitelná. Dokáže ve vysokém tempu odehrát celý zápas, klidně i bez jediného střídání, což z něj dělá skutečnou raritu napříč soutěžemi.",
+                     "Kromě spolehlivého bránění začal pravidelně přidávat také gólové bonbónky a každý pobyt na hřišti si viditelně užívá.",
+                     "Výrazně se zapojuje i do chodu klubu a nechybí na žádné týmové akci. Do mužstva přivedl řadu nových hráčů a patří mu velký dík za to, že Invictus nadále existuje a působí v tolika soutěžích. Pokud bychom měli hledat skutečného týmového srdcaře, byl by jím díky své neúnavnosti a oddanosti právě Maluch."
+                 ],
         "birth":  "15.5.1993",
         "seasons":  "2015/16, 2020/22, 2024/25, 2025/26",
         "matches":  63,
