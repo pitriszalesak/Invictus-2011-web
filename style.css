@@ -446,8 +446,10 @@ body.modal-open { overflow: hidden; }
 .instagram-profile div span { margin-top: .2rem; color: var(--muted); font-size: .76rem; }
 .instagram-profile .button { min-height: 46px; padding-inline: 1rem; white-space: nowrap; }
 .instagram-intro { max-width: 650px; margin: 2rem 0; color: #c4c0b7; font-size: 1.05rem; }
-.instagram-feed { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 1rem; }
-.instagram-card { min-width: 0; padding: .7rem; border: 1px solid rgba(255,255,255,.13); border-top-color: var(--gold); background: #111; }
+.instagram-feed { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: start; gap: 1rem; }
+.instagram-card { grid-column: span 2; min-width: 0; padding: .7rem; border: 1px solid rgba(255,255,255,.13); border-top-color: var(--gold); background: #111; }
+.instagram-card:nth-child(4) { grid-column: 2 / span 2; }
+.instagram-card:nth-child(5) { grid-column: 4 / span 2; }
 .instagram-card-label { display: block; padding: .35rem .35rem .8rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: .13em; font-size: .64rem; font-weight: 800; }
 .instagram-media {
   display: grid;
@@ -514,6 +516,9 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .gallery-item { min-height: 52vw; }
   .instagram-head { grid-template-columns: 1fr; gap: 1.5rem; }
   .instagram-feed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .instagram-card,
+  .instagram-card:nth-child(4),
+  .instagram-card:nth-child(5) { grid-column: auto; }
   .kit-page-hero { grid-template-columns: 1fr; min-height: 700px; }
   .kit-page-hero > img { display: none; }
   .kit-page-timeline li { grid-template-columns: 130px 60px minmax(0, 1fr); align-items: start; }
