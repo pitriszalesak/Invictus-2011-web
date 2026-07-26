@@ -52,7 +52,7 @@ nav a:hover, nav a:focus-visible { color: var(--gold-light); }
 .hero-logo { width: clamp(150px, 18vw, 250px); max-height: 175px; object-fit: contain; object-position: left center; margin: .6rem 0 1.2rem; filter: drop-shadow(0 10px 25px rgba(0,0,0,.4)); }
 .eyebrow { margin: 0 0 1rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: .24em; font-size: .72rem; font-weight: 800; }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2 { font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; text-transform: uppercase; letter-spacing: .015em; line-height: .9; font-weight: 500; }
+h1, h2 { font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; text-transform: uppercase; letter-spacing: .015em; line-height: 1; font-weight: 500; }
 h1 { margin: 0; font-size: clamp(4rem, 10vw, 9.2rem); }
 h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .hero-lead { max-width: 610px; margin: 1.5rem 0 2.1rem; font-size: clamp(1rem, 1.8vw, 1.35rem); color: #dedbd4; }
@@ -93,7 +93,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .match-pending > span:first-child { text-align: right; }
 .match-pending > span:last-child { text-align: left; }
 .match-pending p { margin: 0 0 .45rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: .14em; font-size: .65rem; font-weight: 800; }
-.match-pending h3 { margin: 0; font-family: Impact, sans-serif; font-size: clamp(2.1rem, 4.2vw, 4.6rem); font-weight: 400; letter-spacing: .02em; line-height: .92; text-transform: uppercase; }
+.match-pending h3 { margin: 0; font-family: Impact, sans-serif; font-size: clamp(2.1rem, 4.2vw, 4.6rem); font-weight: 400; letter-spacing: .02em; line-height: 1.05; text-transform: uppercase; }
 .match-card-copy { position: relative; z-index: 1; max-width: 680px; margin-bottom: 1.4rem; color: #aaa79f; font-size: .88rem; }
 .match-card-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .7rem; }
 .match-updated { position: relative; z-index: 1; margin: 1rem 0 0; color: #696761; font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; }
@@ -101,7 +101,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .anniversary-season-card > img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center; }
 .anniversary-season-card > div { padding: 1.5rem; border-top: 1px solid rgba(234,209,143,.3); }
 .anniversary-season-card span { color: var(--gold-light); text-transform: uppercase; letter-spacing: .14em; font-size: .65rem; font-weight: 800; }
-.anniversary-season-card h3 { margin: .55rem 0 .7rem; font-family: Impact, sans-serif; font-size: clamp(2rem, 3.2vw, 3.2rem); font-weight: 400; line-height: .95; text-transform: uppercase; }
+.anniversary-season-card h3 { margin: .55rem 0 .7rem; font-family: Impact, sans-serif; font-size: clamp(2rem, 3.2vw, 3.2rem); font-weight: 400; line-height: 1.08; text-transform: uppercase; }
 .anniversary-season-card p { margin-bottom: .9rem; color: #aaa79f; font-size: .82rem; }
 .anniversary-season-card a, .result-content > a { color: var(--gold-light); text-transform: uppercase; letter-spacing: .09em; font-size: .68rem; font-weight: 800; }
 .anniversary-season-card a:hover, .result-content > a:hover { color: #fff; }
@@ -263,7 +263,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 /* Historie dresů */
 .kit-page { background: #090909; }
 .kit-page-hero { min-height: 82vh; display: grid; grid-template-columns: 1.1fr .65fr; align-items: center; gap: clamp(2rem, 7vw, 7rem); padding: 9rem max(5vw, 2rem) 5rem; overflow: hidden; background: radial-gradient(circle at 78% 40%, rgba(199,163,77,.16), transparent 30%), linear-gradient(145deg,#171717,#070707 68%); }
-.kit-page-hero h1 { margin: .5rem 0 1.5rem; font-size: clamp(4rem, 9vw, 8.5rem); line-height: .84; letter-spacing: -.065em; text-transform: uppercase; }
+.kit-page-hero h1 { margin: .5rem 0 1.5rem; font-size: clamp(4rem, 9vw, 8.5rem); line-height: 1; letter-spacing: -.065em; text-transform: uppercase; }
 .kit-page-hero h1 em { color: var(--gold); font-style: normal; }
 .kit-page-hero > div > p:last-child { max-width: 680px; color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.7; }
 .kit-page-hero > img { width: min(35vw, 470px); max-height: 590px; justify-self: center; object-fit: cover; filter: grayscale(100%); box-shadow: 0 2rem 5rem rgba(0,0,0,.55); transform: rotate(2deg); }
@@ -476,7 +476,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .archive-page { background: #0a0a0a; }
 .archive-page .site-header { background: rgba(8,8,8,.94); }
 .archive-hero { min-height:72vh; display:grid; grid-template-columns:1.4fr .6fr; align-items:center; gap:4rem; padding:10rem max(5vw,2rem) 5rem; overflow:hidden; background:radial-gradient(circle at 80% 45%,rgba(201,164,75,.16),transparent 33%),linear-gradient(135deg,#151515,#070707 65%); }
-.archive-hero h1 { max-width:900px; margin:.4rem 0 1.5rem; font-size:clamp(3.8rem,9vw,8.6rem); line-height:.85; letter-spacing:-.065em; text-transform:uppercase; }
+.archive-hero h1 { max-width:900px; margin:.4rem 0 1.5rem; font-size:clamp(3.8rem,9vw,8.6rem); line-height:1; letter-spacing:-.065em; text-transform:uppercase; }
 .archive-hero h1 em { color:var(--gold); font-style:normal; }
 .archive-hero > div > p:last-child { max-width:720px; color:var(--muted); font-size:clamp(1.05rem,1.5vw,1.35rem); line-height:1.7; }
 .archive-hero-mark { display:grid; place-items:center; opacity:.2; transform:rotate(4deg); }
@@ -489,7 +489,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .archive-section { padding:7rem max(5vw,2rem); }
 .archive-section + .archive-section { border-top:1px solid var(--line); }
 .archive-heading { display:grid; grid-template-columns:1fr minmax(280px,520px); align-items:end; gap:3rem; margin-bottom:3rem; }
-.archive-heading h2,.archive-note h2 { margin:.4rem 0 0; font-size:clamp(2.6rem,6vw,5.6rem); line-height:.95; text-transform:uppercase; letter-spacing:-.045em; }
+.archive-heading h2,.archive-note h2 { margin:.4rem 0 0; font-size:clamp(2.6rem,6vw,5.6rem); line-height:1.05; text-transform:uppercase; letter-spacing:-.045em; }
 .archive-heading > p { color:var(--muted); line-height:1.7; }
 .season-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 .season-card { display:flex; flex-direction:column; min-height:325px; padding:1.6rem; border:1px solid var(--line); background:#111; }
@@ -600,7 +600,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 /* Rozcestník soutěží a ligové přehledy */
 .competitions-page,.league-page { background:#090909; }
 .competitions-hero { min-height:62vh; display:flex; flex-direction:column; justify-content:flex-end; padding:10rem max(5vw,2rem) 5rem; background:radial-gradient(circle at 80% 20%,rgba(201,164,75,.18),transparent 30%),linear-gradient(145deg,#161616,#070707); }
-.competitions-hero h1 { margin:.5rem 0 1.5rem; font-size:clamp(4rem,10vw,9rem); line-height:.84; letter-spacing:-.07em; text-transform:uppercase; }
+.competitions-hero h1 { margin:.5rem 0 1.5rem; font-size:clamp(4rem,10vw,9rem); line-height:1; letter-spacing:-.07em; text-transform:uppercase; }
 .competitions-hero h1 em,.league-hero h1 em { color:var(--gold); font-style:normal; }
 .competitions-hero > p:last-child { max-width:720px; color:var(--muted); font-size:1.2rem; line-height:1.7; }
 .competition-grid { display:grid; grid-template-columns:repeat(3,1fr); }
@@ -613,13 +613,13 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .competition-card:hover::before { opacity:.9; transform:scale(1.04); }
 .competition-card > * { position:relative; z-index:1; }
 .competition-index { position:absolute; top:2rem; right:2rem; color:rgba(255,255,255,.13); font-size:5rem; font-weight:800; }
-.competition-card h2 { margin:.5rem 0 1.5rem; font-size:clamp(2.2rem,3.7vw,4rem); line-height:.92; text-transform:uppercase; letter-spacing:-.045em; }
+.competition-card h2 { margin:.5rem 0 1.5rem; font-size:clamp(2.2rem,3.7vw,4rem); line-height:1.05; text-transform:uppercase; letter-spacing:-.045em; }
 .competition-meta { display:flex; gap:1rem; flex-wrap:wrap; padding-top:1.2rem; border-top:1px solid rgba(255,255,255,.15); color:var(--muted); font-size:.8rem; }
 .competition-card > strong { margin-top:2rem; color:var(--gold); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; }
 .league-hero { min-height:72vh; display:grid; grid-template-columns:1fr .4fr; align-items:center; gap:3rem; padding:10rem max(5vw,2rem) 5rem; background:linear-gradient(145deg,#151515,#070707); overflow:hidden; }
 .league-hero-havirov { background:radial-gradient(circle at 82% 45%,rgba(255,128,40,.17),transparent 32%),linear-gradient(145deg,#151515,#070707); }
 .league-hero-ostrava { background:radial-gradient(circle at 82% 45%,rgba(75,135,201,.2),transparent 32%),linear-gradient(145deg,#151515,#070707); }
-.league-hero h1 { margin:.6rem 0 1.5rem; font-size:clamp(3.8rem,8vw,8rem); line-height:.86; text-transform:uppercase; letter-spacing:-.06em; }
+.league-hero h1 { margin:.6rem 0 1.5rem; font-size:clamp(3.8rem,8vw,8rem); line-height:1; text-transform:uppercase; letter-spacing:-.06em; }
 .league-hero div > p:last-child { max-width:720px; color:var(--muted); font-size:1.15rem; line-height:1.7; }
 .league-hero > img { width:min(34vw,470px); opacity:.18; transform:rotate(4deg); }
 .back-link { display:inline-block; margin-bottom:3rem; color:var(--muted); text-decoration:none; font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; }
@@ -645,4 +645,47 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .competition-index { top:1.25rem; right:1.25rem; }
   .season-cards.two-cards { grid-template-columns:1fr; }
   .league-summary div { padding:1.5rem 1.25rem; }
+}
+
+/* Bezpečná mobilní typografie pro vícerádkové titulky s českou diakritikou */
+@media (max-width:640px) {
+  h1,
+  .hero h1,
+  .kit-page-hero h1,
+  .archive-hero h1,
+  .competitions-hero h1,
+  .league-hero h1 {
+    font-size:clamp(3.2rem,17vw,4.2rem);
+    line-height:1.08;
+    letter-spacing:-.035em;
+  }
+
+  .season-center-head h2,
+  .recent-results-head h2,
+  .records-head h2,
+  .section-heading h2,
+  .roster h2,
+  .gallery-head h2,
+  .contact h2 {
+    font-size:clamp(3rem,15vw,3.5rem);
+    line-height:1.12;
+  }
+
+  .archive-heading h2,
+  .archive-note h2 {
+    font-size:clamp(2.5rem,12vw,3.3rem);
+    line-height:1.12;
+    letter-spacing:-.025em;
+  }
+
+  .modal-title-row h2 {
+    font-size:clamp(2.6rem,13vw,3.4rem);
+    line-height:1.1;
+  }
+
+  .match-pending h3,
+  .anniversary-season-card h3,
+  .competition-card h2 {
+    line-height:1.12;
+  }
 }
