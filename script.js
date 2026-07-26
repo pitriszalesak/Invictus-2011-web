@@ -214,6 +214,7 @@ const routeByHash = new Map([
   ["", "home"],
   ["#top", "home"],
   ["#sezona", "home"],
+  ["#novinky", "news"],
   ["#klub", "club"],
   ["#rekordy", "club"],
   ["#historie", "history"],
@@ -224,6 +225,7 @@ const routeByHash = new Map([
 ]);
 const viewTitles = {
   home: "Invictus 2011 | Futsal Havířov",
+  news: "Novinky | Invictus 2011",
   club: "O klubu | Invictus 2011",
   history: "Historie | Invictus 2011",
   roster: "Soupiska | Invictus 2011",
