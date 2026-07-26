@@ -1,6 +1,6 @@
 ﻿window.playersData = [
     {
-        "number":  1,
+        "number":  null,
         "name":  "Daniel Klimša",
         "slug":  "daniel-klimsa",
         "image":  "daniel-klimsa.webp",
@@ -48,7 +48,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/daniel-klimsa/"
     },
     {
-        "number":  2,
+        "number":  null,
         "name":  "David Vallo",
         "slug":  "david-vallo",
         "image":  "david-vallo.webp",
@@ -96,7 +96,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/david-vallo/"
     },
     {
-        "number":  3,
+        "number":  11,
         "name":  "Filip Hrbek",
         "slug":  "filip-hrbek",
         "image":  "filip-hrbek.webp",
@@ -144,7 +144,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/filip-hrbek/"
     },
     {
-        "number":  4,
+        "number":  2,
         "name":  "Jakub Horňák",
         "slug":  "jakub-hornak",
         "image":  "jakub-hornak.webp",
@@ -192,7 +192,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/jakub-hornak/"
     },
     {
-        "number":  5,
+        "number":  10,
         "name":  "Jakub Malý",
         "slug":  "jakub-maly",
         "image":  "jakub-maly.webp",
@@ -240,7 +240,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/jakub-maly/"
     },
     {
-        "number":  6,
+        "number":  1,
         "name":  "Jakub Mojzeš",
         "slug":  "jakub-mojzes",
         "image":  "jakub-mojzes.webp",
@@ -304,7 +304,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/jakub-mojzes/"
     },
     {
-        "number":  7,
+        "number":  4,
         "name":  "Jakub Čespiva",
         "slug":  "jakub-cespiva",
         "image":  "jakub-cespiva.webp",
@@ -352,7 +352,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/jakub-cespiva/"
     },
     {
-        "number":  8,
+        "number":  null,
         "name":  "Ján Štromp",
         "slug":  "jan-stromp",
         "image":  "jan-stromp.webp",
@@ -384,7 +384,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/jan-stromp/"
     },
     {
-        "number":  9,
+        "number":  null,
         "name":  "Martin Myšák",
         "slug":  "martin-mysak",
         "image":  "martin-mysak.webp",
@@ -424,7 +424,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/martin-mysak/"
     },
     {
-        "number":  10,
+        "number":  17,
         "name":  "Petr Zálešák",
         "slug":  "petr-zalesak",
         "image":  "petr-zalesak.webp",
@@ -480,7 +480,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/petr-zalesak/"
     },
     {
-        "number":  11,
+        "number":  88,
         "name":  "Tomáš Malý",
         "slug":  "tomas-maly",
         "image":  "tomas-maly.webp",
@@ -528,7 +528,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/tomas-maly/"
     },
     {
-        "number":  12,
+        "number":  null,
         "name":  "Tomáš Poncza",
         "slug":  "tomas-poncza",
         "image":  "tomas-poncza.webp",
@@ -560,7 +560,7 @@
         "profile":  "https://www.futsalhavirov.cz/hrac/tomas-poncza/"
     },
     {
-        "number": 13,
+        "number": null,
         "name": "Jiří Richter",
         "slug": "jiri-richter",
         "image": "jiri-richter-portrait.webp",
@@ -580,7 +580,7 @@
         "profile": "https://www.futsalhavirov.cz/hrac/jiri-richter/"
     },
     {
-        "number": 14,
+        "number": null,
         "name": "Marek Šlosar",
         "slug": "marek-slosar",
         "image": "marek-slosar-portrait.webp",
@@ -597,7 +597,7 @@
         "profile": "https://www.futsalhavirov.cz/hrac/marek-slosar/"
     },
     {
-        "number": 15,
+        "number": 14,
         "name": "Mathias Ruschka",
         "slug": "mathias-ruschka",
         "image": "mathias-ruschka-portrait.webp",
@@ -614,7 +614,7 @@
         "profile": "https://www.futsalhavirov.cz/hrac/mathias-ruschka/"
     },
     {
-        "number": 16,
+        "number": null,
         "name": "Miroslav Tomašák",
         "slug": "miroslav-tomasak",
         "image": "miroslav-tomasak-portrait.webp",
@@ -631,7 +631,7 @@
         "profile": "https://www.futsalhavirov.cz/hrac/miroslav-tomasak/"
     },
     {
-        "number": 17,
+        "number": null,
         "name": "Ondřej Smolka",
         "slug": "ondrej-smolka",
         "image": "ondrej-smolka-portrait.webp",

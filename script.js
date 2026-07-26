@@ -1,5 +1,9 @@
 const players = window.playersData || [];
 
+function formatJerseyNumber(number) {
+  return Number.isInteger(number) ? `#${number}` : "—";
+}
+
 const grid = document.querySelector("#player-grid");
 players.forEach((player) => {
   const card = document.createElement("article");
@@ -21,7 +25,7 @@ players.forEach((player) => {
 
   const info = document.createElement("div");
   info.className = "player-info";
-  info.innerHTML = `<span class="player-number">${String(player.number).padStart(2, "0")}</span><h3>${player.name}</h3>`;
+  info.innerHTML = `<span class="player-number">${formatJerseyNumber(player.number)}</span><h3>${player.name}</h3>`;
   card.append(info);
   card.addEventListener("click", () => openPlayer(player, card));
   card.addEventListener("keydown", (event) => {
@@ -39,7 +43,7 @@ let lastPlayerTrigger = null;
 
 function openPlayer(player, trigger) {
   lastPlayerTrigger = trigger;
-  document.querySelector("#modal-player-number").textContent = String(player.number).padStart(2, "0");
+  document.querySelector("#modal-player-number").textContent = formatJerseyNumber(player.number);
   document.querySelector("#modal-player-name").textContent = player.name;
   document.querySelector("#modal-player-birth").textContent = player.birth || "Neuvedeno";
   document.querySelector("#modal-matches").textContent = player.matches;
