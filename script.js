@@ -154,6 +154,7 @@ const routeByHash = new Map([
   ["#historie", "history"],
   ["#soupiska", "roster"],
   ["#galerie", "gallery"],
+  ["#instagram", "instagram"],
   ["#kontakt", "contact"],
 ]);
 const viewTitles = {
@@ -162,9 +163,34 @@ const viewTitles = {
   history: "Historie | Invictus 2011",
   roster: "Soupiska | Invictus 2011",
   gallery: "Galerie | Invictus 2011",
+  instagram: "Instagram | Invictus 2011",
   contact: "Kontakt | Invictus 2011",
 };
 const viewSections = [...document.querySelectorAll("[data-view]")];
+let instagramScriptLoading = false;
+
+function loadInstagramEmbeds() {
+  if (window.instgrm?.Embeds?.process) {
+    window.instgrm.Embeds.process();
+    return;
+  }
+  if (instagramScriptLoading || document.querySelector("script[data-instagram-embed]")) return;
+
+  instagramScriptLoading = true;
+  const instagramScript = document.createElement("script");
+  instagramScript.src = "https://www.instagram.com/embed.js";
+  instagramScript.async = true;
+  instagramScript.dataset.instagramEmbed = "";
+  instagramScript.addEventListener("load", () => {
+    instagramScriptLoading = false;
+    window.instgrm?.Embeds?.process();
+  });
+  instagramScript.addEventListener("error", () => {
+    instagramScriptLoading = false;
+    instagramScript.remove();
+  });
+  document.body.append(instagramScript);
+}
 
 function getRequestedView() {
   if (window.location.hash === "#obsah") {
@@ -180,6 +206,10 @@ function renderView() {
   });
   document.body.dataset.currentView = requestedView;
   document.title = viewTitles[requestedView];
+
+  if (requestedView === "instagram") {
+    window.requestAnimationFrame(loadInstagramEmbeds);
+  }
 
   nav.querySelectorAll("a").forEach((link) => {
     const linkView = routeByHash.get(link.getAttribute("href"));
