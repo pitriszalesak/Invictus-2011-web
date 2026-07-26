@@ -14,8 +14,8 @@ players.forEach((player) => {
     image.src = `assets/players/${player.image}`;
     image.alt = `Profilová fotografie – ${player.name}`;
     image.loading = "lazy";
-    image.width = 300;
-    image.height = 300;
+    image.width = 1024;
+    image.height = 1400;
     card.append(image);
   }
 
@@ -55,8 +55,8 @@ function openPlayer(player, trigger) {
     const image = document.createElement("img");
     image.src = `assets/players/${player.image}`;
     image.alt = `Profilová fotografie – ${player.name}`;
-    image.width = 300;
-    image.height = 300;
+    image.width = 1024;
+    image.height = 1400;
     portrait.append(image);
   } else {
     portrait.textContent = player.initials;
