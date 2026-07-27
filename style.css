@@ -48,14 +48,14 @@ button { font: inherit; }
 .brand, .footer-brand { display: flex; align-items: center; gap: .85rem; text-transform: uppercase; letter-spacing: .13em; font-size: .84rem; font-weight: 700; }
 .brand img { width: 54px; height: 42px; object-fit: contain; }
 .brand b { color: var(--gold-light); }
-.site-header nav { display: flex; gap: clamp(1.15rem, 2.2vw, 2.4rem); }
+.site-header nav { display: flex; gap: clamp(.8rem, 1.35vw, 1.45rem); }
 .site-header nav a {
   position: relative;
   padding: .48rem 0;
   color: var(--gold-light);
   text-transform: uppercase;
-  letter-spacing: .13em;
-  font-size: clamp(.76rem, .72rem + .12vw, .84rem);
+  letter-spacing: .11em;
+  font-size: clamp(.66rem, .63rem + .08vw, .72rem);
   font-weight: 800;
   text-shadow: 0 0 18px rgba(199,163,77,.16);
   transition: color .2s, text-shadow .2s;
@@ -593,7 +593,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .menu-button { display: block; }
   .site-header nav { position: absolute; top: 82px; left: 0; right: 0; display: none; flex-direction: column; gap: 0; background: rgba(5,5,5,.98); border-bottom: 1px solid rgba(199,163,77,.42); }
   .site-header nav.open { display: flex; }
-  .site-header nav a { padding: 1rem 1.4rem; border-top: 1px solid var(--line); }
+  .site-header nav a { padding: .9rem 1.4rem; border-top: 1px solid var(--line); font-size: .68rem; }
   .site-header nav a::after { display: none; }
 }
 
@@ -602,7 +602,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .menu-button { display: block; }
   .site-header nav { position: absolute; top: 72px; left: 0; right: 0; display: none; flex-direction: column; gap: 0; background: rgba(5,5,5,.98); border-bottom: 1px solid rgba(199,163,77,.42); }
   .site-header nav.open { display: flex; }
-  .site-header nav a { padding: 1.1rem 1.4rem; border-top: 1px solid var(--line); }
+  .site-header nav a { padding: .9rem 1.4rem; border-top: 1px solid var(--line); font-size: .68rem; }
   .site-header nav a::after { display: none; }
   .hero { min-height: 100svh; padding: 7rem 1.4rem 4.5rem; }
   .hero-content { max-width: 700px; }
