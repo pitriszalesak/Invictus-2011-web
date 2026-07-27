@@ -950,6 +950,18 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .ostrava-card::before { background:linear-gradient(180deg,transparent 25%,#090909 88%),radial-gradient(circle at 60% 20%,rgba(75,135,201,.3),transparent 45%); }
 .competition-card:hover::before { opacity:.9; transform:scale(1.04); }
 .competition-card > * { position:relative; z-index:1; }
+.competition-logo {
+  position:absolute;
+  top:2rem;
+  left:2.5rem;
+  width:200px;
+  height:150px;
+  padding:1rem;
+  border:1px solid rgba(255,255,255,.18);
+  background:#f7f7f4;
+  object-fit:contain;
+  box-shadow:0 14px 35px rgba(0,0,0,.28);
+}
 .competition-index { position:absolute; top:2rem; right:2rem; color:rgba(255,255,255,.13); font-size:5rem; font-weight:800; }
 .competition-card h2 { margin:.5rem 0 1.5rem; font-size:clamp(2.2rem,3.7vw,4rem); line-height:1.05; text-transform:uppercase; letter-spacing:-.045em; }
 .competition-meta { display:flex; gap:1rem; flex-wrap:wrap; padding-top:1.2rem; border-top:1px solid rgba(255,255,255,.15); color:var(--muted); font-size:.8rem; }
@@ -990,6 +1002,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 @media (max-width:640px) {
   .competitions-hero,.league-hero { padding-inline:1.25rem; }
   .competition-card { min-height:390px; padding:1.5rem; }
+  .competition-logo { top:1.25rem; left:1.5rem; width:160px; height:118px; padding:.75rem; }
   .competition-index { top:1.25rem; right:1.25rem; }
   .season-cards.two-cards { grid-template-columns:1fr; }
   .league-summary div { padding:1.5rem 1.25rem; }
