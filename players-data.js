@@ -438,7 +438,7 @@
         "position":  "Útočník",
         "name":  "Petr Zálešák",
         "slug":  "petr-zalesak",
-        "image":  "petr-zalesak.webp",
+        "image":  "petr-zalesak-new.webp",
         "initials":  null,
         "birth":  "10.4.1995",
         "seasons":  "2015/16, 2018/19, 2020/22, 2024/25, 2025/26",
