@@ -4,6 +4,7 @@
         "position":  "Útočník",
         "name":  "Daniel Klimša",
         "slug":  "daniel-klimsa",
+        "hidden":  true,
         "image":  "daniel-klimsa.webp",
         "initials":  null,
         "birth":  "4.6.1994",

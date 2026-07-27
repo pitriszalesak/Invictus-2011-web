@@ -16,7 +16,7 @@ function getSurname(name) {
   return nameParts[nameParts.length - 1];
 }
 
-const sortedPlayers = [...players].sort((playerA, playerB) => {
+const sortedPlayers = players.filter((player) => !player.hidden).sort((playerA, playerB) => {
   const positionDifference = (positionOrder.get(playerA.position) ?? positionOrder.size)
     - (positionOrder.get(playerB.position) ?? positionOrder.size);
   if (positionDifference) return positionDifference;
