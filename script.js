@@ -224,7 +224,7 @@ const routeByHash = new Map([
   ["#kontakt", "contact"],
 ]);
 const viewTitles = {
-  home: "Invictus 2011 | Futsal Havířov",
+  home: "Invictus 2011 – futsalový klub Havířov | Oficiální web",
   news: "Novinky | Invictus 2011",
   club: "O klubu | Invictus 2011",
   history: "Historie | Invictus 2011",

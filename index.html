@@ -297,6 +297,60 @@
       </div>
     </section>
 
+    <section class="traffic-section" id="navstevnost" data-view="home" aria-labelledby="traffic-title" data-traffic-dashboard aria-busy="true">
+      <div class="traffic-shell">
+        <header class="traffic-head">
+          <div>
+            <p class="eyebrow">Živá návštěvnost</p>
+            <h2 id="traffic-title">Invictus<br><em>online.</em></h2>
+          </div>
+          <div class="traffic-live" aria-live="polite">
+            <span class="traffic-live-dot" aria-hidden="true"></span>
+            <div>
+              <strong data-traffic-status>Načítám návštěvnost</strong>
+              <time data-traffic-updated></time>
+            </div>
+          </div>
+        </header>
+
+        <div class="traffic-table-wrap">
+          <table class="traffic-table">
+            <thead>
+              <tr>
+                <th scope="col">Ukazatel</th>
+                <th scope="col">Hodnota</th>
+                <th scope="col">Co číslo znamená</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Dnes</th>
+                <td data-traffic-value="today">—</td>
+                <td>Návštěvy od dnešní půlnoci</td>
+              </tr>
+              <tr>
+                <th scope="row">Tento měsíc</th>
+                <td data-traffic-value="month">—</td>
+                <td>Návštěvy v aktuálním kalendářním měsíci</td>
+              </tr>
+              <tr>
+                <th scope="row">Celkem</th>
+                <td data-traffic-value="total">—</td>
+                <td>Návštěvy od spuštění měření</td>
+              </tr>
+              <tr>
+                <th scope="row">Zobrazení stránek</th>
+                <td data-traffic-value="pageviews">—</td>
+                <td>Všechna načtení jednotlivých stránek webu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="traffic-note">Měření běží od 27. 7. 2026. Jedna návštěva odpovídá jednomu otevření webu v nové kartě; zobrazení se započítá při každém načtení stránky.</p>
+      </div>
+    </section>
+
     <section class="section about" id="klub" data-view="club" hidden>
       <div class="section-heading">
         <p class="eyebrow">Kdo jsme</p>
@@ -712,6 +766,7 @@
   </footer>
 
   <script src="players-data.js"></script>
+  <script src="traffic.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
