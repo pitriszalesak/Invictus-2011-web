@@ -202,11 +202,6 @@
         "slug":  "jakub-maly",
         "image":  "jakub-maly.webp",
         "initials":  null,
-        "bio":  [
-                     "Maluch se k Invictu připojil několik sezon po jeho vzniku, přesto všichni cítíme, jako by s námi byl od samého začátku. Na hřišti naběhá jednoznačně nejvíce kilometrů a neúnavně bojuje – klidně i za cenu vlastního palce. Jeho kvalita podpořená lety fotbalových tréninků je nezpochybnitelná. Dokáže ve vysokém tempu odehrát celý zápas, klidně i bez jediného střídání, což z něj dělá skutečnou raritu napříč soutěžemi.",
-                     "Kromě spolehlivého bránění začal pravidelně přidávat také gólové bonbónky a každý pobyt na hřišti si viditelně užívá.",
-                     "Výrazně se zapojuje i do chodu klubu a nechybí na žádné týmové akci. Do mužstva přivedl řadu nových hráčů a patří mu velký dík za to, že Invictus nadále existuje a působí v tolika soutěžích. Pokud bychom měli hledat skutečného týmového srdcaře, byl by jím díky své neúnavnosti a oddanosti právě Maluch."
-                 ],
         "birth":  "15.5.1993",
         "seasons":  "2015/16, 2020/22, 2024/25, 2025/26",
         "matches":  63,
@@ -321,11 +316,6 @@
         "slug":  "jakub-cespiva",
         "image":  "jakub-cespiva.webp",
         "initials":  null,
-        "bio":  [
-                     "Pokud bychom měli hledat jeho slabé stránky, byla by to téměř marná práce. Vyniká obrovskou rychlostí a skvělou technikou a obě tyto přednosti dokáže v zápase dokonale spojit. Pro soupeřovu obranu tak představuje neustálé nebezpečí. Je lídrem na hřišti i mimo něj – vedle neúnavného útočení neváhá zabrat ani směrem dozadu a svou univerzálností je pro tým mimořádně cenný.",
-                     "V posledních letech na sebe konečně převzal také hlavní odpovědnost za góly a sází jednu branku za druhou. Je naším jednoznačně nejlepším střelcem. Kapitánskou pásku nenosí náhodou – získal si ji schopností pozvednout všechny kolem sebe na vyšší úroveň i přirozeným respektem, který u spoluhráčů má.",
-                     "Čespík je takzvaným otcem našeho klubu. Prvotní myšlenka založit tým vzešla právě od něj a od té chvíle s obrovským odhodláním řídí jeho chod. Pro mnoho spoluhráčů je jedním z hlavních důvodů, proč stále hrají, a zároveň jednoznačným pojítkem nás všech. Jedním slovem: LEGENDA."
-                 ],
         "birth":  "10.2.1993",
         "seasons":  "2015/16, 2020/22, 2024/25, 2025/26",
         "matches":  59,
@@ -449,11 +439,6 @@
         "slug":  "petr-zalesak",
         "image":  "petr-zalesak.webp",
         "initials":  null,
-        "bio":  [
-                     "Petr, kterému spousta spoluhráčů neřekne jinak než Pitris, je jedním ze čtyř zakladatelů Invictu. Do historie klubu se zapsal také jako autor vůbec prvního soutěžního gólu. Na kontě má nespočet proměněných penalt i přímých kopů, přičemž jeden z nich svou originalitou obletěl sociální sítě.",
-                     "Vždy se mohl pochlubit výbornou střelbou – v noze měl ránu, jako když kopne kůň. S přibývajícími lety se však jeho hra proměnila. Už sice nesází v každé sezoně přes deset gólů jako dříve, stále častěji ale nastupuje také v obraně, kde umí pěkně přitvrdit.",
-                     "Pitris není pouze hráčem, výrazně se zapojuje také do chodu celého klubu. Stojí za internetovými stránkami a sociálními sítěmi, vytvořil klubové logo i veškerou další grafiku. Navrhuje dresy a klubová trička – a dresy po zápase nemá problém také vyprat. Pro Invictus žije a dýchá a svou lásku ke klubu neváhal zvěčnit tetováním na ruce. Spoluhráči se pro něj stali rodinou a snad mu prominou i jeho občas výbušnou povahu."
-                 ],
         "birth":  "10.4.1995",
         "seasons":  "2015/16, 2018/19, 2020/22, 2024/25, 2025/26",
         "matches":  63,
