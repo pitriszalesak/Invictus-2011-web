@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pitriszalesak.github.io/Invictus-2011-web/sitemap.xml
+Sitemap: https://invictus2011.cz/sitemap.xml
