@@ -259,6 +259,117 @@ function loadInstagramEmbeds() {
   document.body.append(instagramScript);
 }
 
+
+const instagramFeed = document.querySelector("[data-instagram-feed]");
+const instagramStatus = document.querySelector("[data-instagram-status]");
+const instagramUpdated = document.querySelector("[data-instagram-updated]");
+let instagramFeedPromise = null;
+
+function isOfficialInstagramPermalink(value) {
+  try {
+    const url = new URL(value);
+    return (url.hostname === "www.instagram.com" || url.hostname === "instagram.com")
+      && /^\/(?:p|reel|tv)\/[A-Za-z0-9_-]+\/?$/.test(url.pathname);
+  } catch {
+    return false;
+  }
+}
+
+function getInstagramCardLabel(mediaType, index) {
+  const labels = {
+    VIDEO: "Reel",
+    REELS: "Reel",
+    CAROUSEL_ALBUM: "Galerie",
+    IMAGE: "Příspěvek",
+  };
+  return labels[mediaType] || `Příspěvek ${index + 1}`;
+}
+
+function formatInstagramUpdatedAt(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("cs-CZ", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+}
+
+function renderInstagramFeed(items) {
+  const fragment = document.createDocumentFragment();
+  items.slice(0, 5).forEach((item, index) => {
+    const article = document.createElement("article");
+    article.className = "instagram-card";
+
+    const label = document.createElement("span");
+    label.className = "instagram-card-label";
+    label.textContent = getInstagramCardLabel(item.media_type, index);
+
+    const embed = document.createElement("blockquote");
+    embed.className = "instagram-media";
+    embed.dataset.instgrmPermalink = item.permalink;
+    embed.dataset.instgrmVersion = "14";
+
+    const link = document.createElement("a");
+    link.href = item.permalink;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = `Zobrazit ${label.textContent.toLowerCase()} na Instagramu ↗`;
+
+    embed.append(link);
+    article.append(label, embed);
+    fragment.append(article);
+  });
+
+  instagramFeed.replaceChildren(fragment);
+}
+
+async function loadInstagramFeed() {
+  if (instagramFeedPromise) {
+    await instagramFeedPromise;
+    loadInstagramEmbeds();
+    return;
+  }
+
+  instagramFeedPromise = (async () => {
+    instagramFeed.setAttribute("aria-busy", "true");
+
+    try {
+      const cacheHour = Math.floor(Date.now() / 3600000);
+      const response = await fetch(`instagram-feed.json?v=${cacheHour}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Instagram feed: ${response.status}`);
+
+      const data = await response.json();
+      const items = Array.isArray(data.items)
+        ? data.items.filter((item) => isOfficialInstagramPermalink(item?.permalink)).slice(0, 5)
+        : [];
+      if (!items.length) throw new Error("Instagram feed neobsahuje platné příspěvky.");
+
+      renderInstagramFeed(items);
+      const automatic = data.source === "instagram-api";
+      instagramStatus.textContent = automatic
+        ? "Automatická aktualizace je aktivní"
+        : "Zobrazen poslední uložený výběr";
+      const formattedDate = formatInstagramUpdatedAt(data.updated_at);
+      instagramUpdated.textContent = formattedDate ? `Aktualizováno ${formattedDate}` : "";
+      instagramUpdated.dateTime = data.updated_at || "";
+      document.querySelector(".instagram-live")?.classList.toggle("is-fallback", !automatic);
+    } catch (error) {
+      instagramStatus.textContent = "Zobrazen poslední uložený výběr";
+      instagramUpdated.textContent = "Instagram je momentálně nedostupný";
+      document.querySelector(".instagram-live")?.classList.add("is-fallback");
+      console.warn(error);
+    } finally {
+      instagramFeed.setAttribute("aria-busy", "false");
+      loadInstagramEmbeds();
+    }
+  })();
+
+  await instagramFeedPromise;
+}
+
 function getRequestedView() {
   if (window.location.hash === "#obsah") {
     return document.body.dataset.currentView || "home";
@@ -275,7 +386,7 @@ function renderView() {
   document.title = viewTitles[requestedView];
 
   if (requestedView === "instagram") {
-    window.requestAnimationFrame(loadInstagramEmbeds);
+    window.requestAnimationFrame(loadInstagramFeed);
   }
 
   nav.querySelectorAll("a").forEach((link) => {
