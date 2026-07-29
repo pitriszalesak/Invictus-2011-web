@@ -619,6 +619,20 @@ body.modal-open { overflow: hidden; }
 }
 .instagram-media > a { padding: 2rem; color: #161616; text-align: center; font-weight: 700; }
 .instagram-card iframe { width: 100% !important; min-width: 0 !important; max-width: 100% !important; }
+.instagram-feed-meta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin: 2rem 0; }
+.instagram-feed-meta .instagram-intro { margin: 0; }
+.instagram-live { display: flex; align-items: center; gap: .7rem; margin: 0; padding: .7rem .9rem; border: 1px solid rgba(199,163,77,.35); background: rgba(199,163,77,.08); white-space: nowrap; }
+.instagram-live-dot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: #7bdc8c; box-shadow: 0 0 0 5px rgba(123,220,140,.12); animation: instagram-live-pulse 2.2s ease-out infinite; }
+.instagram-live.is-fallback .instagram-live-dot { background: var(--gold); box-shadow: none; animation: none; }
+.instagram-live strong,
+.instagram-live time { display: block; }
+.instagram-live strong { color: var(--white); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+.instagram-live time { margin-top: .2rem; color: var(--muted); font-size: .65rem; }
+@keyframes instagram-live-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(123,220,140,.35); }
+  70%, 100% { box-shadow: 0 0 0 9px rgba(123,220,140,0); }
+}
+.instagram-feed[aria-busy="true"] { opacity: .72; }
 .instagram-note { margin: 1rem 0 0; color: #77736b; font-size: .72rem; }
 
 .contact { align-items: center; }
@@ -679,6 +693,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .article-layout { grid-template-columns: minmax(0, 820px); }
   .article-toc { display: none; }
   .instagram-head { grid-template-columns: 1fr; gap: 1.5rem; }
+  .instagram-feed-meta { align-items: flex-start; flex-direction: column; }
   .instagram-feed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .instagram-card,
   .instagram-card:nth-child(4),
@@ -804,6 +819,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .instagram-profile { grid-template-columns: 58px minmax(0, 1fr); }
   .instagram-avatar { width: 58px; height: 58px; padding: 8px; }
   .instagram-profile .button { grid-column: 1 / -1; }
+  .instagram-live { width: 100%; white-space: normal; }
   .instagram-feed { grid-template-columns: 1fr; }
   .instagram-media { min-height: 380px; }
   .player-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
