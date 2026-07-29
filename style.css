@@ -20,6 +20,14 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
 }
+
+body.standalone-section-page #obsah {
+  min-height: 100svh;
+  padding-top: 82px;
+}
+body.standalone-section-page [id] {
+  scroll-margin-top: 82px;
+}
 [data-view][hidden] { display: none !important; }
 [data-view] { scroll-margin-top: 82px; }
 body[data-current-view]:not([data-current-view="home"]) #obsah {
