@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aktuální soupiska futsalového klubu Invictus 2011 z Havířova. Profily hráčů, čísla, pozice a statistiky.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#090909">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Invictus 2011">
+  <meta property="og:title" content="Soupiska | Invictus 2011">
+  <meta property="og:description" content="Aktuální soupiska futsalového klubu Invictus 2011 z Havířova. Profily hráčů, čísla, pozice a statistiky.">
+  <meta property="og:url" content="https://invictus2011.cz/soupiska.html">
+  <meta property="og:image" content="https://invictus2011.cz/assets/hero-team-invictus-2026.jpg">
+  <meta property="og:image:alt" content="Invictus 2011 – futsalový klub Havířov">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Soupiska | Invictus 2011">
+  <meta name="twitter:description" content="Aktuální soupiska futsalového klubu Invictus 2011 z Havířova. Profily hráčů, čísla, pozice a statistiky.">
+  <meta name="twitter:image" content="https://invictus2011.cz/assets/hero-team-invictus-2026.jpg">
+  <link rel="canonical" href="https://invictus2011.cz/soupiska.html">
+  <title>Soupiska | Invictus 2011</title>
+  <link rel="icon" href="favicon.ico?v=orlice-20260726" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=orlice-20260726">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=orlice-20260726">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="standalone-section-page roster-page">
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Invictus 2011 – úvod">
+      <img src="assets/logo-invictus-2011.png" alt="" width="72" height="53">
+      <span>Invictus <b>2011</b></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Otevřít menu</span>
+    </button>
+    <nav id="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html#sezona">Sezona 26/27</a>
+      <a href="novinky.html">Novinky</a>
+      <a href="index.html#klub">O klubu</a>
+      <a href="historie.html">Historie</a>
+      <a href="soupiska.html" aria-current="page">Soupiska</a>
+      <a href="souteze.html">Soutěže</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="index.html#instagram">Instagram</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+  <main id="obsah">
+    <h1 class="sr-only">Soupiska futsalového klubu Invictus 2011</h1>
+    <section class="roster" id="soupiska">
+      <div class="roster-head">
+        <div>
+          <p class="eyebrow">Náš tým</p>
+          <h2>Soupiska</h2>
+        </div>
+        <p>Hráči Invictus 2011, kteří se aktivně účastnili zápasů napříč soutěžemi v sezoně 2025/2026.</p>
+      </div>
+      <div class="player-grid" id="player-grid"></div>
+      <button class="button button-outline roster-toggle" type="button" aria-expanded="false">Zobrazit celou soupisku</button>
+    </section>
+
+    <dialog class="player-modal" id="player-modal" aria-labelledby="modal-player-name">
+      <button class="modal-close" type="button" aria-label="Zavřít profil hráče">×</button>
+      <div class="modal-player">
+        <div class="modal-portrait" id="modal-portrait"></div>
+        <div class="modal-content">
+          <p class="eyebrow">Hráčský profil · Futsal Havířov</p>
+          <div class="modal-title-row">
+            <div>
+              <div class="modal-role-row">
+                <span class="modal-number" id="modal-player-number"></span>
+                <span class="modal-position" id="modal-player-position"></span>
+              </div>
+              <h2 id="modal-player-name">Profil hráče</h2>
+            </div>
+            <p class="modal-born">Narozen<br><strong id="modal-player-birth"></strong></p>
+          </div>
+          <div class="modal-stats" role="group" aria-label="Celkové statistiky hráče">
+            <div><strong id="modal-matches"></strong><span>Zápasy</span></div>
+            <div><strong id="modal-goals"></strong><span>Góly</span></div>
+            <div><strong id="modal-yellow"></strong><span>Žluté karty</span></div>
+            <div><strong id="modal-red"></strong><span>Červené karty</span></div>
+          </div>
+          <section class="modal-biography" id="modal-player-biography" aria-labelledby="modal-biography-title" hidden>
+            <h3 id="modal-biography-title">Příběh hráče</h3>
+            <div id="modal-player-bio"></div>
+          </section>
+          <div class="season-table-wrap">
+            <table class="season-table">
+              <thead><tr><th>Sezona</th><th>Klub</th><th>Z</th><th>G</th><th>ŽK</th><th>ČK</th></tr></thead>
+              <tbody id="modal-seasons"></tbody>
+            </table>
+          </div>
+          <a class="button button-outline modal-source" id="modal-source" href="#" target="_blank" rel="noopener">Kompletní profil na Futsal Havířov ↗</a>
+          <p class="modal-note">Statistiky pocházejí z veřejné databáze Futsalu Havířov. Aktualizováno 23. 7. 2026.</p>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  <footer>
+    <a class="footer-brand" href="index.html"><img src="assets/logo-invictus-2011.png" alt="" width="110" height="81"><span>Invictus 2011</span></a>
+    <a class="footer-instagram" href="https://www.instagram.com/futsalinvictus2011/" target="_blank" rel="noopener">@futsalinvictus2011 ↗</a>
+    <p>Amicitia · Virtus · Invictus</p>
+    <p>© <span id="year"></span> Invictus 2011</p>
+  </footer>
+  <script src="players-data.js"></script>
+  <script src="roster.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
