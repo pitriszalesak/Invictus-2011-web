@@ -231,7 +231,7 @@ const viewTitles = {
   roster: "Soupiska | Invictus 2011",
   gallery: "Galerie | Invictus 2011",
   instagram: "Instagram | Invictus 2011",
-  contact: "Kontakt | Invictus 2011",
+  contact: "Partneři a kontakt | Invictus 2011",
 };
 const viewSections = [...document.querySelectorAll("[data-view]")];
 let instagramScriptLoading = false;
