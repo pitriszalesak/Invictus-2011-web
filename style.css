@@ -1134,7 +1134,14 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   box-shadow:0 2rem 5rem rgba(0,0,0,.35);
 }
 .partners-mark { display:grid; place-items:center; min-height:260px; margin:1.5rem 0; border-block:1px solid rgba(234,209,143,.18); }
-.partners-mark img { width:min(250px,72%); filter:drop-shadow(0 1.2rem 2rem rgba(0,0,0,.45)); }
+.partners-mark img {
+  display:block;
+  width:min(250px,72%);
+  height:auto;
+  max-height:250px;
+  object-fit:contain;
+  filter:drop-shadow(0 1.2rem 2rem rgba(0,0,0,.45));
+}
 .partners-status-card > p { margin:0; color:var(--muted); font-size:.67rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; }
 .partners-status-card > strong { display:block; margin:.35rem 0 .7rem; color:var(--white); font-size:clamp(1.7rem,3vw,2.7rem); text-transform:uppercase; }
 .partners-status-card > small { display:block; color:var(--muted); line-height:1.65; }
