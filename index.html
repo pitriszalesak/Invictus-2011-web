@@ -310,49 +310,6 @@
       </div>
     </section>
 
-    <section class="traffic-section" id="navstevnost" data-view="home" aria-labelledby="traffic-title" data-traffic-dashboard aria-busy="true">
-      <div class="traffic-shell">
-        <header class="traffic-head">
-          <div>
-            <p class="eyebrow">Živá návštěvnost</p>
-            <h2 id="traffic-title">Návštěvnost webu</h2>
-          </div>
-          <div class="traffic-live" aria-live="polite">
-            <span class="traffic-live-dot" aria-hidden="true"></span>
-            <div>
-              <strong data-traffic-status>Načítám návštěvnost</strong>
-              <time data-traffic-updated></time>
-            </div>
-          </div>
-        </header>
-
-        <div class="traffic-table-wrap">
-          <table class="traffic-table">
-            <caption class="sr-only">Aktuální návštěvnost webu Invictus 2011</caption>
-            <tbody>
-              <tr>
-                <th scope="row">Dnes</th>
-                <td data-traffic-value="today">—</td>
-              </tr>
-              <tr>
-                <th scope="row">Tento měsíc</th>
-                <td data-traffic-value="month">—</td>
-              </tr>
-              <tr>
-                <th scope="row">Celkem</th>
-                <td data-traffic-value="total">—</td>
-              </tr>
-              <tr>
-                <th scope="row">Zobrazení stránek</th>
-                <td data-traffic-value="pageviews">—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="traffic-note">Měření od 27. 7. 2026 · aktualizace každých 30 sekund</p>
-      </div>
-    </section>
 
     <section class="section about" id="klub" data-view="club" hidden>
       <div class="section-heading">
@@ -381,10 +338,10 @@
       <div class="records-grid">
         <article>
           <span class="record-index">01</span>
-          <strong class="record-value">72</strong>
-          <p class="record-label">startů v HFL</p>
+          <strong class="record-value">67</strong>
+          <p class="record-label">zápasů za Invictus</p>
           <h3>Jakub Mojzeš</h3>
-          <p>Nejvíce evidovaných ligových startů v dostupné databázi Futsalu Havířov.</p>
+          <p>Nejvíce dohledaných startů přímo v dresu Invictu v dostupné databázi Futsalu Havířov.</p>
         </article>
         <article>
           <span class="record-index">02</span>
@@ -486,6 +443,168 @@
             </a>
           </div>
         </article>
+      </div>
+
+      <div class="history-leaderboards" id="historicke-statistiky" aria-labelledby="history-stats-title">
+        <header class="history-leaderboards-head">
+          <div>
+            <p class="eyebrow">Historické statistiky</p>
+            <h2 id="history-stats-title">Dohledaná<br><em>klubová čísla.</em></h2>
+          </div>
+          <p>Pořadí počítá pouze dohledané zápisy Havířovské futsalové ligy, ve kterých hráči nastoupili za Invictus 2011. Nezahrnuje starší ročníky ani další soutěže bez kompletní individuální evidence.</p>
+        </header>
+
+        <div class="history-leaderboards-grid">
+          <section class="history-ranking-card" aria-labelledby="matches-ranking-title">
+            <div class="history-ranking-leader">
+              <figure class="history-ranking-photo">
+                <img src="assets/players/jakub-mojzes.webp" alt="Jakub Mojzeš – lídr dohledaných startů za Invictus 2011" width="1024" height="1400" loading="lazy">
+              </figure>
+              <div class="history-ranking-leader-copy">
+                <span class="history-ranking-kicker">Nejvíce zápasů</span>
+                <h3 id="matches-ranking-title">Jakub Mojzeš</h3>
+                <strong>67</strong>
+                <p>dohledaných zápasů za Invictus</p>
+              </div>
+            </div>
+            <div class="history-ranking-table-wrap">
+              <table class="history-ranking-table">
+                <caption class="sr-only">Prvních deset hráčů podle počtu dohledaných zápasů za Invictus 2011</caption>
+                <thead>
+                  <tr><th>Pořadí</th><th>Hráč</th><th>Zápasy</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="is-leader">
+                    <td>1.</td>
+                    <th scope="row">Jakub Mojzeš</th>
+                    <td>67</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <th scope="row">Jakub Malý</th>
+                    <td>63</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <th scope="row">Petr Zálešák</th>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <th scope="row">Jakub Čespiva</th>
+                    <td>59</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <th scope="row">David Vallo</th>
+                    <td>54</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                    <th scope="row">Tomáš Malý</th>
+                    <td>41</td>
+                  </tr>
+                  <tr>
+                    <td>7.</td>
+                    <th scope="row">Filip Hrbek</th>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <td>8.</td>
+                    <th scope="row">Martin Myšák</th>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>9.</td>
+                    <th scope="row">Tomáš Poncza</th>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>10.</td>
+                    <th scope="row">Jakub Horňák</th>
+                    <td>15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="history-ranking-card" aria-labelledby="goals-ranking-title">
+            <div class="history-ranking-leader">
+              <figure class="history-ranking-photo">
+                <img src="assets/players/jakub-cespiva.webp" alt="Jakub Čespiva – nejlepší dohledaný střelec Invictus 2011" width="1024" height="1400" loading="lazy">
+              </figure>
+              <div class="history-ranking-leader-copy">
+                <span class="history-ranking-kicker">Nejvíce gólů</span>
+                <h3 id="goals-ranking-title">Jakub Čespiva</h3>
+                <strong>32</strong>
+                <p>dohledaných gólů za Invictus</p>
+              </div>
+            </div>
+            <div class="history-ranking-table-wrap">
+              <table class="history-ranking-table">
+                <caption class="sr-only">Prvních deset hráčů podle počtu dohledaných gólů za Invictus 2011</caption>
+                <thead>
+                  <tr><th>Pořadí</th><th>Hráč</th><th>Góly</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="is-leader">
+                    <td>1.</td>
+                    <th scope="row">Jakub Čespiva</th>
+                    <td>32</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <th scope="row">Petr Zálešák</th>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <th scope="row">David Vallo</th>
+                    <td>21</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <th scope="row">Tomáš Malý</th>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <th scope="row">Ján Štromp</th>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                    <th scope="row">Jakub Malý</th>
+                    <td>7</td>
+                  </tr>
+                  <tr>
+                    <td>7.</td>
+                    <th scope="row">Daniel Klimša</th>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>8.</td>
+                    <th scope="row">Tomáš Poncza</th>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>9.</td>
+                    <th scope="row">Martin Myšák</th>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>10.</td>
+                    <th scope="row">Jakub Mojzeš</th>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <p class="history-ranking-note">Zdroj: veřejná databáze Futsalu Havířov. Započítány jsou pouze dostupné sezonní řádky vedené pod klubem Invictus 2011; historická evidence není kompletní. Aktualizováno 4. 8. 2026.</p>
       </div>
     </section>
 
@@ -840,7 +959,6 @@
   </footer>
 
   <script src="players-data.js"></script>
-  <script src="traffic.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
