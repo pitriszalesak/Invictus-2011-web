@@ -129,10 +129,10 @@
             <p class="eyebrow">Historické statistiky</p>
             <h2 id="history-stats-title">Dohledaná<br><em>klubová čísla.</em></h2>
           </div>
-          <p>Pořadí spojuje ověřené individuální záznamy z Havířovské, Karvinské a Ostravské futsalové ligy. Započítáváme pouze čísla přiřazená ke konkrétním hráčům, nikoli týmové branky z kontumací.</p>
+          <p data-history-intro>Pořadí spojuje ověřené individuální záznamy z Havířovské, Karvinské a Ostravské futsalové ligy. Započítáváme pouze čísla přiřazená ke konkrétním hráčům, nikoli týmové branky z kontumací.</p>
         </header>
 
-        <div class="history-leaderboards-grid">
+        <div class="history-leaderboards-grid" data-history-leaderboards-grid>
           <section class="history-ranking-card" aria-labelledby="matches-ranking-title">
             <div class="history-ranking-leader">
               <figure class="history-ranking-photo">
@@ -282,7 +282,7 @@
           </section>
         </div>
 
-        <div class="history-source-coverage" aria-labelledby="history-source-title">
+        <div data-history-source-coverage>
           <div>
             <p class="eyebrow">Rozsah evidence</p>
             <h3 id="history-source-title">Co je v součtech zahrnuto</h3>
@@ -294,7 +294,7 @@
           </ul>
         </div>
 
-        <p class="history-ranking-note">Zdroje: <a href="https://www.futsalhavirov.cz/klub/invictus-2011/" target="_blank" rel="noopener">Futsal Havířov</a>, <a href="https://futsalkarvina.cz/statistiky.asp?filtrpost=&amp;filtrtym=313&amp;kategorie=1LIGA&amp;order1=strely&amp;order2=tm&amp;sezona=2020-3" target="_blank" rel="noopener">Futsal Karviná 2019/20</a>, <a href="https://futsalkarvina.cz/statistiky.asp?filtrpost=&amp;filtrtym=313&amp;limit=&amp;order2=tym&amp;sezona=20223LIGA" target="_blank" rel="noopener">Futsal Karviná 2021/22</a> a <a href="https://www.fotbal.cz/futsal/club/club/a84ff330-691f-4980-b9c5-d063357697c5" target="_blank" rel="noopener">FAČR – Invictus Ostrava</a>. Starší karvinské a ostravské ročníky bez kompletní individuální evidence nejsou dopočítávány odhadem. Aktualizováno 4. 8. 2026.</p>
+        <p class="history-ranking-note" data-history-ranking-note>Zdroje a rozsah evidence se načítají ze společného přehledu historických statistik.</p>
       </div>
     </section>
 
@@ -308,6 +308,7 @@
     <p>Amicitia · Virtus · Invictus</p>
     <p>© <span id="year"></span> Invictus 2011</p>
   </footer>
+  <script src="historical-stats.js"></script>
   <script src="page.js"></script>
 </body>
 </html>
