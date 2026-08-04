@@ -1252,11 +1252,30 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .history-ranking-table tbody tr:last-child > * { border-bottom:0; }
 .history-ranking-table tbody tr.is-leader { background:rgba(199,163,77,.09); }
 .history-ranking-table tbody tr.is-leader th { color:#fff; }
+.history-source-coverage {
+  display:grid;
+  grid-template-columns:minmax(220px,.55fr) minmax(0,1.45fr);
+  gap:clamp(1.5rem,5vw,5rem);
+  margin-top:1.5rem;
+  padding:clamp(1.5rem,3vw,2.4rem);
+  border:1px solid rgba(199,163,77,.24);
+  background:rgba(199,163,77,.045);
+}
+.history-source-coverage h3 { margin:.45rem 0 0; font-size:clamp(1.35rem,2.6vw,2.2rem); line-height:1.05; text-transform:uppercase; }
+.history-source-coverage ul { display:grid; gap:0; margin:0; padding:0; list-style:none; }
+.history-source-coverage li { display:grid; grid-template-columns:110px minmax(0,1fr); gap:1rem; padding:.85rem 0; border-bottom:1px solid rgba(255,255,255,.07); }
+.history-source-coverage li:first-child { padding-top:0; }
+.history-source-coverage li:last-child { padding-bottom:0; border-bottom:0; }
+.history-source-coverage strong { color:var(--gold-light); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; }
+.history-source-coverage span { color:var(--muted); font-size:.76rem; line-height:1.55; }
 .history-ranking-note { margin:1.2rem 0 0; color:#706e68; font-size:.67rem; line-height:1.6; }
+.history-ranking-note a { color:#aaa69c; text-decoration-color:rgba(199,163,77,.55); text-underline-offset:3px; }
+.history-ranking-note a:hover { color:var(--gold-light); }
 
 @media (max-width:900px) {
   .history-leaderboards-head,
-  .history-leaderboards-grid { grid-template-columns:1fr; }
+  .history-leaderboards-grid,
+  .history-source-coverage { grid-template-columns:1fr; }
   .history-leaderboards-head > p { max-width:700px; }
 }
 @media (max-width:620px) {
@@ -1271,5 +1290,5 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .history-ranking-table tbody td:first-child { width:60px; }
   .history-ranking-table thead th:last-child,
   .history-ranking-table tbody td:last-child { width:78px; }
+  .history-source-coverage li { grid-template-columns:1fr; gap:.35rem; }
 }
-
