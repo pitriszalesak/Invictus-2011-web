@@ -338,17 +338,17 @@
       <div class="records-grid">
         <article>
           <span class="record-index">01</span>
-          <strong class="record-value">67</strong>
+          <strong class="record-value" data-record-matches-value>88</strong>
           <p class="record-label">zápasů za Invictus</p>
-          <h3>Jakub Mojzeš</h3>
-          <p>Nejvíce dohledaných startů přímo v dresu Invictu v dostupné databázi Futsalu Havířov.</p>
+          <h3 data-record-matches-name>Jakub Malý</h3>
+          <p data-record-matches-copy>Nejvíce dohledaných startů za Invictus v dostupných ligových záznamech.</p>
         </article>
         <article>
           <span class="record-index">02</span>
-          <strong class="record-value">32</strong>
-          <p class="record-label">gólů v HFL</p>
-          <h3>Jakub Čespiva</h3>
-          <p>Nejlepší evidovaný střelec klubu v dostupné databázi Futsalu Havířov.</p>
+          <strong class="record-value" data-record-goals-value>54</strong>
+          <p class="record-label">dohledaných gólů</p>
+          <h3 data-record-goals-name>Jakub Čespiva</h3>
+          <p data-record-goals-copy>Nejlepší doložený střelec klubu v dostupných ligových záznamech.</p>
         </article>
         <article>
           <span class="record-index">03</span>
@@ -365,7 +365,7 @@
           <p>Autor vůbec prvního gólu Invictu po dlouhém čekání v premiérové sezoně.</p>
         </article>
       </div>
-      <p class="records-note">Hráčské statistiky vycházejí z veřejné databáze Futsalu Havířov a zahrnují pouze dohledané ročníky; starší evidence není kompletní. Aktualizováno 23. 7. 2026.</p>
+      <p class="records-note" data-records-note>Hráčské statistiky spojují dohledané individuální záznamy z Havířovské, Karvinské a Ostravské futsalové ligy. Aktualizováno 4. 8. 2026.</p>
     </section>
 
     <section class="quote-band" data-view="club" aria-label="Klubové motto" hidden>
@@ -451,10 +451,10 @@
             <p class="eyebrow">Historické statistiky</p>
             <h2 id="history-stats-title">Dohledaná<br><em>klubová čísla.</em></h2>
           </div>
-          <p>Pořadí počítá pouze dohledané zápisy Havířovské futsalové ligy, ve kterých hráči nastoupili za Invictus 2011. Nezahrnuje starší ročníky ani další soutěže bez kompletní individuální evidence.</p>
+          <p data-history-intro>Pořadí spojuje ověřené individuální záznamy z Havířovské, Karvinské a Ostravské futsalové ligy. Započítáváme pouze čísla přiřazená ke konkrétním hráčům, nikoli týmové branky z kontumací.</p>
         </header>
 
-        <div class="history-leaderboards-grid">
+        <div class="history-leaderboards-grid" data-history-leaderboards-grid>
           <section class="history-ranking-card" aria-labelledby="matches-ranking-title">
             <div class="history-ranking-leader">
               <figure class="history-ranking-photo">
@@ -604,7 +604,8 @@
           </section>
         </div>
 
-        <p class="history-ranking-note">Zdroj: veřejná databáze Futsalu Havířov. Započítány jsou pouze dostupné sezonní řádky vedené pod klubem Invictus 2011; historická evidence není kompletní. Aktualizováno 4. 8. 2026.</p>
+        <div data-history-source-coverage></div>
+        <p class="history-ranking-note" data-history-ranking-note>Zdroje a rozsah evidence se načítají ze společného přehledu historických statistik.</p>
       </div>
     </section>
 
@@ -959,6 +960,7 @@
   </footer>
 
   <script src="players-data.js"></script>
+  <script src="historical-stats.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
