@@ -151,7 +151,8 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .stats-strip span { color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: .68rem; }
 .stats-strip .annotated-stat small { display: block; max-width: 230px; margin: .65rem auto 0; color: #77746d; font-size: .58rem; line-height: 1.45; letter-spacing: .02em; }
 
-.season-center { scroll-margin-top: 78px; padding: clamp(5rem, 9vw, 8rem) max(1.4rem, calc((100vw - var(--max)) / 2)); background: #efede7; color: #111; }
+.match-center { scroll-margin-top: 78px; }
+.season-center { padding: clamp(5rem, 9vw, 8rem) max(1.4rem, calc((100vw - var(--max)) / 2)); background: #efede7; color: #111; }
 .season-center-inner { max-width: var(--max); margin: 0 auto; }
 .season-center-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
 .season-center-head .eyebrow, .last-season .eyebrow { color: #80601c; }
@@ -159,10 +160,11 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .season-center-head h2 em { color: #997326; }
 .season-status { display: flex; align-items: center; gap: .9rem; max-width: 330px; padding: 1rem 1.15rem; border: 1px solid #cac5b9; background: #f8f6f1; }
 .season-status-dot { width: 11px; height: 11px; flex: 0 0 auto; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(199,163,77,.18); }
+.season-status.has-match .season-status-dot { background: #2fc77b; box-shadow: 0 0 0 5px rgba(47,199,123,.17); }
 .season-status strong { display: block; text-transform: uppercase; letter-spacing: .09em; font-size: .75rem; }
 .season-status p { margin: .2rem 0 0; color: #6d6960; font-size: .76rem; }
 .season-center-grid { display: grid; grid-template-columns: 1.22fr .78fr; gap: 1rem; }
-.next-match-card, .anniversary-season-card { min-width: 0; min-height: 440px; }
+.next-match-card, .anniversary-season-card, .match-venue-card { min-width: 0; min-height: 440px; }
 .next-match-card { position: relative; display: flex; flex-direction: column; padding: clamp(1.5rem, 3vw, 2.6rem); overflow: hidden; background: #101010; color: #fff; }
 .next-match-card::before { content: ""; position: absolute; width: 380px; height: 380px; right: -180px; bottom: -230px; border: 1px solid rgba(234,209,143,.17); border-radius: 50%; box-shadow: 0 0 0 52px rgba(234,209,143,.035), 0 0 0 104px rgba(234,209,143,.025); }
 .match-card-topline { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); color: var(--gold-light); text-transform: uppercase; letter-spacing: .13em; font-size: .66rem; font-weight: 800; }
@@ -176,6 +178,35 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .match-card-copy { position: relative; z-index: 1; max-width: 680px; margin-bottom: 1.4rem; color: #aaa79f; font-size: .88rem; }
 .match-card-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .7rem; }
 .match-updated { position: relative; z-index: 1; margin: 1rem 0 0; color: #696761; font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; }
+.match-center-loading { align-self: center; margin: auto; color: #8a877f; font-size: .72rem; letter-spacing: .1em; text-align: center; text-transform: uppercase; }
+.next-match-showdown { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: clamp(.8rem,2.5vw,2rem); padding: 2rem 0 1.4rem; }
+.next-match-team { min-width: 0; text-align: center; }
+.next-match-team > span { display: block; color: #77746d; font-size: .58rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.next-match-team h3 { max-width: 190px; margin: .38rem auto 0; color: #fff; font-size: clamp(.8rem,1.2vw,1rem); letter-spacing: .06em; line-height: 1.25; text-transform: uppercase; }
+.next-match-versus { text-align: center; }
+.next-match-versus strong { display: block; color: var(--gold-light); font-family: Impact,sans-serif; font-size: clamp(2.8rem,5vw,5.3rem); font-weight: 400; line-height: .9; }
+.next-match-versus span { display: block; max-width: 130px; margin-top: .65rem; color: #6f6d67; font-size: .57rem; letter-spacing: .09em; line-height: 1.4; text-transform: uppercase; }
+.match-countdown { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 0 0 1.35rem; border: 1px solid rgba(234,209,143,.2); background: rgba(0,0,0,.2); }
+.match-countdown > div { padding: .9rem .55rem; border-right: 1px solid rgba(234,209,143,.15); text-align: center; }
+.match-countdown > div:last-of-type { border-right: 0; }
+.match-countdown strong { display: block; color: #fff; font-family: Impact,sans-serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 400; line-height: 1; }
+.match-countdown span { display: block; margin-top: .35rem; color: #77746d; font-size: .54rem; letter-spacing: .1em; text-transform: uppercase; }
+.match-venue-card { display: flex; flex-direction: column; padding: clamp(1.5rem,3vw,2.2rem); overflow: hidden; background: radial-gradient(circle at 90% 10%,rgba(199,163,77,.23),transparent 33%),#111; color: #fff; }
+.match-venue-copy > span { color: var(--gold-light); font-size: .63rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.match-venue-copy h3 { margin: .7rem 0 .55rem; font-family: Impact,sans-serif; font-size: clamp(2.3rem,4vw,4rem); font-weight: 400; line-height: 1; text-transform: uppercase; }
+.match-venue-copy > p { margin: 0; color: #9a978f; font-size: .8rem; }
+.match-venue-copy dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px; margin: 1.3rem 0; background: rgba(255,255,255,.1); }
+.match-venue-copy dl div { padding: .9rem; background: rgba(0,0,0,.35); }
+.match-venue-copy dt { color: #6f6d67; font-size: .54rem; letter-spacing: .1em; text-transform: uppercase; }
+.match-venue-copy dd { margin: .3rem 0 0; color: #e4e0d6; font-size: .7rem; line-height: 1.45; }
+.match-map-link { display: block; color: inherit; text-decoration: none; }
+.match-venue-map, .match-map-placeholder { width: 100%; min-height: 150px; border: 1px solid rgba(234,209,143,.2); }
+.match-venue-map { display: block; height: 170px; }
+.match-map-placeholder { display: grid; place-content: center; gap: .45rem; background: radial-gradient(circle,rgba(199,163,77,.16),transparent 58%),repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 1px,transparent 1px 18px); color: #85827b; text-align: center; }
+.match-map-placeholder span { color: var(--gold-light); font-size: 2rem; line-height: 1; }
+.match-map-placeholder strong { font-size: .62rem; letter-spacing: .11em; text-transform: uppercase; }
+.match-map-link:hover .match-map-placeholder { border-color: rgba(234,209,143,.5); color: #fff; }
+.match-venue-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: auto; padding-top: 1.2rem; }
 .anniversary-season-card { display: grid; grid-template-rows: minmax(220px, 1fr) auto; background: radial-gradient(circle at 50% 25%, rgba(212,171,47,.26), transparent 42%), #0c0c0c; color: #fff; }
 .anniversary-season-card > img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center; }
 .anniversary-season-card > div { padding: 1.5rem; border-top: 1px solid rgba(234,209,143,.3); }
@@ -223,6 +254,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .form-sequence abbr { text-decoration: none; }
 .form-sequence .is-win { color: var(--gold-light); background: rgba(199,163,77,.13); }
 .form-sequence .is-loss { color: #b7827c; background: rgba(124,51,43,.13); }
+.form-sequence .is-draw { color: #a8a49a; background: rgba(255,255,255,.06); }
 .recent-goal-balance { padding-left: 1.5rem; border-left: 1px solid var(--line); }
 .recent-goal-balance strong { display: block; margin-top: .3rem; color: #fff; font-family: Impact, sans-serif; font-size: 2rem; font-weight: 400; letter-spacing: .04em; line-height: 1; }
 .recent-results-layout { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(390px, .88fr); gap: 1rem; }
@@ -241,6 +273,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .result-label { display: inline-flex; align-items: center; justify-content: center; min-height: 25px; padding: .3rem .58rem; border: 1px solid currentColor; border-radius: 999px; text-transform: uppercase; letter-spacing: .1em; font-size: .56rem; font-weight: 900; }
 .result-label.is-win { color: var(--gold-light); background: rgba(199,163,77,.12); }
 .result-label.is-loss { color: #c58b84; background: rgba(124,51,43,.14); }
+.result-label.is-draw { color: #aaa69c; background: rgba(255,255,255,.06); }
 .featured-score strong { display: flex; align-items: center; gap: .2em; margin: .75rem 0 .55rem; color: #fff; font-family: Impact, sans-serif; font-size: clamp(4.2rem, 8vw, 7.2rem); font-weight: 400; letter-spacing: .015em; line-height: .82; }
 .featured-score i, .recent-score i { color: var(--gold-light); font-style: normal; font-size: .55em; }
 .featured-score p { max-width: 150px; margin: 0 auto; color: #6f6d67; font-size: .62rem; line-height: 1.45; text-transform: uppercase; letter-spacing: .08em; }
@@ -253,6 +286,7 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .recent-result-row:last-child { border-bottom: 0; }
 .recent-result-row::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; background: #7f4842; opacity: .8; }
 .recent-result-row.is-win::before { background: var(--gold); }
+.recent-result-row.is-draw::before { background: #8d8980; }
 .recent-result-row time { display: flex; flex-direction: column; line-height: 1.1; }
 .recent-result-row time strong { color: #d4d1c9; font-size: .78rem; }
 .recent-result-row time span { margin-top: .34rem; color: #65635e; font-size: .61rem; }
@@ -261,6 +295,8 @@ h1 em, h2 em { color: var(--gold-light); font-style: normal; }
 .recent-score { min-width: 65px; color: #fff; font-family: Impact, sans-serif; font-size: 2.1rem; font-weight: 400; letter-spacing: .04em; line-height: 1; text-align: right; }
 .recent-results-footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 1.25rem; }
 .recent-results-footer p { margin: 0; color: #65635e; font-size: .63rem; }
+.recent-results-footer p a { color: #8d8980; }
+.recent-results-footer p a:hover { color: var(--gold-light); }
 .recent-results-footer a { color: var(--gold-light); text-transform: uppercase; letter-spacing: .1em; font-size: .67rem; font-weight: 800; }
 .recent-results-footer a:hover { color: #fff; }
 
@@ -712,6 +748,15 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .match-card-topline { display: block; }
   .match-card-topline span { display: block; }
   .match-card-topline span:last-child { margin-top: .35rem; text-align: left; }
+  .next-match-showdown { gap: .45rem; padding-block: 1.55rem 1.15rem; }
+  .next-match-team h3 { font-size: .68rem; letter-spacing: .035em; }
+  .next-match-versus strong { font-size: 2.5rem; }
+  .next-match-versus span { max-width: 78px; font-size: .48rem; }
+  .match-countdown { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .match-countdown > div:nth-child(2) { border-right: 0; }
+  .match-countdown > div:nth-child(-n+2) { border-bottom: 1px solid rgba(234,209,143,.15); }
+  .match-venue-copy dl { grid-template-columns: 1fr; }
+  .match-venue-actions .button { width: 100%; }
   .anniversary-season-card { display: grid; grid-template-columns: 1fr; grid-template-rows: 260px auto; }
   .anniversary-season-card > div { border-top: 1px solid rgba(234,209,143,.3); border-left: 0; }
   .last-season-heading h2, .last-season-heading h3 { margin-top: .5rem; }
