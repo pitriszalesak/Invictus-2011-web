@@ -666,3 +666,4 @@
         "profile": "https://www.futsalhavirov.cz/hrac/ondrej-smolka/"
     }
 ];
+window.playersDataUpdatedAt = "2026-07-23";

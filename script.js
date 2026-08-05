@@ -27,10 +27,9 @@ const sortedPlayers = players.filter((player) => !player.hidden).sort((playerA, 
 
 const grid = document.querySelector("#player-grid");
 sortedPlayers.forEach((player) => {
-  const card = document.createElement("article");
+  const card = document.createElement("a");
   card.className = `player-card${player.image ? "" : " missing"}`;
-  card.tabIndex = 0;
-  card.setAttribute("role", "button");
+  card.href = `hraci/${player.slug}.html`;
   card.setAttribute("aria-label", `Otevřít profil hráče ${player.name}`);
   if (!player.image) card.dataset.initials = player.initials;
 
@@ -48,13 +47,6 @@ sortedPlayers.forEach((player) => {
   info.className = "player-info";
   info.innerHTML = `<div class="player-role"><span class="player-number">${formatJerseyNumber(player.number)}</span><span class="player-position">${player.position}</span></div><h3>${player.name}</h3>`;
   card.append(info);
-  card.addEventListener("click", () => openPlayer(player, card));
-  card.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      openPlayer(player, card);
-    }
-  });
   grid.append(card);
 });
 
