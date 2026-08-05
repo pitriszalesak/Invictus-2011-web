@@ -14,6 +14,7 @@ from reportlab.lib.utils import ImageReader
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "pdf" / "partnersky-balicek-invictus-2011-2026-27.pdf"
+TEMP_ASSETS = ROOT / "tmp" / "pdfs" / "partner-package-assets"
 
 BLACK = HexColor("#090909")
 PANEL = HexColor("#151515")
@@ -56,6 +57,29 @@ def fit_image(c, path, x, y, width, height, preserve_alpha=True):
         preserveAspectRatio=True,
         mask="auto" if preserve_alpha else None,
     )
+
+
+def prepare_pdf_assets():
+    """Zmenší rastrové podklady na skutečnou tiskovou velikost v PDF."""
+    TEMP_ASSETS.mkdir(parents=True, exist_ok=True)
+    sources = {
+        "logo": (ROOT / "assets/logo-invictus-2011.webp", (280, 210), "PNG"),
+        "havirov": (ROOT / "assets/competitions/futsal-havirov.jpg", (300, 150), "JPEG"),
+        "facr": (ROOT / "assets/competitions/facr.png", (150, 150), "PNG"),
+        "karvina": (ROOT / "assets/competitions/futsal-karvina.png", (150, 150), "PNG"),
+    }
+    prepared = {}
+    for key, (source, size, image_format) in sources.items():
+        suffix = ".jpg" if image_format == "JPEG" else ".png"
+        target = TEMP_ASSETS / f"{key}{suffix}"
+        with Image.open(source) as image:
+            image.thumbnail(size, Image.Resampling.LANCZOS)
+            if image_format == "JPEG":
+                image.convert("RGB").save(target, image_format, quality=86, optimize=True, progressive=True)
+            else:
+                image.save(target, image_format, optimize=True)
+        prepared[key] = target
+    return prepared
 
 
 def wrap_lines(text, font_name, font_size, max_width):
@@ -175,6 +199,7 @@ def draw_variant(c, x, y, width, height, number, title, text):
 def build_pdf():
     register_fonts()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    pdf_assets = prepare_pdf_assets()
     page_width, page_height = A4
     c = canvas.Canvas(str(OUTPUT), pagesize=A4, pageCompression=1)
     c.setTitle("Partnerský balíček Invictus 2011 - sezona 2026/27")
@@ -189,7 +214,7 @@ def build_pdf():
     content_width = page_width - 2 * margin
 
     # Hlavička
-    fit_image(c, ROOT / "assets" / "logo-invictus-2011.webp", margin, 749, 70, 58)
+    fit_image(c, pdf_assets["logo"], margin, 749, 70, 58)
     c.setFillColor(GOLD_LIGHT)
     c.setFont("Invictus-Bold", 6.5)
     c.drawString(111, 802, "PARTNERSTVÍ · SEZONA 2026/27")
@@ -304,9 +329,9 @@ def build_pdf():
     c.drawString(left_x, 261, "HAVÍŘOV · OSTRAVA/OPAVA · KARVINÁ")
     logo_y = 205
     logo_data = [
-        (ROOT / "assets/competitions/futsal-havirov.jpg", "Havířovská liga"),
-        (ROOT / "assets/competitions/facr.png", "Ostrava/Opava"),
-        (ROOT / "assets/competitions/futsal-karvina.png", "Karvinská liga"),
+        (pdf_assets["havirov"], "Havířovská liga"),
+        (pdf_assets["facr"], "Ostrava/Opava"),
+        (pdf_assets["karvina"], "Karvinská liga"),
     ]
     logo_width = left_w / 3
     for index, (path, label) in enumerate(logo_data):
