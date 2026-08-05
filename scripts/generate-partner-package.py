@@ -247,11 +247,11 @@ def build_pdf():
     stats_y = 700
     stat_width = content_width / 5
     stats = [
+        ("2011", "rok založení klubu"),
         ("15", "let klubové historie"),
-        ("198", "dohledaných zápasů"),
-        ("397", "vstřelených gólů"),
         ("16", "hráčů v soupisce"),
         ("2", "soutěže v sezoně 25/26"),
+        ("3", "regionální ligy v historii"),
     ]
     for index, (value, label) in enumerate(stats):
         x = margin + stat_width * index
@@ -431,7 +431,7 @@ def build_pdf():
 
     c.setFillColor(HexColor("#6E5B2D"))
     c.setFont("Invictus", 5.4)
-    c.drawString(margin, 38, "Klubová čísla vycházejí z dohledané evidence Invictus 2011. Stav: srpen 2026.")
+    c.drawString(margin, 38, "Klubové údaje: stav srpen 2026.")
     c.drawRightString(page_width - margin, 38, "Amicitia · Virtus · Invictus")
 
     c.showPage()
