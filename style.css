@@ -1605,3 +1605,118 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .featured-event-date { width: min(100%, 210px); margin: 0 auto; }
   .featured-event-facts { grid-template-columns: 1fr; text-align: left; }
 }
+
+
+/* INVICUP 2026 schedule, cross table and standings */
+.cup-tournament-section { scroll-margin-top: 110px; }
+.cup-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.2rem; }
+.cup-section-heading .eyebrow { margin-bottom: .65rem; }
+.cup-section-heading h2 { margin: 0; }
+.cup-time-note { display: grid; grid-template-columns: auto auto auto auto auto; align-items: center; gap: .55rem; padding: .8rem 1rem; border: 1px solid rgba(199,163,77,.32); background: #111; color: #fff; }
+.cup-time-note span { color: var(--gold-light); font-family: Impact,sans-serif; font-size: 1.5rem; line-height: 1; }
+.cup-time-note small { color: #8f8c85; font-size: .56rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.cup-time-note i { color: var(--gold); font-style: normal; }
+.cup-loading { padding: 2rem; border: 1px solid #d9d5cc; color: #77746d; text-align: center; }
+.cup-table-scroll { width: 100%; overflow-x: auto; border: 1px solid #d4d0c7; background: #fff; box-shadow: 0 16px 42px rgba(17,17,17,.08); }
+.cup-table-scroll:focus-visible { outline: 3px solid rgba(199,163,77,.55); outline-offset: 3px; }
+.cup-schedule-table,
+.cup-cross-table,
+.cup-standings-table { width: 100%; border-collapse: collapse; color: #111; font-variant-numeric: tabular-nums; }
+.cup-schedule-table { min-width: 760px; }
+.cup-cross-table { min-width: 860px; table-layout: fixed; }
+.cup-standings-table { min-width: 780px; }
+.cup-schedule-table th,
+.cup-cross-table th,
+.cup-standings-table th { background: #111; color: var(--gold-light); font-size: .62rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.cup-schedule-table th,
+.cup-schedule-table td,
+.cup-cross-table th,
+.cup-cross-table td,
+.cup-standings-table th,
+.cup-standings-table td { padding: .82rem .7rem; border: 1px solid #ddd8cf; text-align: center; }
+.cup-schedule-table tbody tr:nth-child(even),
+.cup-cross-table tbody tr:nth-child(even),
+.cup-standings-table tbody tr:nth-child(even) { background: #f2efe8; }
+.cup-schedule-table tbody tr.is-invictus,
+.cup-cross-table tbody tr.is-invictus,
+.cup-standings-table tbody tr.is-invictus { background: #f3e5ba; }
+.cup-schedule-table td:first-child { width: 48px; color: #8a6b20; font-weight: 800; }
+.cup-schedule-table td:nth-child(2) { width: 90px; font-family: Impact,sans-serif; font-size: 1.45rem; }
+.cup-schedule-table td:nth-child(3) { text-align: left; }
+.cup-schedule-table td:nth-child(3) strong { display: inline-block; min-width: 145px; }
+.cup-schedule-table td:nth-child(3) span { margin: 0 .55rem; color: #9a968c; }
+.cup-schedule-table td:last-child { width: 130px; }
+.cup-score-empty,
+.cup-score-final { display: inline-flex; align-items: center; justify-content: center; gap: .38rem; }
+.cup-score-empty i { display: block; width: 28px; height: 30px; border: 1px solid #c9c3b8; border-bottom: 2px solid #8f7740; background: #fff; }
+.cup-score-empty b,
+.cup-score-final i { color: #8d887e; font-style: normal; }
+.cup-score-final { color: #111; font-family: Impact,sans-serif; font-size: 1.55rem; font-weight: 400; }
+.cup-cross-table th:first-child { position: sticky; left: 0; z-index: 2; width: 170px; text-align: left; }
+.cup-cross-table tbody th { position: sticky; left: 0; z-index: 1; background: #171717; color: #fff; text-align: left; }
+.cup-cross-table tbody tr.is-invictus th { color: var(--gold-light); }
+.cup-cross-table td { height: 62px; }
+.cup-cross-table td.is-diagonal { background: repeating-linear-gradient(135deg,#d9d5cc 0 2px,#ebe8e1 2px 9px); color: #8c887f; font-size: 1.25rem; }
+.cup-cross-table abbr,
+.cup-standings-table abbr { text-decoration: none; cursor: help; }
+.cup-results-section { padding-bottom: 1rem; }
+.cup-table-card { margin: 1.4rem 0; border: 1px solid #d4d0c7; background: #f7f5ef; }
+.cup-table-card > header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.3rem; border-bottom: 1px solid #d4d0c7; }
+.cup-table-card > header span { color: #8a6b20; font-size: .58rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.cup-table-card > header h3 { margin: 0; color: #111; font-family: Impact,sans-serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 400; text-transform: uppercase; }
+.cup-standings-table th:nth-child(2),
+.cup-standings-table tbody th { text-align: left; }
+.cup-standings-table tbody th { min-width: 165px; color: #111; }
+.cup-standings-table td:first-child { width: 48px; color: #8a6b20; }
+.cup-standings-table td:last-child { color: #7d5e1c; font-size: 1.05rem; }
+.cup-rules-note { display: grid; gap: .35rem; margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 3px solid var(--gold); background: #efebe2; color: #59564f; font-size: .74rem; }
+.cup-rules-note p { margin: 0; }
+.cup-rules-note p:last-child { color: #8b877e; font-size: .64rem; text-transform: uppercase; letter-spacing: .07em; }
+.cup-print-button { flex: 0 0 auto; color: #111; }
+
+@media (max-width: 720px) {
+  .cup-section-heading { align-items: stretch; flex-direction: column; }
+  .cup-time-note { grid-template-columns: 1fr auto; }
+  .cup-time-note i { display: none; }
+  .cup-print-button { width: 100%; }
+}
+
+@media print {
+  body.article-page { background: #fff; color: #000; }
+  body.article-page .site-header,
+  body.article-page .article-hero,
+  body.article-page .article-toc,
+  body.article-page footer,
+  body.article-page .article-body > :not(#rozpis):not(#turnajove-tabulky),
+  .cup-print-button { display: none !important; }
+  body.article-page #obsah { padding: 0; }
+  body.article-page .article-layout { display: block; padding: 0; }
+  body.article-page .article-body { width: 100%; max-width: none; }
+  .cup-tournament-section { margin: 0; padding: 0; border: 0; }
+  #turnajove-tabulky { break-before: page; }
+  .cup-section-heading h2,
+  .cup-table-card > header h3 { color: #000; }
+  .cup-time-note,
+  .cup-rules-note,
+  .cup-table-card,
+  .cup-table-scroll { box-shadow: none; }
+  .cup-table-scroll { overflow: visible; border-color: #999; }
+  .cup-schedule-table,
+  .cup-cross-table,
+  .cup-standings-table { min-width: 0; font-size: 9pt; }
+  .cup-schedule-table th,
+  .cup-cross-table th,
+  .cup-standings-table th { background: #eee !important; color: #000 !important; }
+  .cup-schedule-table th,
+  .cup-schedule-table td,
+  .cup-cross-table th,
+  .cup-cross-table td,
+  .cup-standings-table th,
+  .cup-standings-table td { padding: 5px; border-color: #888; }
+  .cup-cross-table th:first-child,
+  .cup-cross-table tbody th { position: static; width: auto; background: #eee !important; color: #000 !important; }
+  .cup-schedule-table tbody tr.is-invictus,
+  .cup-cross-table tbody tr.is-invictus,
+  .cup-standings-table tbody tr.is-invictus { background: #f5e8bf !important; }
+  .cup-table-card { break-inside: avoid; }
+}
