@@ -1,6 +1,7 @@
 (() => {
   const data = window.MATCH_CENTER_DATA;
   if (!data) return;
+  const localTimeZone = "Europe/Prague";
 
   const escapeHtml = (value) => String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -21,7 +22,8 @@
       weekday: "long",
       day: "numeric",
       month: "numeric",
-      year: "numeric"
+      year: "numeric",
+      timeZone: localTimeZone
     }).format(parsed);
     const datePart = formatted.charAt(0).toUpperCase() + formatted.slice(1);
     return `${datePart} · ${formatTime(parsed)}`;
@@ -41,7 +43,8 @@
     if (!parsed) return "—";
     return new Intl.DateTimeFormat("cs-CZ", {
       hour: "2-digit",
-      minute: "2-digit"
+      minute: "2-digit",
+      timeZone: localTimeZone
     }).format(parsed);
   };
 
@@ -111,7 +114,7 @@
       </div>
       <div class="featured-event-main">
         <time class="featured-event-date" datetime="${escapeHtml(event.start)}">
-          <strong>${escapeHtml(new Intl.DateTimeFormat("cs-CZ", { day: "2-digit" }).format(start))}</strong>
+          <strong>${escapeHtml(new Intl.DateTimeFormat("cs-CZ", { day: "2-digit", timeZone: localTimeZone }).format(start))}</strong>
           <span>srpna 2026</span>
         </time>
         <div class="featured-event-copy">
