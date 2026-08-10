@@ -121,7 +121,7 @@
           <p>${escapeHtml(event.kicker)}</p>
           <h3>${escapeHtml(event.title)}</h3>
           <dl class="featured-event-facts">
-            <div><dt>Začátek</dt><dd>${escapeHtml(formatTime(event.start))}</dd></div>
+            <div><dt>První výkop</dt><dd>${escapeHtml(formatTime(event.start))}</dd></div>
             <div><dt>Místo</dt><dd>${escapeHtml(event.location)}</dd></div>
             <div><dt>Formát</dt><dd>${escapeHtml(event.format)}</dd></div>
           </dl>
