@@ -68,20 +68,90 @@
       <img src="${escapeHtml(team.logo)}" alt="" width="128" height="128" loading="lazy">
     </span>`;
 
+  const getFeaturedEvent = () => {
+    const event = data.featuredEvent;
+    const start = parseDate(event?.start);
+    if (!event || !start) return null;
+    const expiresAt = parseDate(event.expiresAt);
+    return expiresAt && Date.now() >= expiresAt.getTime() ? null : event;
+  };
+
   const renderStatus = () => {
     const target = document.querySelector("[data-match-center-status]");
     if (!target) return;
     const match = data.nextMatch;
+    const event = getFeaturedEvent();
     const hasMatch = Boolean(match && parseDate(match.start));
-    const label = hasMatch ? "Příští zápas" : data.status.label;
-    const text = hasMatch ? formatDateTime(match.start) : data.status.text;
-    target.classList.toggle("has-match", hasMatch);
+    const label = hasMatch
+      ? "Příští zápas"
+      : event?.statusLabel || data.status.label;
+    const text = hasMatch
+      ? formatDateTime(match.start)
+      : event
+        ? formatDateTime(event.start)
+        : data.status.text;
+    target.classList.toggle("has-match", hasMatch || Boolean(event));
     target.innerHTML = `
       <span class="season-status-dot" aria-hidden="true"></span>
       <div>
         <strong>${escapeHtml(label)}</strong>
         <p>${escapeHtml(text)}</p>
       </div>`;
+  };
+
+  const renderFeaturedEvent = (card, detailsCard, event) => {
+    const start = parseDate(event.start);
+    const visual = event.visual;
+
+    card.className = "next-match-card is-featured-event";
+    card.innerHTML = `
+      <div class="match-card-topline">
+        <span>Nejbližší klubová událost</span>
+        <time datetime="${escapeHtml(event.start)}">${escapeHtml(formatDateTime(event.start))}</time>
+      </div>
+      <div class="featured-event-main">
+        <time class="featured-event-date" datetime="${escapeHtml(event.start)}">
+          <strong>${escapeHtml(new Intl.DateTimeFormat("cs-CZ", { day: "2-digit" }).format(start))}</strong>
+          <span>srpna 2026</span>
+        </time>
+        <div class="featured-event-copy">
+          <p>${escapeHtml(event.kicker)}</p>
+          <h3>${escapeHtml(event.title)}</h3>
+          <dl class="featured-event-facts">
+            <div><dt>Začátek</dt><dd>${escapeHtml(formatTime(event.start))}</dd></div>
+            <div><dt>Místo</dt><dd>${escapeHtml(event.location)}</dd></div>
+            <div><dt>Formát</dt><dd>${escapeHtml(event.format)}</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="match-countdown" data-match-countdown aria-label="Odpočet do turnaje">
+        <div><strong data-countdown-days>--</strong><span>dní</span></div>
+        <div><strong data-countdown-hours>--</strong><span>hodin</span></div>
+        <div><strong data-countdown-minutes>--</strong><span>minut</span></div>
+        <div><strong data-countdown-seconds>--</strong><span>sekund</span></div>
+        <p class="sr-only" data-countdown-accessible aria-live="polite"></p>
+      </div>
+      <p class="match-card-copy">${escapeHtml(event.description)}</p>
+      <div class="match-card-actions">
+        <a class="button button-primary" href="${escapeHtml(event.detailUrl)}">${escapeHtml(event.detailLabel)}</a>
+        <a class="button button-ghost" href="${escapeHtml(event.detailUrl)}#informace">Praktické informace</a>
+      </div>
+      <p class="match-updated">Aktualizováno ${escapeHtml(formatUpdatedDate(data.updatedAt))}</p>`;
+
+    detailsCard.className = "match-details-card anniversary-season-card event-details-card";
+    detailsCard.innerHTML = `
+      <img src="${escapeHtml(visual.image)}" alt="${escapeHtml(visual.imageAlt)}" width="${escapeHtml(visual.imageWidth)}" height="${escapeHtml(visual.imageHeight)}" loading="lazy">
+      <div>
+        <span>${escapeHtml(visual.label)}</span>
+        <h3>${escapeHtml(visual.title)}</h3>
+        <p>${escapeHtml(visual.text)}</p>
+        <a href="${escapeHtml(visual.link)}">${escapeHtml(visual.linkLabel)}</a>
+      </div>`;
+
+    updateCountdown(start, {
+      remainingLabel: "zahájení turnaje",
+      liveText: "Turnaj právě začal nebo již probíhá."
+    });
   };
 
   const renderPendingMatch = (card, detailsCard) => {
@@ -171,9 +241,11 @@
     };
   };
 
-  const updateCountdown = (start) => {
+  const updateCountdown = (start, options = {}) => {
     const target = document.querySelector("[data-match-countdown]");
     if (!target) return;
+    const remainingLabel = options.remainingLabel || "utkání";
+    const liveText = options.liveText || "Utkání právě začalo nebo již probíhá.";
     const units = {
       days: target.querySelector("[data-countdown-days]"),
       hours: target.querySelector("[data-countdown-hours]"),
@@ -187,7 +259,7 @@
       const difference = start.getTime() - Date.now();
       if (difference <= 0) {
         Object.values(units).forEach((element) => { element.textContent = "00"; });
-        accessible.textContent = "Utkání právě začalo nebo již probíhá.";
+        accessible.textContent = liveText;
         return false;
       }
 
@@ -202,7 +274,7 @@
       units.seconds.textContent = String(seconds).padStart(2, "0");
 
       if (lastAccessibleMinute !== totalSeconds - seconds) {
-        accessible.textContent = `Do utkání zbývá ${days} dní, ${hours} hodin a ${minutes} minut.`;
+        accessible.textContent = `Do ${remainingLabel} zbývá ${days} dní, ${hours} hodin a ${minutes} minut.`;
         lastAccessibleMinute = totalSeconds - seconds;
       }
       return true;
@@ -294,11 +366,18 @@
     if (!card || !detailsCard) return;
 
     const match = data.nextMatch;
-    if (!match || !parseDate(match.start)) {
-      renderPendingMatch(card, detailsCard);
+    if (match && parseDate(match.start)) {
+      renderScheduledMatch(card, detailsCard, match);
       return;
     }
-    renderScheduledMatch(card, detailsCard, match);
+
+    const event = getFeaturedEvent();
+    if (event) {
+      renderFeaturedEvent(card, detailsCard, event);
+      return;
+    }
+
+    renderPendingMatch(card, detailsCard);
   };
 
   const featuredTeamMarkup = (team, role) => `
