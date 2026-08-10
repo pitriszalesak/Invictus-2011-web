@@ -13,7 +13,7 @@ window.INVI_CUP_DATA = {
   teams: [
     { id: "invictus", name: "Invictus 2011", shortName: "Invictus", logo: "assets/logo-invictus-2011.png", logoType: "crest", seed: 1 },
     { id: "slovan", name: "Slovan Havířov", shortName: "Slovan", logo: "assets/teams/slovan-havirov.png", logoType: "crest", seed: 2 },
-    { id: "ludgerovice", name: "Ludgeřovice", shortName: "Ludgeřovice", seed: 3 },
+    { id: "ludgerovice", name: "Ludgeřovice", shortName: "Ludgeřovice", logo: "assets/teams/ludgerovice.png?v=20260810-modern", logoType: "crest", seed: 3 },
     { id: "lopata-1", name: "Joga Bonito", shortName: "Joga Bonito", logo: "assets/teams/joga-bonito.png?v=20260810-transparent", logoType: "crest", seed: 4 },
     { id: "lopata-2", name: "Lopata 2", shortName: "Lopata 2", seed: 5 }
   ],
