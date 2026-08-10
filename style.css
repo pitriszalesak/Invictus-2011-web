@@ -1622,9 +1622,9 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-schedule-table,
 .cup-cross-table,
 .cup-standings-table { width: 100%; border-collapse: collapse; color: #111; font-variant-numeric: tabular-nums; }
-.cup-schedule-table { min-width: 760px; }
-.cup-cross-table { min-width: 860px; table-layout: fixed; }
-.cup-standings-table { min-width: 780px; }
+.cup-schedule-table { min-width: 900px; }
+.cup-cross-table { min-width: 960px; table-layout: fixed; }
+.cup-standings-table { min-width: 850px; }
 .cup-schedule-table th,
 .cup-cross-table th,
 .cup-standings-table th { background: #111; color: var(--gold-light); font-size: .62rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
@@ -1640,11 +1640,17 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-schedule-table tbody tr.is-invictus,
 .cup-cross-table tbody tr.is-invictus,
 .cup-standings-table tbody tr.is-invictus { background: #f3e5ba; }
+.cup-team-label { display: inline-flex; align-items: center; gap: .62rem; max-width: 100%; line-height: 1.2; vertical-align: middle; }
+.cup-team-label__name { min-width: 0; }
+.cup-team-logo { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; padding: 4px; border: 1px solid rgba(17,17,17,.14); border-radius: 9px; background: #fff; box-shadow: 0 4px 12px rgba(17,17,17,.09); }
+.cup-team-logo--wordmark { width: 76px; }
+.cup-team-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cup-team-label--compact { gap: .48rem; }
 .cup-schedule-table td:first-child { width: 48px; color: #8a6b20; font-weight: 800; }
 .cup-schedule-table td:nth-child(2) { width: 90px; font-family: Impact,sans-serif; font-size: 1.45rem; }
 .cup-schedule-table td:nth-child(3) { text-align: left; }
-.cup-schedule-table td:nth-child(3) strong { display: inline-block; min-width: 145px; }
-.cup-schedule-table td:nth-child(3) span { margin: 0 .55rem; color: #9a968c; }
+.cup-schedule-team { display: inline-flex; min-width: 205px; vertical-align: middle; }
+.cup-schedule-separator { display: inline-block; margin: 0 .55rem; color: #9a968c; vertical-align: middle; }
 .cup-schedule-table td:last-child { width: 130px; }
 .cup-score-empty,
 .cup-score-final { display: inline-flex; align-items: center; justify-content: center; gap: .38rem; }
@@ -1652,10 +1658,14 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-score-empty b,
 .cup-score-final i { color: #8d887e; font-style: normal; }
 .cup-score-final { color: #111; font-family: Impact,sans-serif; font-size: 1.55rem; font-weight: 400; }
-.cup-cross-table th:first-child { position: sticky; left: 0; z-index: 2; width: 170px; text-align: left; }
+.cup-cross-table th:first-child { position: sticky; left: 0; z-index: 2; width: 200px; text-align: left; }
 .cup-cross-table tbody th { position: sticky; left: 0; z-index: 1; background: #171717; color: #fff; text-align: left; }
 .cup-cross-table tbody tr.is-invictus th { color: var(--gold-light); }
-.cup-cross-table td { height: 62px; }
+.cup-cross-table thead th:not(:first-child) .cup-team-label { display: flex; min-height: 66px; flex-direction: column; justify-content: center; gap: .34rem; }
+.cup-cross-table thead .cup-team-logo { width: 34px; height: 34px; padding: 3px; border-radius: 8px; }
+.cup-cross-table thead .cup-team-logo--wordmark { width: 64px; height: 30px; }
+.cup-cross-table thead .cup-team-label__name { white-space: nowrap; }
+.cup-cross-table td { height: 70px; }
 .cup-cross-table td.is-diagonal { background: repeating-linear-gradient(135deg,#d9d5cc 0 2px,#ebe8e1 2px 9px); color: #8c887f; font-size: 1.25rem; }
 .cup-cross-table abbr,
 .cup-standings-table abbr { text-decoration: none; cursor: help; }
@@ -1666,7 +1676,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-table-card > header h3 { margin: 0; color: #111; font-family: Impact,sans-serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 400; text-transform: uppercase; }
 .cup-standings-table th:nth-child(2),
 .cup-standings-table tbody th { text-align: left; }
-.cup-standings-table tbody th { min-width: 165px; color: #111; }
+.cup-standings-table tbody th { min-width: 205px; color: #111; }
 .cup-standings-table td:first-child { width: 48px; color: #8a6b20; }
 .cup-standings-table td:last-child { color: #7d5e1c; font-size: 1.05rem; }
 .cup-rules-note { display: grid; gap: .35rem; margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 3px solid var(--gold); background: #efebe2; color: #59564f; font-size: .74rem; }
@@ -1718,5 +1728,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
   .cup-schedule-table tbody tr.is-invictus,
   .cup-cross-table tbody tr.is-invictus,
   .cup-standings-table tbody tr.is-invictus { background: #f5e8bf !important; }
+  .cup-team-logo { width: 24px; height: 24px; padding: 2px; border-color: #999; border-radius: 4px; box-shadow: none; }
+  .cup-team-logo--wordmark { width: 50px; }
   .cup-table-card { break-inside: avoid; }
 }
