@@ -14,7 +14,7 @@ window.INVI_CUP_DATA = {
     { id: "invictus", name: "Invictus 2011", shortName: "Invictus", seed: 1 },
     { id: "slovan", name: "Slovan Havířov", shortName: "Slovan", seed: 2 },
     { id: "ludgerovice", name: "Ludgeřovice", shortName: "Ludgeřovice", seed: 3 },
-    { id: "lopata-1", name: "Lopata 1", shortName: "Lopata 1", seed: 4 },
+    { id: "lopata-1", name: "Joga Bonito", shortName: "Joga Bonito", seed: 4 },
     { id: "lopata-2", name: "Lopata 2", shortName: "Lopata 2", seed: 5 }
   ],
   matches: [
