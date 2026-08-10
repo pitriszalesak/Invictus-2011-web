@@ -5,7 +5,7 @@
  */
 window.MATCH_CENTER_DATA = {
   season: "2026/27",
-  updatedAt: "2026-08-05",
+  updatedAt: "2026-08-10",
   team: {
     name: "Invictus 2011",
     logo: "assets/logo-invictus-2011.webp"
@@ -13,6 +13,29 @@ window.MATCH_CENTER_DATA = {
   status: {
     label: "Před sezonou",
     text: "Čekáme na oficiální rozpis soutěží."
+  },
+  featuredEvent: {
+    statusLabel: "Nejbližší klubová událost",
+    start: "2026-08-15T09:00:00+02:00",
+    expiresAt: "2026-08-16T00:00:00+02:00",
+    kicker: "První ročník · pět týmů",
+    title: "INVICUP 2026",
+    description: "V sobotu 15. srpna od 9:00 se na venkovním hřišti u ZŠ Gorkého v Havířově uskuteční první ročník turnaje INVICUP.",
+    location: "ZŠ Gorkého · Havířov",
+    format: "Každý s každým · 2×10 minut",
+    detailUrl: "invi-cup-2026.html",
+    detailLabel: "Detail turnaje",
+    visual: {
+      image: "assets/news/invi-cup-2026.svg",
+      imageAlt: "Plakát prvního ročníku futsalového turnaje INVICUP 2026",
+      imageWidth: 1003,
+      imageHeight: 1568,
+      label: "15. srpna 2026 · od 9:00",
+      title: "První INVICUP. První vítěz.",
+      text: "Pět týmů se utká systémem každý s každým o putovní pohár.",
+      link: "invi-cup-2026.html",
+      linkLabel: "Všechny informace →"
+    }
   },
   pending: {
     kicker: "Jubilejní sezona",
