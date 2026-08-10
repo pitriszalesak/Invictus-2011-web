@@ -21,11 +21,7 @@ Nahrajte obsah této složky do kořene repozitáře GitHub Pages:
 
 ## Automatický Instagram feed
 
-Workflow `.github/workflows/update-instagram-feed.yml` každé dvě hodiny načte posledních pět příspěvků profilu `@futsalinvictus2011` a aktualizuje `instagram-feed.json`.
-
-V nastavení repozitáře je nutné vytvořit Actions secret `INSTAGRAM_ACCESS_TOKEN` s dlouhodobým tokenem profesionálního Instagram účtu a oprávněním `instagram_business_basic`. Token se používá pouze v GitHub Actions. Aktualizační skript jej průběžně obnovuje a aktuální hodnotu ukládá do repozitáře pouze v zašifrované podobě.
-
-Workflow lze po přidání secretu poprvé spustit ručně v záložce Actions. Když Instagram API selže, poslední funkční obsah souboru zůstane beze změny.
+Sekce Instagram používá oficiální vložení veřejného profilu `@futsalinvictus2011` přes `https://www.instagram.com/embed.js`. Obsah se obnovuje přímo na straně Instagramu a web nepotřebuje přístupový token, Meta aplikaci ani naplánovaný GitHub Actions workflow.
 
 ## Obsah k doplnění
 
