@@ -1672,7 +1672,7 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-rules-note { display: grid; gap: .35rem; margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 3px solid var(--gold); background: #efebe2; color: #59564f; font-size: .74rem; }
 .cup-rules-note p { margin: 0; }
 .cup-rules-note p:last-child { color: #8b877e; font-size: .64rem; text-transform: uppercase; letter-spacing: .07em; }
-.cup-print-button { flex: 0 0 auto; color: #111; }
+.cup-print-button { flex: 0 0 auto; color: var(--gold); }
 
 @media (max-width: 720px) {
   .cup-section-heading { align-items: stretch; flex-direction: column; }
