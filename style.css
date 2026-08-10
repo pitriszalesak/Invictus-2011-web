@@ -635,6 +635,20 @@ body.modal-open { overflow: hidden; }
 }
 .instagram-feed[aria-busy="true"] { opacity: .72; }
 .instagram-note { margin: 1rem 0 0; color: #77736b; font-size: .72rem; }
+.instagram-feed.instagram-profile-embed {
+  grid-template-columns: minmax(0, 640px);
+  justify-content: center;
+}
+.instagram-profile-card,
+.instagram-profile-card:nth-child(4),
+.instagram-profile-card:nth-child(5) {
+  grid-column: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: .9rem;
+}
+.instagram-profile-card .instagram-media { min-height: 640px; }
+.instagram-profile-card iframe { min-height: 640px; }
 
 .contact { align-items: center; }
 .contact-copy { max-width: 530px; }
