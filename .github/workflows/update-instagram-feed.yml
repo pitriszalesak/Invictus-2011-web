@@ -1,61 +1,47 @@
-name: Aktualizace Instagramu
+name: Aktualizace Instagram feedu
 
 on:
   schedule:
-    - cron: "23 */2 * * *"
+    - cron: "17 */4 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: instagram-feed-update
+  group: update-instagram-feed
   cancel-in-progress: false
 
 jobs:
   update-feed:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Načíst repozitář
         uses: actions/checkout@v4
 
-      - name: Ověřit propojení s Instagramem
-        id: instagram-token
-        env:
-          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-        shell: bash
-        run: |
-          if [ -n "$INSTAGRAM_ACCESS_TOKEN" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Doplňte repository secret INSTAGRAM_ACCESS_TOKEN."
-          fi
+      - name: Nastavit Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - name: Načíst posledních pět příspěvků
-        if: steps.instagram-token.outputs.available == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         run: node scripts/update-instagram-feed.mjs
 
-      - name: Zjistit změny
-        if: steps.instagram-token.outputs.available == 'true'
-        id: changes
-        shell: bash
+      - name: Uložit změnu feedu
         run: |
-          if git diff --quiet -- instagram-feed.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+          if [[ -z "$(git status --porcelain -- instagram-feed.json .instagram-token.enc)" ]]; then
+            echo "Instagram feed i token jsou beze změny."
+            exit 0
           fi
 
-      - name: Uložit nový výběr
-        if: steps.changes.outputs.changed == 'true'
-        shell: bash
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add instagram-feed.json
+          if [[ -f .instagram-token.enc ]]; then
+            git add .instagram-token.enc
+          fi
           git commit -m "Aktualizovat Instagram feed"
-          git pull --rebase origin "$GITHUB_REF_NAME"
-          git push origin "HEAD:$GITHUB_REF_NAME"
+          git push
