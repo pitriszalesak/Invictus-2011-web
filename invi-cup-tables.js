@@ -18,6 +18,16 @@
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+  const teamMarkup = (team, { short = false, compact = false } = {}) => {
+    const displayName = short ? team.shortName : team.name;
+    const logoType = team.logoType === "wordmark" ? "wordmark" : "crest";
+    const logo = team.logo ? `
+      <span class="cup-team-logo cup-team-logo--${logoType}" aria-hidden="true">
+        <img src="${escapeHtml(team.logo)}" alt="" loading="lazy" decoding="async">
+      </span>` : "";
+    return `<span class="cup-team-label${compact ? " cup-team-label--compact" : ""}${team.logo ? " has-logo" : ""}">${logo}<span class="cup-team-label__name">${escapeHtml(displayName)}</span></span>`;
+  };
+
   const formatTime = (value) => {
     const parsed = new Date(value);
     if (Number.isNaN(parsed.getTime())) return "—";
@@ -72,7 +82,7 @@
                 <tr class="${match.home === "invictus" || match.away === "invictus" ? "is-invictus" : ""}">
                   <td data-label="Zápas">${match.number}</td>
                   <td data-label="Čas"><time datetime="${escapeHtml(match.start)}">${escapeHtml(formatTime(match.start))}</time></td>
-                  <td data-label="Utkání"><strong>${escapeHtml(home.name)}</strong><span>–</span><strong>${escapeHtml(away.name)}</strong></td>
+                  <td data-label="Utkání"><strong class="cup-schedule-team">${teamMarkup(home)}</strong><span class="cup-schedule-separator">–</span><strong class="cup-schedule-team">${teamMarkup(away)}</strong></td>
                   <td data-label="Výsledek">${resultMarkup(match)}</td>
                 </tr>`;
             }).join("")}
@@ -95,13 +105,13 @@
           <thead>
             <tr>
               <th scope="col">Tým</th>
-              ${data.teams.map((team) => `<th scope="col"><abbr title="${escapeHtml(team.name)}">${escapeHtml(team.shortName)}</abbr></th>`).join("")}
+              ${data.teams.map((team) => `<th scope="col"><abbr title="${escapeHtml(team.name)}">${teamMarkup(team, { short: true, compact: true })}</abbr></th>`).join("")}
             </tr>
           </thead>
           <tbody>
             ${data.teams.map((rowTeam) => `
               <tr class="${rowTeam.id === "invictus" ? "is-invictus" : ""}">
-                <th scope="row">${escapeHtml(rowTeam.name)}</th>
+                <th scope="row">${teamMarkup(rowTeam, { compact: true })}</th>
                 ${data.teams.map((columnTeam) => {
                   if (rowTeam.id === columnTeam.id) {
                     return '<td class="is-diagonal" aria-label="Stejný tým">×</td>';
@@ -217,7 +227,7 @@
             ${standings.map((row, index) => `
               <tr class="${row.team.id === "invictus" ? "is-invictus" : ""}">
                 <td data-label="Pořadí"><strong>${index + 1}.</strong></td>
-                <th scope="row">${escapeHtml(row.team.name)}</th>
+                <th scope="row">${teamMarkup(row.team, { compact: true })}</th>
                 <td data-label="Z">${row.played}</td>
                 <td data-label="V">${row.wins}</td>
                 <td data-label="R">${row.draws}</td>
