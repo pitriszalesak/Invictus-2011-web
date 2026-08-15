@@ -1082,6 +1082,19 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 /* Bezpečná mobilní typografie pro vícerádkové titulky s českou diakritikou */
 @media (max-width:640px) {
   h1,
+  h2,
+  h3,
+  .hero h1,
+  .kit-page-hero h1,
+  .archive-hero h1,
+  .competitions-hero h1,
+  .league-hero h1 {
+    max-width:100%;
+    overflow-wrap:anywhere;
+    hyphens:auto;
+  }
+
+  h1,
   .hero h1,
   .kit-page-hero h1,
   .archive-hero h1,
@@ -1684,12 +1697,12 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 .cup-table-card > header h3 { margin: 0; color: #111; font-family: Impact,sans-serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 400; text-transform: uppercase; }
 .cup-standings-table th:nth-child(2),
 .cup-standings-table tbody th { text-align: left; }
-.cup-standings-table tbody th { min-width: 205px; color: #111; }
+.cup-standings-table tbody th { min-width: 205px; background: #171717; color: #fff; }
 .cup-standings-table td:first-child { width: 48px; color: #8a6b20; }
 .cup-standings-table td:last-child { color: #7d5e1c; font-size: 1.05rem; }
 .cup-rules-note { display: grid; gap: .35rem; margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 3px solid var(--gold); background: #efebe2; color: #59564f; font-size: .74rem; }
-.cup-rules-note p { margin: 0; }
-.cup-rules-note p:last-child { color: #8b877e; font-size: .64rem; text-transform: uppercase; letter-spacing: .07em; }
+.article-body .cup-rules-note p { margin: 0; color: #4f4b44; }
+.article-body .cup-rules-note p:last-child { color: #706c64; font-size: .64rem; text-transform: uppercase; letter-spacing: .07em; }
 .cup-print-button { flex: 0 0 auto; color: var(--gold); }
 .cup-photo-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin-top: 2.4rem; }
 .cup-photo-grid .gallery-item { min-height: 0; aspect-ratio: 4/3; border: 1px solid rgba(255,255,255,.14); }
@@ -1702,6 +1715,8 @@ footer { min-height: 220px; display: flex; justify-content: space-between; align
 
 @media (max-width: 720px) {
   .cup-section-heading { align-items: stretch; flex-direction: column; }
+  .cup-table-card > header { align-items: flex-start; flex-direction: column; }
+  .cup-table-card > header h3 { max-width: 100%; overflow-wrap: anywhere; line-height: 1.05; }
   .cup-time-note { grid-template-columns: 1fr auto; }
   .cup-time-note i { display: none; }
   .cup-print-button { width: 100%; }
