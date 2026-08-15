@@ -5,7 +5,7 @@
  */
 window.MATCH_CENTER_DATA = {
   season: "2026/27",
-  updatedAt: "2026-08-10",
+  updatedAt: "2026-08-15",
   team: {
     name: "Invictus 2011",
     logo: "assets/logo-invictus-2011.webp"
@@ -15,26 +15,29 @@ window.MATCH_CENTER_DATA = {
     text: "Čekáme na oficiální rozpis soutěží."
   },
   featuredEvent: {
-    statusLabel: "Nejbližší klubová událost",
+    completed: true,
+    statusLabel: "INVICUP 2026 dokončen",
+    statusText: "Joga Bonito vítězem · Invictus druhý",
     start: "2026-08-15T09:20:00+02:00",
-    expiresAt: "2026-08-16T00:00:00+02:00",
-    kicker: "První ročník · pět týmů",
+    expiresAt: "2026-08-24T00:00:00+02:00",
+    kicker: "Konečné pořadí · čtyři týmy",
     title: "INVICUP 2026",
-    description: "Sraz všech týmů je v 9:00. První zápas turnaje INVICUP začne v sobotu 15. srpna v 9:20 na hřišti u ZŠ Gorkého v Havířově.",
+    description: "První ročník vyhrál tým Joga Bonito se sedmi body. Invictus skončil druhý, Slovan Havířov třetí a pořadí uzavřely Ludgeřovice.",
+    winner: "Joga Bonito",
     location: "ZŠ Gorkého · Havířov",
-    format: "Každý s každým · 2×10 minut",
+    format: "6 zápasů · 26 gólů",
     detailUrl: "invi-cup-2026.html",
-    detailLabel: "Detail turnaje",
+    detailLabel: "Výsledky turnaje",
     visual: {
       image: "assets/news/invi-cup-2026.svg",
       imageAlt: "Plakát prvního ročníku futsalového turnaje INVICUP 2026",
       imageWidth: 1003,
       imageHeight: 1568,
-      label: "Sraz 9:00 · první výkop 9:20",
-      title: "První INVICUP. První vítěz.",
-      text: "Pět týmů se utká systémem každý s každým o putovní pohár.",
+      label: "Vítěz · 7 bodů",
+      title: "Joga Bonito bere putovní pohár.",
+      text: "Čtyři týmy odehrály šest zápasů. Invictus obsadil se ziskem pěti bodů druhé místo.",
       link: "invi-cup-2026.html",
-      linkLabel: "Všechny informace →"
+      linkLabel: "Kompletní výsledky →"
     }
   },
   pending: {

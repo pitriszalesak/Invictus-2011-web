@@ -91,7 +91,7 @@
     const text = hasMatch
       ? formatDateTime(match.start)
       : event
-        ? formatDateTime(event.start)
+        ? event.statusText || formatDateTime(event.start)
         : data.status.text;
     target.classList.toggle("has-match", hasMatch || Boolean(event));
     target.innerHTML = `
@@ -105,12 +105,22 @@
   const renderFeaturedEvent = (card, detailsCard, event) => {
     const start = parseDate(event.start);
     const visual = event.visual;
+    const completed = event.completed === true;
+    const eventDate = completed
+      ? new Intl.DateTimeFormat("cs-CZ", {
+        weekday: "long",
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        timeZone: localTimeZone
+      }).format(start)
+      : formatDateTime(event.start);
 
     card.className = "next-match-card is-featured-event";
     card.innerHTML = `
       <div class="match-card-topline">
-        <span>Nejbližší klubová událost</span>
-        <time datetime="${escapeHtml(event.start)}">${escapeHtml(formatDateTime(event.start))}</time>
+        <span>${completed ? "Poslední klubová událost" : "Nejbližší klubová událost"}</span>
+        <time datetime="${escapeHtml(event.start)}">${escapeHtml(eventDate)}</time>
       </div>
       <div class="featured-event-main">
         <time class="featured-event-date" datetime="${escapeHtml(event.start)}">
@@ -121,23 +131,23 @@
           <p>${escapeHtml(event.kicker)}</p>
           <h3>${escapeHtml(event.title)}</h3>
           <dl class="featured-event-facts">
-            <div><dt>První výkop</dt><dd>${escapeHtml(formatTime(event.start))}</dd></div>
+            <div><dt>${completed ? "Vítěz" : "První výkop"}</dt><dd>${escapeHtml(completed ? event.winner : formatTime(event.start))}</dd></div>
             <div><dt>Místo</dt><dd>${escapeHtml(event.location)}</dd></div>
             <div><dt>Formát</dt><dd>${escapeHtml(event.format)}</dd></div>
           </dl>
         </div>
       </div>
-      <div class="match-countdown" data-match-countdown aria-label="Odpočet do turnaje">
+      ${completed ? "" : `<div class="match-countdown" data-match-countdown aria-label="Odpočet do turnaje">
         <div><strong data-countdown-days>--</strong><span>dní</span></div>
         <div><strong data-countdown-hours>--</strong><span>hodin</span></div>
         <div><strong data-countdown-minutes>--</strong><span>minut</span></div>
         <div><strong data-countdown-seconds>--</strong><span>sekund</span></div>
         <p class="sr-only" data-countdown-accessible aria-live="polite"></p>
-      </div>
+      </div>`}
       <p class="match-card-copy">${escapeHtml(event.description)}</p>
       <div class="match-card-actions">
         <a class="button button-primary" href="${escapeHtml(event.detailUrl)}">${escapeHtml(event.detailLabel)}</a>
-        <a class="button button-ghost" href="${escapeHtml(event.detailUrl)}#informace">Praktické informace</a>
+        <a class="button button-ghost" href="${escapeHtml(event.detailUrl)}${completed ? "#turnajove-tabulky" : "#informace"}">${completed ? "Konečná tabulka" : "Praktické informace"}</a>
       </div>
       <p class="match-updated">Aktualizováno ${escapeHtml(formatUpdatedDate(data.updatedAt))}</p>`;
 
@@ -151,10 +161,12 @@
         <a href="${escapeHtml(visual.link)}">${escapeHtml(visual.linkLabel)}</a>
       </div>`;
 
-    updateCountdown(start, {
-      remainingLabel: "zahájení turnaje",
-      liveText: "Turnaj právě začal nebo již probíhá."
-    });
+    if (!completed) {
+      updateCountdown(start, {
+        remainingLabel: "zahájení turnaje",
+        liveText: "Turnaj právě začal nebo již probíhá."
+      });
+    }
   };
 
   const renderPendingMatch = (card, detailsCard) => {
